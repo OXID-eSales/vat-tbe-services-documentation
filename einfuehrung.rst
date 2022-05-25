@@ -64,6 +64,7 @@ Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die
 Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Meldung aktualisiert.
 
 .. todo: #HR: Was folgt aus der Fehlermeldung für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
+              sieht nach Info aus, Bestellung kann aber durchgeführt werden. Screenshot oxdaka03 sieht nciht nach Fehlermeldung aus ?
 
 Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden.
 

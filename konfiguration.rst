@@ -46,7 +46,8 @@ Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder. P
 
    Mehrwertsteuersätze sind für die Länder der Europäischen Union bereits vorbereitet. Die Mehrwertsteuersätze sind im Modul statisch hinterlegt.
 
-   .. todo: #HR: "Änderungen an den Werten müssen im Repository gepflegt werden." Betrieb: Wie pflege ich Änderungen im Repo? Wer macht es?
+   .. todo: #HR: "Änderungen an den Werten müssen im Repository gepflegt werden." Betrieb: Wie pflege ich Änderungen im Repo? Wer macht es? -> das muss dann wohl OXID für das Modul übernehmen.
+             Im SHop mit aktiviertem Modul kann das aber der Shopbetreiber für seinen Shop selbst hinterlegen.
 
    Wenn Sie das Modul aktivieren, wird geprüft, ob es bereits einen Eintrag für das Land gibt:
 
@@ -54,6 +55,7 @@ Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder. P
    * Wenn nein, dann wird der Wert aus der Liste genommen
 
    .. todo: #HR: "Ist das Modul installiert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen." -- Meinen wir installiert oder aktiviert?
+         -> aktiviert, wenn nur installiert aber nicht aktiv darf das Modul ja gar nicht eingreifen
 
    Ist das Modul installiert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen.
 
@@ -99,7 +101,8 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 
    Bei einer Enterprise Edition können Sie nur die Artikel des Hauptshops anpassen.
 
-.. todo: #HR: Was genau folgt daraus: "Bei einer Enterprise Edition können Sie nur die Artikel des Hauptshops anpassen."?
+.. todo: #HR: Was genau folgt daraus: "Bei einer Enterprise Edition können Sie nur die Artikel des Hauptshops anpassen."? -> das klingt seltsam, was bedeutet Hauptshop?
+              Bei vererbten Artikeln macht das Sinn, das nur im Parentshop markieren zu können. Aber im standlone subshop mit eigenen Produkten muss das möglich sein.
 
 
 |procedure|
@@ -195,7 +198,7 @@ Das Modul eVAT verwendet folgende Methoden, um den Kundenstandort zu bestimmen:
       * Um den Kundenstandort mittels Rechnungsadresse zu prüfen, ordnen sie dem Parameter :technicalname:`billing_country` den Wert :technicalname:`1` zu.
       * Um den Kundenstandort mittels Geolocation zu prüfen, ordnen sie dem Parameter :technicalname:`geo_location` den Wert :technicalname:`1` zu.
 
-.. todo: #HR: welchen Sinn hat es Geolocation zu aktivieren, wenn es nicht implementiert ist?
+.. todo: #HR: welchen Sinn hat es Geolocation zu aktivieren, wenn es nicht implementiert ist? -> wird das Modul überhaupt von irgendwem verwendet? sieht so aus, als ob man das ohne Anpassungen nicht verwenden kann.
 
    .. code::
 
@@ -239,15 +242,15 @@ Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansäs
 
 Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
 
-.. todo: #HR: 1. Was bedeutet im Folgenden: "als wäre kein Land eingetragen"? 2. Wie merkt das System, wenn der Code falsch ist?
+.. todo: #HR: 1. Was bedeutet im Folgenden: "als wäre kein Land eingetragen"? 2. Wie merkt das System, wenn der Code falsch ist? -> keinen Eintrag in oxcountry Tabelle gefunden vermutlich
 
 Ist der Ländercode nicht korrekt, verhält sich der Shop so, als wäre kein Land eingetragen.
 
-.. todo: #HR: Was heißt "Artikel ... werden nicht als elektr. Dienstl. gekennzeichnet"?
+.. todo: #HR: Was heißt "Artikel ... werden nicht als elektr. Dienstl. gekennzeichnet"? -> klingt nach: das Modl macht einfach gar nichts
 
 Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden nicht als solche gekennzeichnet.
 
-.. todo: #HR: Was heißt: "Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben."
+.. todo: #HR: Was heißt: "Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben." -> keine Hände keine Kekse, das Modul ignoriert einfach alles
 
 Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
@@ -265,7 +268,8 @@ PDF-Rechnung konfigurieren
 Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
 
 .. todo: #HR: Was ist das auf EN: "overloaded" classes oder "extended" wie hier beschrieben: https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/quality.html#extending-and-reusing-the-shop-functionality
-         #HR: Michael schreibt: "Das Wort "überschreiben" wäre vermutlich eher richtiger als "überladen". Beides ist jedoch geläufig."
+         #HR: Michael schreibt: "Das Wort "überschreiben" wäre vermutlich eher richtiger als "überladen". Beides ist jedoch geläufig."  -> wir reden von 'chain extend', wenn sich ein mMdul in die class chain reinhängt (virtuelle parent Klasse, class_alias).
+              renn Reihenfolge udnd überöadene Klassen in einem Zusammenhang erwähnt werden, dann ist bestimmt von 'chain extend' die Rede.
 
 .. todo: #VL: zu https://github.com/OXIDprojects/pdf-invoice-module: brauchen wir eine Doku?
 
@@ -335,7 +339,8 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #HR: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager
+.. todo: #HR: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit
+               dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
 
 .. _oxdakb06:
 

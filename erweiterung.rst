@@ -8,7 +8,7 @@ Wir beschreiben beispielhaft,
 * wie Sie eine eigene Bestimmungsmethode für den Kundenstandort hinzufügen
 * wie Sie einen Artikel im Warenkorb farblich hervorheben können, dessen Mehrwertsteuersatz nicht ermittelt werden konnte.
 
-.. todo #HR: "wie Sie einen Artikel im Warenkorb markieren können": automatisch markieren?
+.. todo #HR: "wie Sie einen Artikel im Warenkorb markieren können": automatisch markieren? -> ja, das soll der Shop automatisch anzeigen
 
 
 Bestimmungsmethode für Kundenstandort hinzufügen
@@ -18,7 +18,7 @@ Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstell
 
 Ein Beispielmodul finden Sie im Verzeichnis :file:`/documentation/countryEvidenceExampleModule` des Installationspakets.
 
-.. todo: #HR: Was bdeutet der Hinweis im Klartext? Wer muss in welchem Fall was tun?
+.. todo: #HR: Was bdeutet der Hinweis im Klartext? Wer muss in welchem Fall was tun? -> der Shopbetreiber muss das e-vat Modul mit einem eigenen Modul erweitern.
 
 .. note::
 
@@ -31,7 +31,7 @@ Ein Beispielmodul finden Sie im Verzeichnis :file:`/documentation/countryEvidenc
 
 Tun Sie Folgendes:
 
-.. todo: #HR: Checkliste so OK? Ist eine Reihenfolge zu beachten?
+.. todo: #HR: Checkliste so OK? Ist eine Reihenfolge zu beachten? -> sollte passen, neues Modul schreiben und dann installieren, so ist das wohl gemeint
 
 * Damit die neue Klasse eine Schnittstelle hat, stellen Sie sicher, dass sie die Klasse :technicalname:`oeVATTBEEvidence` erweitert.
 * Registrieren Sie die Klasse mit :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
@@ -89,6 +89,7 @@ Ein Beispiel ist der Kauf eines Artikels, welcher als Telekommunikations-, Rundf
 Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler.
 
 .. todo: #HR: "Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler. " : Dient eVAT nicht gerade dazu, diesen Fall auszuschließen, indem ich die Artikel markiere und den Ländern USt-Sätze zuweise? Ist das nicht ein Konfig-Fehler?
+-> wir haben ja inzwischen noch das geo-blocking Modul. Vermutlich ist der 'Fehler' einfach die Fehlermeldung, wenn das betreffende Land nicht konfiguriert wurde. Dh der Shop-Admin muss das entsprechen eintragen.
 
 Es wird normalerweise eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt. Der Kunde muss den Artikel aus dem Warenkorb entfernen.
 
@@ -96,7 +97,7 @@ Durch die farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichte
 
 |procedure|
 
-.. todo: #HR: Was genau tue ich hier?:
+.. todo: #HR: Was genau tue ich hier?: -> offenbar ein neues Modul schreiben
 
 1. CCS-Klasse erstellen und in Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` integrieren?
 
