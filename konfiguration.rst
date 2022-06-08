@@ -267,7 +267,7 @@ Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXID
 .. todo: #HR: Was ist das auf EN: "overloaded" classes oder "extended" wie hier beschrieben: https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/quality.html#extending-and-reusing-the-shop-functionality
          #HR: Michael schreibt: "Das Wort "überschreiben" wäre vermutlich eher richtiger als "überladen". Beides ist jedoch geläufig."
 
-.. todo: #VL: zu https://github.com/OXIDprojects/pdf-invoice-module: brauchen wir eine Doku?
+.. todo: VL: zu https://github.com/OXIDprojects/pdf-invoice-module: brauchen wir eine Doku? -- nein, nicht von Oxid entw.; nur Reihenfolge wichtig wie beschrieben
 
 |procedure|
 
