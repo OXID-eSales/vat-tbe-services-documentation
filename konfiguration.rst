@@ -34,7 +34,7 @@ eVAT konfigurieren
 
 .. todo:
 
-Um die Konfiguration zu starten, wählen Sie :menuselection:`PayPal --> Konfiguration`.
+Um die Konfiguration zu starten, wählen Sie :menuselection:`PayPal --> Konfiguration`.  .. todo #HR: prüfen, wieso PayPal?
 
 Länderspezifische Mehrwertsteuersätze aktivieren
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
