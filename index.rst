@@ -6,14 +6,8 @@ Moduldokumentation
    :maxdepth: 1
    :caption: eVAT
 
-   Wofür/Wofür nicht? <einfuehrung>
-   Installation <installation>
-   Konfiguration <konfiguration>
-   Betrieb <betrieb>
-   Erweiterung <erweiterung>
-..
-   Changelog (GitHub) ➜ <https://github.com/OXID-eSales/paypal/blob/v6.2.1/CHANGELOG.md>
-.. todo: #HR: es gibt kein Changelog
+Wir bereiten die Dokumentation für unser Modul :productname:`eVAT` aktuell vor.
+
 
 .. image:: media/icons/home.png
    :width: 0 px
