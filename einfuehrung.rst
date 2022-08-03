@@ -4,7 +4,7 @@
 Integrieren Sie mit dem Modul :productname:`eVAT` für nichtsteuerpflichtige Kunden die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
 
 
-.. todo: #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
+.. todo: #tbd VL: Country-Modul nutzen für folgenden use case: , #Sven #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
    Große eShops: aus Österreich bestellt, dann 19 -> Modul würde helfen: wenn gezwungen, MWSt korrekt auszuweisen, dann Modul: Steuerberater fragen
 
 
