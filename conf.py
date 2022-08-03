@@ -135,7 +135,7 @@ html_theme = 'sphinx_rtd_theme'
 html_context = {
     'current_version': '2.0',
     'versions':
-        [('1.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
+        [('2.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.0/'),
          ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
@@ -148,7 +148,7 @@ html_context = {
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'OXID-eSales',
     'github_repo': 'vat-tbe-services-documentation',
-    'github_version': '2.0-de/'
+    'github_version': '2.0-en/'
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -277,11 +277,11 @@ rst_prolog = """
 
 rst_epilog = """
 .. |link| image:: /media/icons/link.png
-.. |procedure| replace:: **Vorgehen**
-.. |prerequisites| replace:: **Voraussetzungen**
-.. |result| replace:: **Resultat**
-.. |background| replace:: **Hintergrund**
-.. |example| replace:: **Beispiel**
+.. |procedure| replace:: **Procedure**
+.. |prerequisites| replace:: **Prerequisites**
+.. |result| replace:: **Result**
+.. |background| replace:: **Background**
+.. |example| replace:: **Example**
 .. |br| raw:: html
 
    <br />

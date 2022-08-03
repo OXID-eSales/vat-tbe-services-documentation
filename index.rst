@@ -1,12 +1,12 @@
-Moduldokumentation
-==================
+Module Documentation
+====================
 
 
 .. toctree::
    :maxdepth: 1
    :caption: eVAT
 
-Wir bereiten die Dokumentation für unser Modul :productname:`eVAT` aktuell vor.
+We are currently preparing the documentation for our :productname:`eVAT` module.
 
 
 .. image:: media/icons/home.png
