@@ -135,7 +135,7 @@ html_theme = 'sphinx_rtd_theme'
 html_context = {
     'current_version': '2.0',
     'versions':
-        [('1.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
+        [('2.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
          ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
