@@ -57,13 +57,18 @@ Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehr
    Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
 
 
+.. todo:   Bild neu, mit neuem Theme
+
+
 Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem der Kundenstandort durch die definierten Bestimmungsmethoden ermittelt wurde (siehe :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`).
 
 Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka02`, Pos. 1, 2).
 
 Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Meldung aktualisiert.
 
-.. todo: #HR: Was folgt aus der Fehlermeldung für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
+.. todo: Keine Fehlereldung : #HR: Was folgt aus der "Fehlermeldung" für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
+
+.. todo: #VL Klären Bsp. UK: aktualisieren wg. Brexit -- Standard-MWst-Sätze anpassen
 
 Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden.
 

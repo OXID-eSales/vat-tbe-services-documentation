@@ -176,7 +176,9 @@ Das Modul eVAT verfügt über eine Regel, um das Herkunftsland eines Kunden hera
 Das Modul eVAT verwendet folgende Methoden, um den Kundenstandort zu bestimmen:
 
 * die Rechnungsadresse des Kunden
-* die sogenannte Geolocation.
+* die sogenannte Geolocation
+
+.. todo: #VL: Aussage ist falsch: Geolocation ist nicht implementiert, das Gesetz schreibt zwei Methoden vorgehen; Geolocation ist fake, eVAT ist nicht marktfertig: OXID haftet -- "wirschreiben derzit nur vorbereitet", das steht auch nicht in Readme
 
   Die Geolocation bestimmt den Standort basierend auf der IP-Adresse des zugehörigen Endgerätes.
 
@@ -195,7 +197,8 @@ Das Modul eVAT verwendet folgende Methoden, um den Kundenstandort zu bestimmen:
       * Um den Kundenstandort mittels Rechnungsadresse zu prüfen, ordnen sie dem Parameter :technicalname:`billing_country` den Wert :technicalname:`1` zu.
       * Um den Kundenstandort mittels Geolocation zu prüfen, ordnen sie dem Parameter :technicalname:`geo_location` den Wert :technicalname:`1` zu.
 
-.. todo: #HR: welchen Sinn hat es Geolocation zu aktivieren, wenn es nicht implementiert ist?
+.. todo: #HR: welchen Sinn hat es Geolocation zu aktivieren, wenn es nicht implementiert ist? -- löschen; welche Vorschrift gibes? Bestimmung, dass es mind 2 Methoden geben muss;
+
 
    .. code::
 
