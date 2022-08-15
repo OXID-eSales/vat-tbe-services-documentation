@@ -7,12 +7,16 @@ Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`eVA
 * Umsatzsteuer-Identifikationsnummer anzeigen
 * Erweiterung der PDF-Rechnung nutzen
 
-.. todo: #HR: Reden wir einheitlich eher von USt oder von MWSt?
+.. todo: #HR: Reden wir einheitlich eher von USt oder von MWSt? -> Bei EU VAT directive 1042/2013 geht es um Mehrwertsteuer auf elektronsiche Produkte, also vermutlich MWSt.
 
 Kundenstandort in der Bestellung anzeigen
 -----------------------------------------
 
 .. todo: #HR: was ist der Anwendugsfall?
+     Zitat: all telecommunications, radio and television broadcasting and electronically supplied services supplied to a non-taxable person are
+            to be taxed in the Member State in which the customer is established, has his permanent address or usually resides, regardless of where
+            the taxable person supplying those services is established. Most other services supplied to a non-taxable person continue to be taxed in
+            the Member State in which the supplier is established.
 
 Zeigen Sie die Information zum Kundenstandort in der Bestellung an.
 
@@ -43,7 +47,7 @@ Die Prüfung ergab, dass der deutsche Mehrwertsteuersatz für die Berechnung des
 
 Die Bestimmung des Kundenstandorts mittels Geolocation lieferte kein Ergebnis.
 
-.. todo: #HR: "Die Bestimmung des Kundenstandorts mittels Geolocation lieferte kein Ergebnis." -- da nicht implementiert?
+.. todo: #HR: "Die Bestimmung des Kundenstandorts mittels Geolocation lieferte kein Ergebnis." -- da nicht implementiert? -> soll das nicht einfach ein Beispiel sein?
 
 .. note::
 
@@ -55,7 +59,7 @@ Umsatzsteuer-Identifikationsnummer anzeigen
 -------------------------------------------
 
 .. todo: #HR: was ist der Anwendugsfall? Ist das für B2B?  -- in der Einführung beschreiben wir den use case so: "für nichtsteuerpflichtige Kunden die Besteuerung von elektr. Artikeln integrieren"
-         #HR: Was heißt: "Hinweis darauf geben, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"
+         #HR: Was heißt: "Hinweis darauf geben, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist" -> eeehm keine Ahnung, sorry
 
 
 Zeigen Sie die Umsatzsteuer-Identifikationsnummer eines Kunden sowie Datum und Zeit der Speicherung an.
@@ -104,9 +108,9 @@ Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul stati
 
 Sobald Sie :productname:`eVAT` installiert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
 
-.. todo: #HR: Wie halte ich mich über Änderungen auf dem laufenden?
-         #HR: Wie pflege ich die Mehrwertsteuersätze?
-         #HR: Meinen wir installiert oder aktiviert?
+.. todo: #HR: Wie halte ich mich über Änderungen auf dem laufenden? -> gibt sicher eine Möglichkeit, einen Infoservice zu abonnieren
+         #HR: Wie pflege ich die Mehrwertsteuersätze? -> Shop admin -> MasterSettings -> Countries -> Country VAT rates (bei aktiviertem Modul)
+         #HR: Meinen wir installiert oder aktiviert? -> In der Datenbank landen die Informationen momentan bei der ersten Modulaktivierung
 
 
 

@@ -4,7 +4,7 @@
 Integrieren Sie mit dem Modul :productname:`eVAT` für nichtsteuerpflichtige Kunden die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
 
 
-.. todo: #tbd VL: Country-Modul nutzen für folgenden use case: , #Sven #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
+.. todo: #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
    Große eShops: aus Österreich bestellt, dann 19 -> Modul würde helfen: wenn gezwungen, MWSt korrekt auszuweisen, dann Modul: Steuerberater fragen
 
 
@@ -57,18 +57,14 @@ Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehr
    Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
 
 
-.. todo:   Bild neu, mit neuem Theme
-
-
 Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem der Kundenstandort durch die definierten Bestimmungsmethoden ermittelt wurde (siehe :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`).
 
 Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka02`, Pos. 1, 2).
 
 Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Meldung aktualisiert.
 
-.. todo: Keine Fehlereldung : #HR: Was folgt aus der "Fehlermeldung" für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
-
-.. todo: #VL Klären Bsp. UK: aktualisieren wg. Brexit -- Standard-MWst-Sätze anpassen
+.. todo: #HR: Was folgt aus der Fehlermeldung für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
+              sieht nach Info aus, Bestellung kann aber durchgeführt werden. Screenshot oxdaka03 sieht nciht nach Fehlermeldung aus ?
 
 Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden.
 

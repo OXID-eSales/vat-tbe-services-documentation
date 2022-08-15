@@ -1,4 +1,4 @@
-Die Zahlungsmodule :productname:`PayPal Checkout`, :productname:`Amazon Pay` und :productname:`Unzer Payment für OXID` sind mit :productname:`eVAT` kompatibel: Auch bei der Schnellkauf-Funktion gelangt Ihr Kunde zu auf eine Checkout-Seite, auf der er die Daten zur Bestellung einschließlich des Mehrwertsteuersatzes bestätigt.
+Die Zahlungsmodule :productname:`PayPal Checkout`, :productname:`Amazon Pay` und :productname:`Unzer Payment für OXID` sind mit :productname:`eVAT` kompatibel: Auch bei der Schnellkauf-Funktion gelangt Ihr Kunde auf eine Checkout-Seite, auf der er die Daten zur Bestellung einschließlich des Mehrwertsteuersatzes bestätigt.
 
 Die Schnellkauf-Funktion der Module :productname:`PayPal` oder :productname:`PayPal Plus` ist dagegen nicht mit :productname:`eVAT` kompatibel.
 
