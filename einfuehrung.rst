@@ -1,7 +1,7 @@
 ﻿Wofür/Wofür nicht?
 ==================
 
-Integrieren Sie mit dem Modul :productname:`eVAT` für nichtsteuerpflichtige Kunden die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
+Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` für nichtsteuerpflichtige Kunden die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
 
 
 .. todo: #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
@@ -11,10 +11,10 @@ Integrieren Sie mit dem Modul :productname:`eVAT` für nichtsteuerpflichtige Kun
 Funktionsweise
 --------------
 
-:productname:`eVAT` passt die Berechnung der Mehrwertsteuer für Artikel an, mit denen Sie elektronisch erbrachten Dienstleistungen anbieten.
+:productname:`OXID eShop eVAT` passt die Berechnung der Mehrwertsteuer für Artikel an, mit denen Sie elektronisch erbrachten Dienstleistungen anbieten.
 
-* Ein OXID eShop :emphasis:`ohne` das Modul :productname:`eVAT` verwendet immer den Mehrwertsteuersatz, den Sie im Administrationsbereich unter :menuselection:`Stammdaten --> Grundeinstellungen --> Einstell. --> Mehrwertsteuer` als Standard festgelegt haben.
-* Ein OXID eShop :emphasis:`mit` dem Modul :productname:`eVAT` berechnet die Mehrwertsteuer für Artikel, die Sie in Ihrem OXID eShop als elektronische Produkte oder Dienstleistungen definiert haben, mit dem Mehrwertsteuersatz, der dem ermittelten Kundenstandort entspricht.
+* Ein OXID eShop :emphasis:`ohne` das Modul :productname:`OXID eShop eVAT` verwendet immer den Mehrwertsteuersatz, den Sie im Administrationsbereich unter :menuselection:`Stammdaten --> Grundeinstellungen --> Einstell. --> Mehrwertsteuer` als Standard festgelegt haben.
+* Ein OXID eShop :emphasis:`mit` dem Modul :productname:`OXID eShop eVAT` berechnet die Mehrwertsteuer für Artikel, die Sie in Ihrem OXID eShop als elektronische Produkte oder Dienstleistungen definiert haben, mit dem Mehrwertsteuersatz, der dem ermittelten Kundenstandort entspricht.
   |br|
   Für alle übrigen Artikel wird der Mehrwertsteuersatz herangezogen, der als Standard im Shop gilt.
 
@@ -36,8 +36,8 @@ Diese Markierung am Artikelpreis erscheint auf der Startseite, in der Kategoriea
 
 Am unteren rechten Ende einer jeden Seite des Frontends weisen die zwei Sternchen :guilabel:`**` auf eine elektronisch erbrachte Dienstleistung hin (:ref:`oxdaka01`, Pos. 2).
 
-Ein Link ruft die Seite auf, auf der Sie als Shopbetreiber Ihre Kunden detailliert über Zahlung und Lieferung Ihrer Ware informieren.
-
+Ein Link (:ref:`oxdaka01`, Pos. 2) ruft die Seite auf, auf der Sie als Shopbetreiber Ihre Kunden detailliert über Zahlung und Lieferung Ihrer Ware informieren.
+|br|
 Den Inhalt dieser Seite bearbeiten Sie im Administrationsbereich unter :menuselection:`Kundeninformationen --> CMS-Seiten` (siehe :ref:`konfiguration:Kundeninformationen zu Mehrwertsteuersätzen ergänzen`).
 
 
@@ -46,7 +46,7 @@ Der Bestellprozess aus Kundensicht
 
 Legt Ihr Kunde einen Artikel, mit Sie elektronisch erbrachte Dienstleistungen anbieten, in den Warenkorb, dann werden die zwei Sternchen :guilabel:`**` bei der Mehrwertsteuer angezeigt (:ref:`oxdaka02`, Pos. 1).
 
-Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehrwertsteuer basiert und dass sich diese ändern kann, sobald der Kunde im Shop angemeldet ist (:ref:`oxdaka02`, Pos. 2).
+Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehrwertsteuer basiert und dass sich die Mehrwertsteuer ändern kann, sobald der Kunde im Shop angemeldet ist (:ref:`oxdaka02`, Pos. 2).
 
 .. _oxdaka02:
 
@@ -57,16 +57,12 @@ Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehr
    Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
 
 
-Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem der Kundenstandort durch die definierten Bestimmungsmethoden ermittelt wurde (siehe :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`).
+Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat (siehe :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`).
 
-Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka02`, Pos. 1, 2).
+Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka03`, Pos. 1, 2).
 
 Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Meldung aktualisiert.
 
-.. todo: #HR: Was folgt aus der Fehlermeldung für den Kunden und für den Shopbetreiber?: "Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden."
-              sieht nach Info aus, Bestellung kann aber durchgeführt werden. Screenshot oxdaka03 sieht nciht nach Fehlermeldung aus ?
-
-Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, wird eine Fehlermeldung ausgegeben. Die Bestellung kann dennoch fortgesetzt werden.
 
 .. _oxdaka03:
 
@@ -78,13 +74,25 @@ Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Meh
 
 
 
+Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, erscheint eine Meldung (:ref:`oxdaka04`). Die Bestellung kann dennoch fortgesetzt werden.
+
+.. todo: #HR: Ich kann keine Fehlermeldung generieren: wenn eVAT nicht aktiv, kommt gar nichts; wenn aktiv: was heißt dann "das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist"?
+
+.. _oxdaka04:
+
+.. figure:: /media/screenshots/oxdaka04png
+   :scale: 100 %
+   :alt: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+
+   Abb.: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+
 
 Kompatibilität mit Zahlungsmodulen
 ----------------------------------
 
 .. include:: /_static/reuse/payment-modules.rst
 
-Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`eVAT` kompatibel sind.
+Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 
@@ -93,7 +101,7 @@ Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Z
 Gesetzliche Grundlage
 ---------------------
 
-Mit dem Modul :productname:`eVAT` stellen Sie sicher, dass Sie die EU-Durchführungsverordnung Nr. 1042/2013 bezüglich des Orts der Dienstleistung einhalten.
+Mit dem Modul :productname:`OXID eShop eVAT` stellen Sie sicher, dass Sie die EU-Durchführungsverordnung Nr. 1042/2013 bezüglich des Orts der Dienstleistung einhalten.
 
 Diese EU-Durchführungsverordnung besagt, dass Händler und Dienstleister ab dem 1. Januar 2015 beim Verkauf ihrer elektronisch erbrachten Dienstleistungen die Mehrwertsteuer des EU-Landes abführen müssen, aus dem der Käufer kommt. Vorher war es die Mehrwertsteuer des Landes, in dem das eigene Unternehmen ansässig ist.
 
@@ -119,7 +127,7 @@ Ihre Vorteile
   * die Bestimmung des Kundenstandortes nach definierten Bestimmungsmethoden
   * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
   * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis steuerpflichtiger Kunden
-* Erweitern Sie :productname:`eVAT` bei Bedarf um eigene Bestimmungsmethoden
+* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden
 
 
 

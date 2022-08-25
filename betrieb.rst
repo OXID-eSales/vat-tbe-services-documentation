@@ -1,7 +1,7 @@
 Betrieb
 =======
 
-Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`eVAT`:
+Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`OXID eShop eVAT`:
 
 * Kundenstandort in der Bestellung anzeigen
 * Umsatzsteuer-Identifikationsnummer anzeigen
@@ -64,7 +64,7 @@ Umsatzsteuer-Identifikationsnummer anzeigen
 
 Zeigen Sie die Umsatzsteuer-Identifikationsnummer eines Kunden sowie Datum und Zeit der Speicherung an.
 
-Das Modul :productname:`eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
+Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
 
 USt-IdNr., Datum und Uhrzeit sollen dem Shopbetreiber einen Hinweis darauf geben, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
 
@@ -92,7 +92,7 @@ Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angez
 Erweiterung der PDF-Rechnung nutzen
 -----------------------------------
 
-Enthält eine Bestellung Artikel, welche als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gelten, fügt :productname:`eVAT` zusätzliche Informationen zur PDF-Rechnung hinzu.
+Enthält eine Bestellung Artikel, welche als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gelten, fügt :productname:`OXID eShop eVAT` zusätzliche Informationen zur PDF-Rechnung hinzu.
 
 Mit einem Sternchen :guilabel:`*` wird auf den verwendeten Mehrwertsteuersatz hingewiesen.
 
@@ -106,7 +106,7 @@ Mehrwertsteuersätze pflegen
 
 Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul statisch hinterlegt.
 
-Sobald Sie :productname:`eVAT` installiert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
+Sobald Sie :productname:`OXID eShop eVAT` installiert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
 
 .. todo: #HR: Wie halte ich mich über Änderungen auf dem laufenden? -> gibt sicher eine Möglichkeit, einen Infoservice zu abonnieren
          #HR: Wie pflege ich die Mehrwertsteuersätze? -> Shop admin -> MasterSettings -> Countries -> Country VAT rates (bei aktiviertem Modul)

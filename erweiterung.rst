@@ -1,7 +1,7 @@
 Modul-Erweiterung
 =================
 
-Erweitern Sie das Modul :productname:`eVAT` bei Bedarf.
+Erweitern Sie das Modul :productname:`OXID eShop eVAT` bei Bedarf.
 
 Wir beschreiben beispielhaft,
 
@@ -66,7 +66,7 @@ Tun Sie Folgendes:
 
   Falls das Modul die neue Klasse bei einer Deaktivierung nicht abgemeldet hat, werden die hinzugefügten Bestimmungsmethoden bei der nächsten Bestimmung des Kundenstandortes entfernt.
 
-* Aktivieren Sie Ihr Modul mit den zusätzlichen Bestimmungsmethoden nur dann, wenn das Modul :productname:`eVAT` aktiv ist.
+* Aktivieren Sie Ihr Modul mit den zusätzlichen Bestimmungsmethoden nur dann, wenn das Modul :productname:`OXID eShop eVAT` aktiv ist.
 
   Andernfalls wird :technicalname:`oeVATTBEEvidenceRegister` nicht gefunden.
 
@@ -89,7 +89,7 @@ Ein Beispiel ist der Kauf eines Artikels, welcher als Telekommunikations-, Rundf
 Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler.
 
 .. todo: #HR: "Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler. " : Dient eVAT nicht gerade dazu, diesen Fall auszuschließen, indem ich die Artikel markiere und den Ländern USt-Sätze zuweise? Ist das nicht ein Konfig-Fehler?
--> wir haben ja inzwischen noch das geo-blocking Modul. Vermutlich ist der 'Fehler' einfach die Fehlermeldung, wenn das betreffende Land nicht konfiguriert wurde. Dh der Shop-Admin muss das entsprechen eintragen.
+    -> wir haben ja inzwischen noch das geo-blocking Modul. Vermutlich ist der 'Fehler' einfach die Fehlermeldung, wenn das betreffende Land nicht konfiguriert wurde. Dh der Shop-Admin muss das entsprechen eintragen.
 
 Es wird normalerweise eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt. Der Kunde muss den Artikel aus dem Warenkorb entfernen.
 

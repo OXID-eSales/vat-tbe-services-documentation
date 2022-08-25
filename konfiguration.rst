@@ -3,7 +3,7 @@ Konfiguration
 
 Damit die Mehrwertsteuer für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen berechnet werden kann, konfigurieren Sie das Modul eVAT.
 
-Machen Sie das Modul :productname:`eVAT` für Ihren OXID eShop betriebsbereit.
+Machen Sie das Modul :productname:`OXID eShop eVAT` für Ihren OXID eShop betriebsbereit.
 
 Grundsätzliches Vorgehen
 ------------------------
@@ -19,27 +19,23 @@ Grundsätzliches Vorgehen
 eVAT aktivieren
 ---------------
 
-Aktivieren Sie :productname:`eVAT` in jedem Subshop, in dem Sie das Modul nutzen wollen.
+Aktivieren Sie :productname:`OXID eShop eVAT` in jedem Subshop, in dem Sie das Modul nutzen wollen.
 
 |procedure|
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`. 
 2. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie :menuselection:`Stamm --> Aktivieren`.
 
-
-
-
 eVAT konfigurieren
 ------------------
 
-.. todo: :menuselection:`PayPal --> Konfiguration`
-
-Um die Konfiguration zu starten, wählen Sie :menuselection:`PayPal --> Konfiguration`.  .. todo #HR: prüfen, wieso PayPal?
 
 Länderspezifische Mehrwertsteuersätze aktivieren
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder. Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf an.
+Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder.
+
+Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf an.
 
 .. attention::
    **Mehrwertsteuersätze als Shop-Betreiber pflegen**
@@ -69,25 +65,37 @@ Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder. P
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Stammdaten --> Länder --> Stamm`.
-#. Aktivieren Sie die Option :guilabel:`eVAT-Modul MwSt. anwenden` für diejenigen Länder, auf die Sie die EU-Richtlinie anwenden wollen.
-#. Um die hinterlegten Mehrwertsteuersätze bei Bedarf anzupassen oder neue Mehrwertsteuersätze anzulegen, wählen Sie die :guilabel:`MwSt.-Sätze` (:ref:`oxdakb01`).
+1. Wählen Sie :menuselection:`Stammdaten --> Länder`.
+#. Markieren Sie das Land, auf das Sie die EU-Richtlinie anwenden wollen, und wählen Sie :guilabel:`Stamm`.
+#. Aktivieren Sie die Option :guilabel:`eVAT-Modul MwSt. anwenden` (:ref:`oxdakb01a`).
+
+   .. _oxdakb01a:
+
+   .. figure:: /media/screenshots/oxdakb01a.png
+      :scale: 100 %
+      :alt: eVAT-Modul MwSt. anwenden
+
+      Abb.: eVAT-Modul MwSt. anwenden
+
+#. Um die hinterlegten Mehrwertsteuersätze bei Bedarf anzupassen oder neue Mehrwertsteuersätze anzulegen, wählen Sie die :guilabel:`MwSt.-Sätze` (:ref:`oxdakb01`, Pos. 1).
    |br|
    Die Mehrwertsteuersätze für die Länder der Europäischen Union sind bereits vorbereitet.
    |br|
-   Ändern Sie sie bei Bedarf oder löschen Sie sie.
+   Passen Sie sie bei Bedarf an die aktuellen Bestimmungen an oder löschen Sie sie.
    |br|
-   Legen Sie neue Mehrwertsteuersätze jeweils mit einem Namen, einem Prozentsatz und einer optionalen Beschreibung an.
+   Bei Bedarf: Legen Sie unter :guilabel:`Neuen MwSt.-Satz anlegen` neue Mehrwertsteuersätze jeweils mit einem Namen, einem Prozentsatz und einer optionalen Beschreibung an.
+   |br|
+   Beispiel: Für das Vereinigte Königreich ergänzen Sie den 2022 geltenden Nullsatz unter anderem für gedruckte Bücher und Zeitungen sowie Hörbücher für Blinde (:ref:`oxdakb01`, Pos. 2).
+
+   .. _oxdakb01:
+
+   .. figure:: /media/screenshots/oxdakb01.png
+      :scale: 100 %
+      :alt: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
+
+      Abb.: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
+
 #. Speichern Sie Ihre Einstellungen.
-
-.. _oxdakb01:
-
-.. figure:: /media/screenshots/oxdakb01.png
-   :scale: 100 %
-   :alt: Beispiel: Mehrwertsteuersätze für Deutschland
-
-   Abb.: Beispiel: Mehrwertsteuersätze für Deutschland
-
 
 Artikel als elektronisches Produkt oder Dienstleistung markieren
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,12 +120,12 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 1. Wählen Sie :menuselection:`Artikel verwalten --> Artikel`.
 #. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
 #. Markieren Sie das Kontrollkästchen :guilabel:`Artikel ist eine Telekommunikations-, Rundfunk-, Fernseh- oder auf elektronischem Weg erbrachte Dienstleistung` (:ref:`oxdakb02`, Pos. 1).
-#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu (:ref:`oxdakb02`, Pos. 2).
-
+#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu.
+   |br|
+   Ein eBook hat beispielsweise im Vereinigten Königreich den Normalsatz, in Frankreich den ermäßigten Satz 1 (:ref:`oxdakb02`, Pos. 2).
 #. Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen.
 
-
-
+   .. todo: #HR: Was meinen wir damit: "Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen."
 
 .. _oxdakb02:
 
@@ -125,7 +133,7 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
    :scale: 100 %
    :alt: Mehrwertsteuersätze einem Artikel zuweisen
 
-   Abb.: Reduzierten Mehrwertsteuersatz einem Artikel zuweisen
+   Abb.: Mehrwertsteuersätze einem Artikel zuweisen
 
 
 Kategorie als elektronisches Produkt oder Dienstleistung markieren
@@ -133,19 +141,20 @@ Kategorie als elektronisches Produkt oder Dienstleistung markieren
 
 Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Dienstleistungen.
 
-.. note::
+.. important::
    **Überschreiben von Artikel-individuellen eVAT-Einstellungen**
 
    Änderungen der eVAT-Einstellungen überschreiben alle individuellen eVAT-Einstellungen bei allen Artikeln dieser Kategorie.
 
+   .. todo: #VL: Warum muss das so sein?
+
 |procedure|
 
-.. todo: #tbd: verifizieren:
-
-1. Wählen Sie :menuselection:`Artikel verwalten --> Kategorie`.
+1. Wählen Sie :menuselection:`Artikel verwalten --> Kategorien`.
+#. Wählen Sie die Produktkategorie.
 #. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
 #. Markieren Sie das Kontrollkästchen :guilabel:`Artikel in dieser Kategorie sind elektronische Dienstleistungen` (:ref:`oxdakb03`, Pos. 1).
-#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu.
+#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu (:ref:`oxdakb03`, Pos. 2).
 #. Speichern Sie Ihre Einstellungen.
 
 .. _oxdakb03:
@@ -157,12 +166,12 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
    Abb.: Artikel einer Kategorie als elektronische Dienstleistungen definieren
 
 
+
 Bestimmen des Kundenstandorts konfigurieren
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aktivieren Sie die Methoden zum Bestimmen des Kundenstandorts.
+Aktivieren Sie das Bestimmen des Kundenstandorts.
 
-Legen Sie eine Bestimmungsmethode als Standard fest.
 
 |background|
 
@@ -170,65 +179,69 @@ Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsla
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
-.. todo: #HR: was bedeutet das Folgende genau? ("verfügt über eine Rolle...")
+.. todo: #VL: 1 (Angabe des Kunden) + 1 (Rechnungsadresse durch eVAT) = 2 (Methoden wie gesetzlich erfordert), korrekt? -- "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
 
-Das Modul eVAT verfügt über eine Regel, um das Herkunftsland eines Kunden herauszufinden sowie über die Möglichkeit, bei Bedarf eigene Bestimmungsmethoden hinzuzufügen.
+.. todo: Shop alleine prüft Prüfung auf Produkt-Ebene und per Land countryVAT-Moduls und per User: Shop prüft VAT per Lieferadresse: wie ist :
+.. todo: #Joe fragen: Wenn ich bestelle ohne Anmelden, gebe ich meine *Rechnungsadresse* ein -- ist das dieselbe Adresse, die eVAT noch einmal auswertet? Dann würde 1 von 2 nötigen Methoden fehlen
 
-.. todo: #HR: gemeint: eVAT verfügt über eine ** EINZIGE" Regel,.. -- und das ist die Methode Rechnunngsadresse?
+.. todo: #VL: gemeint: eVAT verfügt über eine ** EINZIGE" Regel,.. -- und das ist die Methode Rechnunngsadresse?
 
-Das Modul eVAT verwendet folgende Methoden, um den Kundenstandort zu bestimmen:
+Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
 
-* die Rechnungsadresse des Kunden
-* die sogenannte Geolocation.
+Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen.
 
-  Die Geolocation bestimmt den Standort basierend auf der IP-Adresse des zugehörigen Endgerätes.
 
-  Die Bestimmungsmethode der Geolocation ist derzeit nur vorbereitet und muss noch implementiert werden.
-
-.. todo: #HR: "Geolocation ist derzeit nur vorbereitet und muss noch implementiert werden": Was heißt dann "Das Modul eVAT verwendet zwei Bestimmungsmethoden, um den Kundenstandort zu bestimmen"?
-         #HR: Sind die EU-Anforderungen aktuell nicht erfüllt?, siehe Michael: "Sofern das noch fertig gebaut wird,  wäre die Anforderung der EU zwei Checks der Angaben des Kunden durchzuführen erfüllt."
 
 |procedure|
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Aktivieren Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` die gewünschte Bestimmungsmethoden (:ref:`oxdakb04`, Pos. 1):
+#. Wählen Sie das Modul :guilabel:`OXID eShop eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
+#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher dass die Bestimmungsmethoden :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
    |br|
-
-      * Um den Kundenstandort mittels Rechnungsadresse zu prüfen, ordnen sie dem Parameter :technicalname:`billing_country` den Wert :technicalname:`1` zu.
-      * Um den Kundenstandort mittels Geolocation zu prüfen, ordnen sie dem Parameter :technicalname:`geo_location` den Wert :technicalname:`1` zu.
-
-.. todo: #HR: welchen Sinn hat es Geolocation zu aktivieren, wenn es nicht implementiert ist? -> wird das Modul überhaupt von irgendwem verwendet? sieht so aus, als ob man das ohne Anpassungen nicht verwenden kann.
+   Ordnen Sie dazu dem Parameter :technicalname:`billing_country` den Wert :technicalname:`1` zu (:ref:`oxdakb04`, Pos. 1).
 
    .. code::
 
       billing_country => 1
-      geo_location => 1
 
-   Das Ergebnis der Prüfung wird in der Bestellung gespeichert.
-   |br|
-   Um eine Bestimmungsmethode zu deaktivieren, weisen Sie den Wert :technicalname:`0` zu.
 
-#. Für den Fall, dass die Ergebnisse der Prüfungen einander widersprechen, legen Sie unter :guilabel:`Standardmethode für Kundenstandort` fest, welche Methode Vorrang haben soll (:ref:`oxdakb04`, Pos. 2).
-   |br|
-   Die Prüfung der Rechnungsadresse ist standardmäßig eingestellt.
-   |br|
-   Wenn Sie keine Bestimmungsmethode als Standard definieren oder die angegebene Bestimmungsmethode nicht gefunden wurde, wird die erste Bestimmungsmethode verwendet, die kein leeres Land als Ergebnis zurückgibt.
+   .. _oxdakb04:
+
+   .. figure:: /media/screenshots/oxdakb04.png
+         :scale: 100 %
+         :alt: Bestimmungsmethode konfigurieren
+
+         Abb.: Bestimmungsmethode konfigurieren
+
 #. Speichern Sie Ihre Einstellungen.
 
-.. todo: #HR: Wie wirkt sich die Einstellung "Sitz des Shops" in diesem Kontext aus? ist es auch eine Bestimmungsmethode?  -- siehe nächster Abschnitt
+.. todo:
+    .. note::
+    Die Bestimmungsmethode Geolocation bestimmt den Standort basierend auf der IP-Adresse des zugehörigen Endgerätes.
+    Die Geolocation ist derzeit nicht implementiert.
 
-.. _oxdakb04:
+.. todo: #VL: Ist rechtlich nicht klug, geplante Entwicklungen in der Doku zu erwähnen; daraus könnte ein Rechtsanspruch auf Implementierung abgeleitet werden. "Geolocation ist derzeit nur vorbereitet und muss noch implementiert werden": Was heißt dann "Das Modul eVAT verwendet zwei Bestimmungsmethoden, um den Kundenstandort zu bestimmen"?
+    #VL: Sind die EU-Anforderungen aktuell nicht erfüllt?, siehe Michael: "Sofern das noch fertig gebaut wird,  wäre die Anforderung der EU zwei Checks der Angaben des Kunden durchzuführen erfüllt." --
+    #VL: Oder hat der Shop eine Standardmethode zur Bestimmung, so dass Rechnungsadresse die erforderliche 2. Methode wäre?
 
-.. figure:: /media/screenshots/oxdakb04.png
-   :scale: 100 %
-   :alt: Bestimmungsmethode konfigurieren
+.. todo: #VL: geolocation vorerst nicht erwähnt
 
-   Abb.: Methoden zur Bestimmung des Kundenstandorts konfigurieren
+.. todo: #VL: blenden wir vorerst aus:
+    #. Für den Fall, dass die Ergebnisse der Prüfungen einander widersprechen, legen Sie unter :guilabel:`Standardmethode für Kundenstandort` fest, welche Methode Vorrang haben soll (:ref:`oxdakb04`, Pos. 2).
+   |br|
+    Die Prüfung der Rechnungsadresse ist standardmäßig eingestellt.
+   |br|
+    Wenn Sie keine Bestimmungsmethode als Standard definieren oder die angegebene Bestimmungsmethode nicht gefunden wurde, wird die erste    Bestimmungsmethode verwendet, die kein leeres Land als Ergebnis zurückgibt.
+
+
+
+
 
 |result|
 
-Im laufenden Betrieb können Sie das Ergebnis der Bestimmung des Kundenstandortes wird in der Bestellung prüfen (siehe :ref:`betrieb:Kundenstandort in der Bestellung anzeigen`).
+Das Ergebnis der Prüfung wird in der Bestellung gespeichert.
+
+Im laufenden Betrieb können Sie das Ergebnis der Bestimmung des Kundenstandortes in der Bestellung prüfen (siehe :ref:`betrieb:Kundenstandort in der Bestellung anzeigen`).
 
 
 Sitz des Shops verifizieren
@@ -258,14 +271,14 @@ Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (:ref:`oxdakb04`, Pos. 3).
+#. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (:ref:`oxdakb04`, Pos. 2).
 
 
 
 PDF-Rechnung konfigurieren
 --------------------------
 
-Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
+Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
 
 .. todo: #HR: Was ist das auf EN: "overloaded" classes oder "extended" wie hier beschrieben: https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/quality.html#extending-and-reusing-the-shop-functionality
          #HR: Michael schreibt: "Das Wort "überschreiben" wäre vermutlich eher richtiger als "überladen". Beides ist jedoch geläufig."  -> wir reden von 'chain extend', wenn sich ein mMdul in die class chain reinhängt (virtuelle parent Klasse, class_alias).
@@ -310,14 +323,14 @@ Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldet
 Kompatibilität mit Zahlungsmodulen sicherstellen
 ------------------------------------------------
 
-Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`eVAT` kompatibel sind.
+Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
 
 Sie müssen nichts tun, wenn Sie
 
 * ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
-* die mit :productname:`eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
+* die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
 
 
 |background|
