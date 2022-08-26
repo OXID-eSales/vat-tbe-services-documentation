@@ -7,8 +7,6 @@ Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`OXI
 * Umsatzsteuer-Identifikationsnummer anzeigen
 * Erweiterung der PDF-Rechnung nutzen
 
-.. todo: #HR: Reden wir einheitlich eher von USt oder von MWSt? -> Bei EU VAT directive 1042/2013 geht es um Mehrwertsteuer auf elektronsiche Produkte, also vermutlich MWSt.
-
 Kundenstandort in der Bestellung anzeigen
 -----------------------------------------
 
@@ -102,16 +100,27 @@ Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung
 Mehrwertsteuersätze pflegen
 ---------------------------
 
-.. todo: #HR: verifizieren:
 
-Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul statisch hinterlegt.
+Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul statisch hinterlegt. Sie werden nicht automatisch aktualisiert.
 
-Sobald Sie :productname:`OXID eShop eVAT` installiert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
+Sobald Sie :productname:`OXID eShop eVAT` aktiviert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
 
-.. todo: #HR: Wie halte ich mich über Änderungen auf dem laufenden? -> gibt sicher eine Möglichkeit, einen Infoservice zu abonnieren
-         #HR: Wie pflege ich die Mehrwertsteuersätze? -> Shop admin -> MasterSettings -> Countries -> Country VAT rates (bei aktiviertem Modul)
-         #HR: Meinen wir installiert oder aktiviert? -> In der Datenbank landen die Informationen momentan bei der ersten Modulaktivierung
+.. tip::
 
+   Um sich über mögliche Änderungen der Mehrwertsteuersätze auf dem Laufenden zu halten, abonnieren Sie einen Informationsservice.
+
+|prerequisites|
+
+Sie haben beim Konfigurieren sichergestellt, dass unter :menuselection:`Artikel verwalten --> Artikel --> <elektronisch erbrachte Dienstleistung> --> eVAT-Einstellungen` jedem betreffenden Artikel der für das jeweilige Land zutrefende Mehrwertsteuersatz zugeordnet ist.
+
+Weitere Informationen finden Sie unter
+
+* :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+
+|procedure|
+
+Pflegen Sie die Mehrwertsteuersätze unter :menuselection:`Stammdaten --> Länder --> <Land> --> MwSt.-Sätze`.
 
 
 

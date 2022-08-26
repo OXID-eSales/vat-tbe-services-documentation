@@ -72,19 +72,28 @@ Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Mel
 
    Abb.: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
 
+Was im Fehlerfall passiert
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Kommt ein Benutzer aus einem EU-Land, das Sie nicht für die Berechnung der Mehrwertsteuer für elektronische Dienstleistungen konfiguriert haben, erscheint eine Fehlermeldung.
 
-Kommt ein Benutzer aus einem EU-Land, das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist, erscheint eine Meldung (:ref:`oxdaka04`). Die Bestellung kann dennoch fortgesetzt werden.
+Der Kunde wird aufgefordert den Artikel aus dem Warenkorb entfernen (:ref:`oxdaka04`, Pos. 1).
 
-.. todo: #HR: Ich kann keine Fehlermeldung generieren: wenn eVAT nicht aktiv, kommt gar nichts; wenn aktiv: was heißt dann "das nicht für die neue Berechnung der Mehrwertsteuer konfiguriert ist"?
+Grund: Die Mehrwertsteuer lässt sich nicht bestimmen  (:ref:`oxdaka04`, Pos. 2).
+
+Um den Fehlerfall zu vermeiden, folgen Sie den Anweisungen unter
+
+* :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+
 
 .. _oxdaka04:
 
-.. figure:: /media/screenshots/oxdaka04png
+.. figure:: /media/screenshots/oxdaka04.png
    :scale: 100 %
-   :alt: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+   :alt: Ermittlung der Mehrwertsteuer Warenkorbübersicht fehlgeschlagen
 
-   Abb.: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+   Abb.: Ermittlung der Mehrwertsteuer Warenkorbübersicht fehlgeschlagen
 
 
 Kompatibilität mit Zahlungsmodulen
@@ -127,7 +136,7 @@ Ihre Vorteile
   * die Bestimmung des Kundenstandortes nach definierten Bestimmungsmethoden
   * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
   * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis steuerpflichtiger Kunden
-* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden
+* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
 
 
 

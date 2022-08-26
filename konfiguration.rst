@@ -40,20 +40,16 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
 .. attention::
    **Mehrwertsteuersätze als Shop-Betreiber pflegen**
 
-   Mehrwertsteuersätze sind für die Länder der Europäischen Union bereits vorbereitet. Die Mehrwertsteuersätze sind im Modul statisch hinterlegt.
+   Mehrwertsteuersätze sind für die Länder der Europäischen Union bereits vorbereitet.
 
-   .. todo: #HR: "Änderungen an den Werten müssen im Repository gepflegt werden." Betrieb: Wie pflege ich Änderungen im Repo? Wer macht es? -> das muss dann wohl OXID für das Modul übernehmen.
-             Im SHop mit aktiviertem Modul kann das aber der Shopbetreiber für seinen Shop selbst hinterlegen.
+   Die Mehrwertsteuersätze sind im Modul statisch hinterlegt, sie werden nicht automatisch angepasst.
 
    Wenn Sie das Modul aktivieren, wird geprüft, ob es bereits einen Eintrag für das Land gibt:
 
    * Wenn ja, dann wird nichts gemacht.
    * Wenn nein, dann wird der Wert aus der Liste genommen
 
-   .. todo: #HR: "Ist das Modul installiert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen." -- Meinen wir installiert oder aktiviert?
-         -> aktiviert, wenn nur installiert aber nicht aktiv darf das Modul ja gar nicht eingreifen
-
-   Ist das Modul installiert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen.
+   Ist das Modul aktiviert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen.
 
    Weitere Informationen finden Sie unter :ref:`betrieb:Mehrwertsteuersätze pflegen`.
 
@@ -97,12 +93,12 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
 
 #. Speichern Sie Ihre Einstellungen.
 
-Artikel als elektronisches Produkt oder Dienstleistung markieren
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Machen Sie Artikel, die zu den Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen zählen, als solche kenntlich.
 
-Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produkt oder Dienstleistung (siehe :ref:`konfiguration:Kategorie als elektronisches Produkt oder Dienstleistung markieren`).
+Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produkt oder Dienstleistung (siehe :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`).
 
 .. note::
    **OXID eShop Enterprise Edition**
@@ -123,6 +119,15 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 #. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu.
    |br|
    Ein eBook hat beispielsweise im Vereinigten Königreich den Normalsatz, in Frankreich den ermäßigten Satz 1 (:ref:`oxdakb02`, Pos. 2).
+
+   .. attention::
+
+      **Konversion gefährdet**
+
+      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Waren korb entfernen.
+
+      In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+
 #. Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen.
 
    .. todo: #HR: Was meinen wir damit: "Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen."
@@ -136,8 +141,8 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
    Abb.: Mehrwertsteuersätze einem Artikel zuweisen
 
 
-Kategorie als elektronisches Produkt oder Dienstleistung markieren
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Dienstleistungen.
 
@@ -155,6 +160,15 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 #. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
 #. Markieren Sie das Kontrollkästchen :guilabel:`Artikel in dieser Kategorie sind elektronische Dienstleistungen` (:ref:`oxdakb03`, Pos. 1).
 #. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu (:ref:`oxdakb03`, Pos. 2).
+
+   .. attention::
+
+      **Konversion gefährdet**
+
+      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Waren korb entfernen.
+
+      In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+
 #. Speichern Sie Ihre Einstellungen.
 
 .. _oxdakb03:
@@ -179,31 +193,31 @@ Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsla
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
-.. todo: #VL: 1 (Angabe des Kunden) + 1 (Rechnungsadresse durch eVAT) = 2 (Methoden wie gesetzlich erfordert), korrekt? -- "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
+.. todo: #Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfülen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
+    Der Kunde gibt im Bestellprozess seine Rechnungsadresse an. Das Modul prüft die Rechnungsadresse. Wir haben also nur 1 Bestimmungsmethode.
 
-.. todo: Shop alleine prüft Prüfung auf Produkt-Ebene und per Land countryVAT-Moduls und per User: Shop prüft VAT per Lieferadresse: wie ist :
-.. todo: #Joe fragen: Wenn ich bestelle ohne Anmelden, gebe ich meine *Rechnungsadresse* ein -- ist das dieselbe Adresse, die eVAT noch einmal auswertet? Dann würde 1 von 2 nötigen Methoden fehlen
-
-.. todo: #VL: gemeint: eVAT verfügt über eine ** EINZIGE" Regel,.. -- und das ist die Methode Rechnunngsadresse?
+.. todo: #Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
 
 Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
 
-Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen.
-
+Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erweiterung:Bestimmungsmethode für Kundenstandort hinzufügen`).
 
 
 |procedure|
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Modul :guilabel:`OXID eShop eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher dass die Bestimmungsmethoden :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
+#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher dass die Bestimmungsmethode :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
    |br|
-   Ordnen Sie dazu dem Parameter :technicalname:`billing_country` den Wert :technicalname:`1` zu (:ref:`oxdakb04`, Pos. 1).
+   Dazu tun Sie folgendes:
+
+   a. Stellen Sie sicher, dass dem Parameter :technicalname:`billing_country` der Wert :technicalname:`1` zugeordnet ist (:ref:`oxdakb04`, Pos. 1).
 
    .. code::
 
       billing_country => 1
 
+   b. Stellen Sie sicher, dass :code:`billing_country` als Standard-Bestimmungsmethode gewählt ist (:ref:`oxdakb04`, Pos. 2).
 
    .. _oxdakb04:
 
@@ -213,28 +227,13 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen.
 
          Abb.: Bestimmungsmethode konfigurieren
 
+   .. note::
+
+      Die Bestimmungsmethode Geolocation ist nicht imlementiert.
+
+      .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint?
+
 #. Speichern Sie Ihre Einstellungen.
-
-.. todo:
-    .. note::
-    Die Bestimmungsmethode Geolocation bestimmt den Standort basierend auf der IP-Adresse des zugehörigen Endgerätes.
-    Die Geolocation ist derzeit nicht implementiert.
-
-.. todo: #VL: Ist rechtlich nicht klug, geplante Entwicklungen in der Doku zu erwähnen; daraus könnte ein Rechtsanspruch auf Implementierung abgeleitet werden. "Geolocation ist derzeit nur vorbereitet und muss noch implementiert werden": Was heißt dann "Das Modul eVAT verwendet zwei Bestimmungsmethoden, um den Kundenstandort zu bestimmen"?
-    #VL: Sind die EU-Anforderungen aktuell nicht erfüllt?, siehe Michael: "Sofern das noch fertig gebaut wird,  wäre die Anforderung der EU zwei Checks der Angaben des Kunden durchzuführen erfüllt." --
-    #VL: Oder hat der Shop eine Standardmethode zur Bestimmung, so dass Rechnungsadresse die erforderliche 2. Methode wäre?
-
-.. todo: #VL: geolocation vorerst nicht erwähnt
-
-.. todo: #VL: blenden wir vorerst aus:
-    #. Für den Fall, dass die Ergebnisse der Prüfungen einander widersprechen, legen Sie unter :guilabel:`Standardmethode für Kundenstandort` fest, welche Methode Vorrang haben soll (:ref:`oxdakb04`, Pos. 2).
-   |br|
-    Die Prüfung der Rechnungsadresse ist standardmäßig eingestellt.
-   |br|
-    Wenn Sie keine Bestimmungsmethode als Standard definieren oder die angegebene Bestimmungsmethode nicht gefunden wurde, wird die erste    Bestimmungsmethode verwendet, die kein leeres Land als Ergebnis zurückgibt.
-
-
-
 
 
 |result|
@@ -271,7 +270,7 @@ Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (:ref:`oxdakb04`, Pos. 2).
+#. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (in unserem Beispiel :code:`de` für Deutschland: :ref:`oxdakb04`, Pos. 3).
 
 
 
@@ -280,44 +279,46 @@ PDF-Rechnung konfigurieren
 
 Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
 
-.. todo: #HR: Was ist das auf EN: "overloaded" classes oder "extended" wie hier beschrieben: https://docs.oxid-esales.com/developer/en/latest/development/modules_components_themes/quality.html#extending-and-reusing-the-shop-functionality
-         #HR: Michael schreibt: "Das Wort "überschreiben" wäre vermutlich eher richtiger als "überladen". Beides ist jedoch geläufig."  -> wir reden von 'chain extend', wenn sich ein mMdul in die class chain reinhängt (virtuelle parent Klasse, class_alias).
-              renn Reihenfolge udnd überöadene Klassen in einem Zusammenhang erwähnt werden, dann ist bestimmt von 'chain extend' die Rede.
-
-.. todo: #VL: zu https://github.com/OXIDprojects/pdf-invoice-module: brauchen wir eine Doku?
-
 |procedure|
 
 1. Wählen Sie im Administrationsbereich :menuselection:`Erweiterungen --> Module`.
    |br|
    Auf der Registerkarte :guilabel:`Installierte Shop-Module` werden die überladenen Klassen aufgelistet.
-#. Stellen Sie sicher, dass unter :guilabel:`oxorder` das Modul :technicalname:`invoicepdf` vor dem Modul :technicalname:`oevattbe` platziert ist (wie in :ref:`oxdakb05`).
+#. Stellen Sie sicher, dass unter :guilabel:`OxidEsales\Eshop\Application\Model\Order` das Modul :technicalname:`invoicepdfoxorder` vor dem Modul :technicalname:`oevattbeoxorder` platziert ist (:ref:`oxdakb05`, Pos. 1).
    |br|
-   Ziehen Sie die Einträge mit der gedrückten Maustaste an die richtige Position.
+   Ziehen Sie dazu den Eintrag mit gedrückter Maustaste an die richtige Position.
 #. Speichern Sie Ihre Einstellungen.
 
 .. _oxdakb05:
 
 .. figure:: /media/screenshots/oxdakb05.png
    :scale: 100 %
-   :alt: Korrekte Reihenfolge der Module für die Klasse oxorder sicherstellen
+   :alt: Korrekte Reihenfolge der Module sicherstellen
 
-   Abb.: Korrekte Reihenfolge der Module für die Klasse oxorder sicherstellen
+   Abb.: Korrekte Reihenfolge der Module sicherstellen
 
 Kundeninformationen zu Mehrwertsteuersätzen ergänzen
 ----------------------------------------------------
 
 Informieren Sie Ihre Kunden über die verschiedenen Mehrwertsteuersätze.
 
-Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`einfuehrung:Informationen zur Mehrwertsteuer aus Kundensicht`).
+Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`einfuehrung:Informationen zur Mehrwertsteuer aus Kundensicht`, Pos. 2).
 
 |procedure|
 
-1. Wählen Sie im Administrationsbereich :menuselection:`Kundeninformationen `--> CMS-Seiten`.
+1. Wählen Sie im Administrationsbereich :menuselection:`Kundeninformationen --> CMS-Seiten`.
 #. Rufen Sie die Seite mit der ID :technicalname:`oxdeliveryinfo` auf.
-#. Fügen Sie Informationen bezüglich der speziellen Artikel und der neuen Berechnung der Mehrwertsteuer hinzu.
+#. Fügen Sie Informationen bezüglich der speziellen Artikel und der neuen Berechnung der Mehrwertsteuer hinzu (:ref:`oxdakb05a`).
+#. Speichern Sie Ihre Einstellungen.
 
-.. todo: Beispiel für solche Ergänzungen angeben
+
+.. _oxdakb05a:
+
+.. figure:: /media/screenshots/oxdakb05a.png
+   :scale: 100 %
+   :alt: Kundeninformation zur Mehrwertsteuer ergänzen
+
+   Abb.: Kundeninformation zur Mehrwertsteuer ergänzen
 
 
 Kompatibilität mit Zahlungsmodulen sicherstellen
