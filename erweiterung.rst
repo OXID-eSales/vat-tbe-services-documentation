@@ -8,17 +8,14 @@ Wir beschreiben beispielhaft,
 * wie Sie eine eigene Bestimmungsmethode für den Kundenstandort hinzufügen
 * wie Sie einen Artikel im Warenkorb farblich hervorheben können, dessen Mehrwertsteuersatz nicht ermittelt werden konnte.
 
-.. todo #HR: "wie Sie einen Artikel im Warenkorb markieren können": automatisch markieren? -> ja, das soll der Shop automatisch anzeigen
-
-
 Bestimmungsmethode für Kundenstandort hinzufügen
 ------------------------------------------------
 
-Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstellen Sie eine Klasse und registrieren sie.
+Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstellen Sie eine Klasse und registrieren sie. Sie erweitern :productname:`OXID eShop eVAT` also mit einem eigenen Modul.
 
 Ein Beispielmodul finden Sie im Verzeichnis :file:`/documentation/countryEvidenceExampleModule` des Installationspakets.
 
-.. todo: #HR: Was bdeutet der Hinweis im Klartext? Wer muss in welchem Fall was tun? -> der Shopbetreiber muss das e-vat Modul mit einem eigenen Modul erweitern.
+.. todo: #HR: Was ist/wo finde ich das "Verzeichnis :file:`/documentation/countryEvidenceExampleModule` des Installationspakets"?
 
 .. note::
 
@@ -30,8 +27,6 @@ Ein Beispielmodul finden Sie im Verzeichnis :file:`/documentation/countryEvidenc
 |procedure|
 
 Tun Sie Folgendes:
-
-.. todo: #HR: Checkliste so OK? Ist eine Reihenfolge zu beachten? -> sollte passen, neues Modul schreiben und dann installieren, so ist das wohl gemeint
 
 * Damit die neue Klasse eine Schnittstelle hat, stellen Sie sicher, dass sie die Klasse :technicalname:`oeVATTBEEvidence` erweitert.
 * Registrieren Sie die Klasse mit :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
@@ -86,22 +81,15 @@ In einigen Fällen kann es sein, dass ein Artikel nicht gekauft werden kann, wei
 
 Ein Beispiel ist der Kauf eines Artikels, welcher als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gilt.
 
-Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler.
+Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, wird eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt (siehe :ref:`einfuehrung:Was im Fehlerfall passiert`).
 
-.. todo: #HR: "Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, kommt es zum Fehler. " : Dient eVAT nicht gerade dazu, diesen Fall auszuschließen, indem ich die Artikel markiere und den Ländern USt-Sätze zuweise? Ist das nicht ein Konfig-Fehler?
-    -> wir haben ja inzwischen noch das geo-blocking Modul. Vermutlich ist der 'Fehler' einfach die Fehlermeldung, wenn das betreffende Land nicht konfiguriert wurde. Dh der Shop-Admin muss das entsprechen eintragen.
+Der Kunde muss den Artikel aus dem Warenkorb entfernen.
 
-Es wird normalerweise eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt. Der Kunde muss den Artikel aus dem Warenkorb entfernen.
-
-Durch die farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichter identifizieren.
+Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichter identifizieren.
 
 |procedure|
 
-.. todo: #HR: Was genau tue ich hier?: -> offenbar ein neues Modul schreiben
-
-1. CCS-Klasse erstellen und in Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` integrieren?
-
-.. todo: #HR: Die CSS-Klasse ist ja oeVATTBEBasketItemInvalid, die Funktion ist neuer Teil von Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`
+1. Erstellen Sie ein Erweiterungsmodul mit einer CCS-Klasse (in unserem Beispiel :code:`oeVATTBEBasketItemInvalid`) und erweitern Sie das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
 
    .. code::
 
@@ -112,7 +100,7 @@ Durch die farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichte
              [{if !$oView->isOeVATTBETBEArticleValid()}] oeVATTBEBasketItemInvalid[{/if}]"
              id="cartItem_[{$smarty.foreach.basketContents.iteration}]">
 
-2. Fügen Sie die CSS-Klasse der CSS-Datei :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` oder der CSS-Datei des verwendeten Themes hinzufügt.
+2. Fügen Sie die CSS-Klasse der CSS-Datei :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` oder der CSS-Datei des verwendeten Themes hinzu.
 
    .. code::
 
@@ -123,7 +111,7 @@ Durch die farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichte
 
 |result|
 
-In unserem Beispiel wird der Artikel im Warenkorb rot hervorgehoben (:ref:`oxdake01`).
+In unserem Beispiel ist die Artikelbezeichnung im Warenkorb rot hervorgehoben (:ref:`oxdake01`, Pos. 1).
 
 .. _oxdake01:
 
@@ -132,15 +120,6 @@ In unserem Beispiel wird der Artikel im Warenkorb rot hervorgehoben (:ref:`oxdak
    :alt: Nicht kaufbare Artikel im Warenkorb farblich hervorheben
 
    Abb.: Nicht kaufbare Artikel im Warenkorb farblich hervorheben
-
-
-
-
-
-
-
-
-
 
 
 .. Intern: oxdake, Status:
