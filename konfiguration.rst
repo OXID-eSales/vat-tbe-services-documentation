@@ -297,6 +297,10 @@ Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXID
 
    Abb.: Korrekte Reihenfolge der Module sicherstellen
 
+|result|
+
+Sie können Rechnungen im PDF-Format ausgeben unter :menuselection:`Bestellungen verwalten --> Bestellungen --> <Bestellung> --> Übersicht`.
+
 Kundeninformationen zu Mehrwertsteuersätzen ergänzen
 ----------------------------------------------------
 
@@ -353,7 +357,7 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #HR: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit
+.. todo: #VL: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit
                dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
 
 .. _oxdakb06:

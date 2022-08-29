@@ -16,7 +16,7 @@ Kundenstandort in der Bestellung anzeigen
             the taxable person supplying those services is established. Most other services supplied to a non-taxable person continue to be taxed in
             the Member State in which the supplier is established.
 
-Zeigen Sie die Information zum Kundenstandort in der Bestellung an.
+Verifizieren Sie bei Bedarf, dass :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat.
 
 |prerequisites|
 
@@ -29,7 +29,7 @@ Ihr Kunde hat mindestens einen Artikel gekauft, der als Telekommunikations-, Run
 
 |result|
 
-Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs eine Tabelle mit den Ergebnissen der Bestimmung des Kundenstandortes angezeigt (:ref:`oxdakd01`).
+Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs das Ergebnis der Bestimmung des Kundenstandortes angezeigt (:ref:`oxdakd01`, Pos. 1).
 
 .. _oxdakd01:
 
@@ -39,19 +39,6 @@ Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs
 
    Abb.: Kundenstandort in der Bestellung anzeigen
 
-In unserem Beispiel (:ref:`oxdakd01`) wurden zwei Bestimmungsmethoden verwendet.
-
-Die Prüfung ergab, dass der deutsche Mehrwertsteuersatz für die Berechnung des Artikelpreises angewendet wird.
-
-Die Bestimmung des Kundenstandorts mittels Geolocation lieferte kein Ergebnis.
-
-.. todo: #HR: "Die Bestimmung des Kundenstandorts mittels Geolocation lieferte kein Ergebnis." -- da nicht implementiert? -> soll das nicht einfach ein Beispiel sein?
-
-.. note::
-
-   Die Bestimmung des Kundenstandorts hängt von Ihrer Konfiguration ab.
-
-   Weitere Informationen finden Sie unter :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`.
 
 Umsatzsteuer-Identifikationsnummer anzeigen
 -------------------------------------------
@@ -64,7 +51,7 @@ Zeigen Sie die Umsatzsteuer-Identifikationsnummer eines Kunden sowie Datum und Z
 
 Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
 
-USt-IdNr., Datum und Uhrzeit sollen dem Shopbetreiber einen Hinweis darauf geben, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
+USt-IdNr., Datum und Uhrzeit geben Ihnen einen Hinweis darauf, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
 
 Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder im Bestellprozess angeben. Er kann sie auch zu einem späteren Zeitpunkt in seinem Kundenkonto nachtragen.
 
@@ -92,9 +79,17 @@ Erweiterung der PDF-Rechnung nutzen
 
 Enthält eine Bestellung Artikel, welche als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gelten, fügt :productname:`OXID eShop eVAT` zusätzliche Informationen zur PDF-Rechnung hinzu.
 
-Mit einem Sternchen :guilabel:`*` wird auf den verwendeten Mehrwertsteuersatz hingewiesen.
+Mit einem Sternchen :guilabel:`*` wird auf den verwendeten Mehrwertsteuersatz hingewiesen (:ref:`oxdakd03`, Pos. 1).
 
-Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung des Artikelpreises herangezogen wurde.
+Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung des Artikelpreises herangezogen wurde (:ref:`oxdakd03`, Pos. 2).
+
+.. _oxdakd03:
+
+.. figure:: /media/screenshots/oxdakd03.png
+   :scale: 100 %
+   :alt: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
+
+   Abb.: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
 
 
 Mehrwertsteuersätze pflegen
