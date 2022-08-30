@@ -10,12 +10,6 @@ Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`OXI
 Kundenstandort in der Bestellung anzeigen
 -----------------------------------------
 
-.. todo: #HR: was ist der Anwendugsfall?
-     Zitat: all telecommunications, radio and television broadcasting and electronically supplied services supplied to a non-taxable person are
-            to be taxed in the Member State in which the customer is established, has his permanent address or usually resides, regardless of where
-            the taxable person supplying those services is established. Most other services supplied to a non-taxable person continue to be taxed in
-            the Member State in which the supplier is established.
-
 Verifizieren Sie bei Bedarf, dass :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat.
 
 |prerequisites|
@@ -43,13 +37,12 @@ Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs
 Umsatzsteuer-Identifikationsnummer anzeigen
 -------------------------------------------
 
-.. todo: #HR: was ist der Anwendugsfall? Ist das für B2B?  -- in der Einführung beschreiben wir den use case so: "für nichtsteuerpflichtige Kunden die Besteuerung von elektr. Artikeln integrieren"
-         #HR: Was heißt: "Hinweis darauf geben, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist" -> eeehm keine Ahnung, sorry
-
-
-Zeigen Sie die Umsatzsteuer-Identifikationsnummer eines Kunden sowie Datum und Zeit der Speicherung an.
+Zeigen Sie bei Bedarf die Umsatzsteuer-Identifikationsnummer des Kunden sowie Datum und Zeit der Speicherung an.
 
 Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
+
+.. todo: #Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Huíntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
+    Warum genau ist das Datum wichtig (ohne eVAT-Modul wird nur die USt-ID angezeit).
 
 USt-IdNr., Datum und Uhrzeit geben Ihnen einen Hinweis darauf, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
 
@@ -64,6 +57,8 @@ Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder
 |result|
 
 Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
+
+.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt)
 
 .. _oxdakd02:
 
@@ -106,7 +101,7 @@ Sobald Sie :productname:`OXID eShop eVAT` aktiviert haben, müssen Sie als Shopb
 
 |prerequisites|
 
-Sie haben beim Konfigurieren sichergestellt, dass unter :menuselection:`Artikel verwalten --> Artikel --> <elektronisch erbrachte Dienstleistung> --> eVAT-Einstellungen` jedem betreffenden Artikel der für das jeweilige Land zutrefende Mehrwertsteuersatz zugeordnet ist.
+Sie haben beim Konfigurieren sichergestellt, dass unter :menuselection:`Artikel verwalten --> Artikel --> <elektronisch erbrachte Dienstleistung> --> eVAT-Einstellungen` jedem betreffenden Artikel der für das jeweilige Land gültige Mehrwertsteuersatz zugeordnet ist.
 
 Weitere Informationen finden Sie unter
 

@@ -1,29 +1,56 @@
 ﻿Wofür/Wofür nicht?
 ==================
 
-Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` für nichtsteuerpflichtige Kunden die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
+Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
 
-
-.. todo: #HR: wer ist Produkt-Manager?: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
+.. todo: #ProdMan:klären: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
    Große eShops: aus Österreich bestellt, dann 19 -> Modul würde helfen: wenn gezwungen, MWSt korrekt auszuweisen, dann Modul: Steuerberater fragen
 
+Gesetzliche Grundlage
+---------------------
+
+Das Modul :productname:`OXID eShop eVAT` hilft Ihnen, die EU-Durchführungsverordnung Nr. 1042/2013 bezüglich des Orts der Dienstleistung einzuhalten.
+
+Diese EU-Durchführungsverordnung besagt, dass Händler und Dienstleister ab dem 1. Januar 2015 beim Verkauf ihrer elektronisch erbrachten Dienstleistungen die Mehrwertsteuer des EU-Landes abführen müssen, aus dem der Privatkunde ("Verbraucher (Nichtsteuerpflichtiger)") kommt. Vorher war es die Mehrwertsteuer des Landes, in dem das eigene Unternehmen ansässig ist.
+
+Weitere Informationen finden Sie auf den Seiten der Europäischen Kommission unter: `ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de <https://ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de>`_.
+
+Technische Umsetzung
+--------------------
+
+Artikel, die Sie in Ihrem OXID eShop als elektronisch erbrachte Dienstleistungen definieren, sind beim Kauf als solche gekennzeichnet.
+
+:productname:`OXID eShop eVAT` ermittelt das Herkunftsland des Privatkunden (B2C) nach der Rechnungsadresse und berechnet entsprechend die jeweilige Mehrwertsteuer.
+
+* Ein OXID eShop :emphasis:`ohne` das Modul :productname:`OXID eShop eVAT` verwendet auch bei Privatkunden aus EU-Ländern immer den Mehrwertsteuersatz, den Sie im Administrationsbereich unter :menuselection:`Stammdaten --> Grundeinstellungen --> Einstell. --> Mehrwertsteuer` als Standard festgelegt haben.
+* Ein OXID eShop :emphasis:`mit` dem Modul :productname:`OXID eShop eVAT` berechnet die Mehrwertsteuer für Artikel, die Sie in Ihrem OXID eShop als elektronische Produkte oder Dienstleistungen definiert haben, mit dem Mehrwertsteuersatz, der dem ermittelten Standort des Privatkunden entspricht.
+  |br|
+  Für alle übrigen Artikel wird der Mehrwertsteuersatz herangezogen, der als Standard im Shop gilt.
+
+Alle der Berechnung zugrunde liegenden Daten werden bei der Bestellung gespeichert.
+
+Ihre Vorteile
+-------------
+
+* Definieren Sie Artikel einzeln oder kategorieweise als elektronische Produkte oder Dienstleistungen und ordnen Sie die Mehrwertsteuersätze für die gewünschten Länder zu.
+* Nutzen Sie dabei
+
+  * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
+  * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)").
+    |br|
+    Bei steuerpflichtigen Kunden wird in der Rechnung der Nettopreis ohne Mehrwertsteuer ausgewiesen.
+* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
 
 Funktionsweise
 --------------
 
-:productname:`OXID eShop eVAT` passt die Berechnung der Mehrwertsteuer für Artikel an, mit denen Sie elektronisch erbrachten Dienstleistungen anbieten.
-
-* Ein OXID eShop :emphasis:`ohne` das Modul :productname:`OXID eShop eVAT` verwendet immer den Mehrwertsteuersatz, den Sie im Administrationsbereich unter :menuselection:`Stammdaten --> Grundeinstellungen --> Einstell. --> Mehrwertsteuer` als Standard festgelegt haben.
-* Ein OXID eShop :emphasis:`mit` dem Modul :productname:`OXID eShop eVAT` berechnet die Mehrwertsteuer für Artikel, die Sie in Ihrem OXID eShop als elektronische Produkte oder Dienstleistungen definiert haben, mit dem Mehrwertsteuersatz, der dem ermittelten Kundenstandort entspricht.
-  |br|
-  Für alle übrigen Artikel wird der Mehrwertsteuersatz herangezogen, der als Standard im Shop gilt.
 
 Informationen zur Mehrwertsteuer aus Kundensicht
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Im Frontend werden alle Artikel, mit denen Sie elektronisch erbrachte Dienstleistungen anbieten, mit zwei Sternchen ** markiert (:ref:`oxdaka01`, Pos. 1).
 
-Diese Markierung am Artikelpreis erscheint auf der Startseite, in der Kategorieansicht, der Detailseite des Artikels und an verschiedenen anderen Stellen.
+Diese Markierung am Artikelpreis erscheint auf der Startseite, in der Kategorie-Ansicht, der Detailseite des Artikels und an verschiedenen anderen Stellen.
 
 .. _oxdaka01:
 
@@ -87,13 +114,15 @@ Um den Fehlerfall zu vermeiden, folgen Sie den Anweisungen unter
 * :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
 
 
+Siehe auch: :ref:`erweiterung:Nicht kaufbare Artikel im Warenkorb hervorheben`.
+
 .. _oxdaka04:
 
 .. figure:: /media/screenshots/oxdaka04.png
    :scale: 100 %
-   :alt: Ermittlung der Mehrwertsteuer Warenkorbübersicht fehlgeschlagen
+   :alt: Ermittlung der Mehrwertsteuer fehlgeschlagen
 
-   Abb.: Ermittlung der Mehrwertsteuer Warenkorbübersicht fehlgeschlagen
+   Abb.: Ermittlung der Mehrwertsteuer fehlgeschlagen
 
 
 Kompatibilität mit Zahlungsmodulen
@@ -104,39 +133,6 @@ Kompatibilität mit Zahlungsmodulen
 Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
-
-
-
-Gesetzliche Grundlage
----------------------
-
-Mit dem Modul :productname:`OXID eShop eVAT` stellen Sie sicher, dass Sie die EU-Durchführungsverordnung Nr. 1042/2013 bezüglich des Orts der Dienstleistung einhalten.
-
-Diese EU-Durchführungsverordnung besagt, dass Händler und Dienstleister ab dem 1. Januar 2015 beim Verkauf ihrer elektronisch erbrachten Dienstleistungen die Mehrwertsteuer des EU-Landes abführen müssen, aus dem der Käufer kommt. Vorher war es die Mehrwertsteuer des Landes, in dem das eigene Unternehmen ansässig ist.
-
-Weitere Informationen finden Sie auf den Seiten der Europäischen Kommission unter: `ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de <https://ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de>`_.
-
-Technische Umsetzung
---------------------
-
-Artikel, die Sie in Ihrem OXID eShop als elektronisch erbrachte Dienstleistungen definieren, sind beim Kauf als solche gekennzeichnet.
-
-Das System ermittelt das Herkunftsland des privaten Käufers (B2C) nach festgelegten Regeln und berechnet entsprechend die jeweilige Mehrwertsteuer.
-
-Alle der Berechnung zugrunde liegenden Daten werden bei der Bestellung gespeichert.
-
-Ihre Vorteile
--------------
-
-* Definieren Sie Artikel als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen.
-* Aktivieren Sie Artikel einzeln oder kategorieweise als elektronische Produkte oder Dienstleistungen und ordnen Sie die Mehrwertsteuersätze für gewünschte Länder zu.
-* Nutzen Sie
-
-  * vorbereitete Mehrwertsteuersätze für alle Länder der Europäischen Union
-  * die Bestimmung des Kundenstandortes nach definierten Bestimmungsmethoden
-  * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
-  * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis steuerpflichtiger Kunden
-* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
 
 
 

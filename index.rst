@@ -11,10 +11,8 @@ Moduldokumentation
    Konfiguration <konfiguration>
    Betrieb <betrieb>
    Erweiterung <erweiterung>
-..
-   Changelog (GitHub) ➜ <https://github.com/OXID-eSales/paypal/blob/v6.2.1/CHANGELOG.md>
-.. todo: #VL: #HR: es gibt kein Changelog -> gibt es im master branch. Allerdings gab es keine wirklichen Veränderungen am Modul seit der 2.0.
-                                        Vielleicht sollte ein Patch released werden mit geupdateten Informationen -> Vilma fragen
+   Changelog (GitHub) ➜ <https://github.com/OXID-eSales/vat_tbe_services/blob/master/CHANGELOG.md>
+
 
 .. image:: media/icons/home.png
    :width: 0 px

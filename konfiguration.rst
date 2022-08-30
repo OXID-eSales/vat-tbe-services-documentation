@@ -103,15 +103,11 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 .. note::
    **OXID eShop Enterprise Edition**
 
-   Bei einer Enterprise Edition können Sie nur die Artikel des Hauptshops anpassen.
+   Bei einer Enterprise Edition können Sie nur die Artikel des Elternshops anpassen. Die Eigenschaft eines elektronischen Produkts oder Dienstleistung wird an die Subshops vererbt.
 
-.. todo: #HR: Was genau folgt daraus: "Bei einer Enterprise Edition können Sie nur die Artikel des Hauptshops anpassen."? -> das klingt seltsam, was bedeutet Hauptshop?
-              Bei vererbten Artikeln macht das Sinn, das nur im Parentshop markieren zu können. Aber im standlone subshop mit eigenen Produkten muss das möglich sein.
-
+   Artikel oder Kategorien, die Sie in einem Subshop neu anlegen, können Sie gesondert als elektronische Dienstleistungen markieren.
 
 |procedure|
-
-.. todo: #tbd: verifizieren:
 
 1. Wählen Sie :menuselection:`Artikel verwalten --> Artikel`.
 #. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
@@ -124,13 +120,10 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 
       **Konversion gefährdet**
 
-      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Waren korb entfernen.
+      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
       In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
-#. Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen.
-
-   .. todo: #HR: Was meinen wir damit: "Ergänzen Sie die Kundeninformationen zu den Mehrwertsteuersätzen."
 
 .. _oxdakb02:
 
@@ -151,7 +144,7 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 
    Änderungen der eVAT-Einstellungen überschreiben alle individuellen eVAT-Einstellungen bei allen Artikeln dieser Kategorie.
 
-   .. todo: #VL: Warum muss das so sein?
+
 
 |procedure|
 
@@ -165,7 +158,7 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 
       **Konversion gefährdet**
 
-      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Waren korb entfernen.
+      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
       In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
@@ -193,7 +186,7 @@ Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsla
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
-.. todo: #Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfülen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
+.. todo: #Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfüllen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
     Der Kunde gibt im Bestellprozess seine Rechnungsadresse an. Das Modul prüft die Rechnungsadresse. Wir haben also nur 1 Bestimmungsmethode.
 
 .. todo: #Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
@@ -207,7 +200,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Modul :guilabel:`OXID eShop eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher dass die Bestimmungsmethode :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
+#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher, dass die Bestimmungsmethode :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
    |br|
    Dazu tun Sie folgendes:
 
@@ -229,7 +222,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
    .. note::
 
-      Die Bestimmungsmethode Geolocation ist nicht imlementiert.
+      Die Bestimmungsmethode Geolocation ist nicht implementiert.
 
       .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint?
 
@@ -248,30 +241,29 @@ Sitz des Shops verifizieren
 
 Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
-|background|
+.. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung
 
-Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
+    |background|
 
-Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
+    Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
 
-.. todo: #HR: 1. Was bedeutet im Folgenden: "als wäre kein Land eingetragen"? 2. Wie merkt das System, wenn der Code falsch ist? -> keinen Eintrag in oxcountry Tabelle gefunden vermutlich
+    Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
 
-Ist der Ländercode nicht korrekt, verhält sich der Shop so, als wäre kein Land eingetragen.
+    Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
 
-.. todo: #HR: Was heißt "Artikel ... werden nicht als elektr. Dienstl. gekennzeichnet"? -> klingt nach: das Modl macht einfach gar nichts
+    .. todo: #tbd done: verifizieren
 
-Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden nicht als solche gekennzeichnet.
+    Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
 
-.. todo: #HR: Was heißt: "Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben." -> keine Hände keine Kekse, das Modul ignoriert einfach alles
+    .. todo: #HR: Was heißt: "Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben." -> keine Hände keine Kekse, das Modul ignoriert einfach alles
 
-Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
+    Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
 |procedure|
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
 #. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (in unserem Beispiel :code:`de` für Deutschland: :ref:`oxdakb04`, Pos. 3).
-
 
 
 PDF-Rechnung konfigurieren
