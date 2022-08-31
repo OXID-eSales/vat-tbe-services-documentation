@@ -58,7 +58,7 @@ Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder
 
 Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
 
-.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt)
+.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt) -- Bug, wird gefixt:
 
 .. _oxdakd02:
 

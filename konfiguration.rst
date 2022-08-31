@@ -224,7 +224,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
       Die Bestimmungsmethode Geolocation ist nicht implementiert.
 
-      .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint?
+      .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint? -- kommt weg oder --> 0
 
 #. Speichern Sie Ihre Einstellungen.
 
@@ -241,7 +241,8 @@ Sitz des Shops verifizieren
 
 Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
-.. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung
+.. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?
+
 
     |background|
 
@@ -251,11 +252,7 @@ Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
     Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
 
-    .. todo: #tbd done: verifizieren
-
     Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
-
-    .. todo: #HR: Was heißt: "Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben." -> keine Hände keine Kekse, das Modul ignoriert einfach alles
 
     Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
@@ -349,8 +346,7 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #VL: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit
-               dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+.. todo: #VL: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
 
 .. _oxdakb06:
 

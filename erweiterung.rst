@@ -13,10 +13,6 @@ Bestimmungsmethode für Kundenstandort hinzufügen
 
 Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstellen Sie eine Klasse und registrieren sie. Sie erweitern :productname:`OXID eShop eVAT` also mit einem eigenen Modul.
 
-Ein Beispielmodul finden Sie im Verzeichnis :file:`/documentation/countryEvidenceExampleModule` des Installationspakets.
-
-.. todo: #HR: Was ist/wo finde ich das "Verzeichnis :file:`/documentation/countryEvidenceExampleModule` des Installationspakets"?
-
 .. note::
 
    Die Klasse :technicalname:`oeVATTBEGeoLocationEvidence` ist derzeit nur vorbereitet und muss implementiert werden.
