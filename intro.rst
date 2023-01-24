@@ -62,7 +62,7 @@ At the bottom right of each page of the frontend, the two asterisks :guilabel:`*
 
 A link (:ref:`oxdaka01`, item 2) calls up the page on which you, as the store operator, inform your customers in detail about payment and delivery of your goods.
 |br|
-You edit the content of this page in the administration area under :menuselection:`Customer Info --> CMS ages` (see :ref:`configuration:add customer information to VAT rates`).
+You edit the content of this page in the administration area under :menuselection:`Customer Info --> CMS ages` (see :ref:`configuration:Adding customer information about VAT rates`).
 
 
 The ordering process from the customer's point of view
@@ -82,7 +82,7 @@ A message tells your customer which country the displayed VAT is based on and th
    Fig.: Order step 1 with reference to VAT calculation
 
 
-The VAT is calculated after registration or after specifying the billing address, after :productname:`OXID eShop eVAT` has determined the customer location (see :ref:`configuration:Configure customer location`).
+The VAT is calculated after registration or after specifying the billing address, after :productname:`OXID eShop eVAT` has determined the customer location (see :ref:`configuration:Configuring the customer location determination`).
 
 A message tells the customer again which country is the basis for the VAT calculation (:ref:`oxdaka03`, items 1, 2).
 
@@ -109,8 +109,8 @@ Reason: The VAT cannot be determined (:ref:`oxdaka04`, pos. 2).
 
 To avoid the error case, follow the instructions under
 
-* :ref:`configuration:Mark item as electronic product and assign VAT rate`
-* :ref:`configuration:Mark category as electronic product and assign VAT rate`
+* :ref:`configuration:Marking items as electronic products and assigning VAT rates`
+* :ref:`configuration:Marking a category as electronic products and assigning VAT rates`
 
 
 See also :ref:`extension:Highlight non-purchasable items in shopping cart`.
@@ -132,7 +132,7 @@ Compatibility with payment modules
 
 You need to make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-For more information, see :ref:`configuration:Ensure compatibility with payment modules`.
+For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
 
 
 

@@ -1,314 +1,322 @@
-Konfiguration
+Configuration
 =============
 
-Damit die Mehrwertsteuer für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen berechnet werden kann, konfigurieren Sie das Modul eVAT.
+Make the :productname:`OXID eShop eVAT` module operational for your OXID eShop.
 
-Machen Sie das Modul :productname:`OXID eShop eVAT` für Ihren OXID eShop betriebsbereit.
-
-Grundsätzliches Vorgehen
+Basic procedure
 ------------------------
 
-1. Aktivieren Sie das Modul.
-#. Ordnen Sie Ländern Mehrwertsteuersätze zu und aktivieren Sie die Länder für die Berechnung der spezifischen Mehrwertsteuer.
-#. Kennzeichnen Sie Artikel oder Kategorien von Artikeln als elektronische Produkte oder Dienstleistungen.
-#. Legen Sie die Methoden für die Bestimmung des Kundenstandortes fest.
-#. Verifizieren Sie den Sitz des Shops.
-#. Stellen Sie die Kompatibilität mit Zahlungsmodulen sicher.
+1. Activate the module.
+#. Assign VAT rates to countries and activate countries for the specific VAT calculation.
+#. Mark items or categories of items as electronic products or services.
+#. Set the methods for determining the customer location.
+#. Verify the store location.
+#. Ensure compatibility with payment modules.
 
-
-eVAT aktivieren
+Activating eVAT
 ---------------
 
-Aktivieren Sie :productname:`OXID eShop eVAT` in jedem Subshop, in dem Sie das Modul nutzen wollen.
+Enable :productname:`OXID eShop eVAT` in each subshop where you want to use the module.
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Erweiterungen --> Module`. 
-2. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie :menuselection:`Stamm --> Aktivieren`.
+.. todo: #tbd: Verify :menuselection:`Main --> Activate`.:
 
-eVAT konfigurieren
-------------------
+1. Choose :menuselection:`Extensions --> Modules`.
+2. Choose the module :guilabel:`eVAT` and choose :menuselection:`Main --> Activate`.
 
+Configuring eVAT
+----------------
 
-Länderspezifische Mehrwertsteuersätze aktivieren
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Activating country specific VAT rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Aktivieren Sie das Berechnen der Mehrwertsteuer für die betreffenden Länder.
+Activate the calculation of the VAT for the relevant countries.
 
-Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf an.
+Check the statically stored VAT rates and adjust them if necessary.
 
 .. attention::
-   **Mehrwertsteuersätze als Shop-Betreiber pflegen**
+   **Maintaining VAT rates as store owner**
 
-   Mehrwertsteuersätze sind für die Länder der Europäischen Union bereits vorbereitet.
+   VAT rates are already prepared for the countries of the European Union.
 
-   Die Mehrwertsteuersätze sind im Modul statisch hinterlegt, sie werden nicht automatisch angepasst.
+   VAT rates are statically stored in the module, they are not automatically adjusted.
 
-   Wenn Sie das Modul aktivieren, wird geprüft, ob es bereits einen Eintrag für das Land gibt:
+   When you activate the module, it will check if there is already an entry for the country:
 
-   * Wenn ja, dann wird nichts gemacht.
-   * Wenn nein, dann wird der Wert aus der Liste genommen
+   * If yes, nothing is done.
+   * If no, the value is taken from the list.
 
-   Ist das Modul aktiviert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen.
+   If the module is activated, you as a store owner have to maintain the VAT rates.
 
-   Weitere Informationen finden Sie unter :ref:`operation:Mehrwertsteuersätze pflegen`.
+   For more information, see :ref:`operation:Maintaining VAT rates`.
 
 
 .. note::
    **OXID eShop Enterprise Edition**
 
-   Bei einer Enterprise Edition wirken sich Anpassungen der Mehrwertsteuersätze auf alle Subhops/Mandanten aus.
+   In case of an Enterprise Edition, adjustments of the VAT rates affect all subhops/clients.
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Stammdaten --> Länder`.
-#. Markieren Sie das Land, auf das Sie die EU-Richtlinie anwenden wollen, und wählen Sie :guilabel:`Stamm`.
-#. Aktivieren Sie die Option :guilabel:`eVAT-Modul MwSt. anwenden` (:ref:`oxdakb01a`).
+.. todo: #tbd: oxdakb01a.png EN einfügen
+
+1. Choose :menuselection:`Master Settings --> Countries`.
+#. Choose the country to which you want to apply the EU directive and choose the :guilabel:`Main` tab.
+#. Activate the :guilabel:`apply VAT module` option (:ref:`oxdakb01a`).
 
    .. _oxdakb01a:
 
    .. figure:: /media/screenshots/oxdakb01a.png
       :class: with-shadow
       :width: 650
-      :alt: eVAT-Modul MwSt. anwenden
+      :alt: Applying the eVAT module VAT
 
-      Abb.: eVAT-Modul MwSt. anwenden
+      Fig.: Applying the eVAT module VAT
 
-#. Um die hinterlegten Mehrwertsteuersätze bei Bedarf anzupassen oder neue Mehrwertsteuersätze anzulegen, wählen Sie die :guilabel:`MwSt.-Sätze` (:ref:`oxdakb01`, Pos. 1).
+#. To adjust the stored VAT rates, if necessary, or to create new VAT rates, choose the :guilabel:`VAT rates` (:ref:`oxdakb01`, pos. 1) tab.
    |br|
-   Die Mehrwertsteuersätze für die Länder der Europäischen Union sind bereits vorbereitet.
+   The VAT rates for the European Union countries are already prepared.
    |br|
-   Passen Sie sie bei Bedarf an die aktuellen Bestimmungen an oder löschen Sie sie.
+   If needed: Adjust them to the current regulations or delete them.
    |br|
-   Bei Bedarf: Legen Sie unter :guilabel:`Neuen MwSt.-Satz anlegen` neue Mehrwertsteuersätze jeweils mit einem Namen, einem Prozentsatz und einer optionalen Beschreibung an.
+   If needed: Create new VAT rates under :guilabel:`Create new VAT rate`, each with a name, a percentage and an optional description.
    |br|
-   Beispiel: Für das Vereinigte Königreich ergänzen Sie den 2022 geltenden Nullsatz unter anderem für gedruckte Bücher und Zeitungen sowie Hörbücher für Blinde (:ref:`oxdakb01`, Pos. 2).
+   Example: For the United Kingdom, add the zero rate applicable in 2022 for, among other things, printed books and newspapers and audio books for the blind (:ref:`oxdakb01`, item 2).
+
+   .. todo: #tbd: oxdakb01.png auf EN ergänzen
 
    .. _oxdakb01:
 
    .. figure:: /media/screenshots/oxdakb01.png
       :class: with-shadow
       :width: 650
-      :alt: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
+      :alt: Adjusting VAT rates, example United Kingdom
 
-      Abb.: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
+      Fig.: Adjusting VAT rates, example United Kingdom
 
-#. Speichern Sie Ihre Einstellungen.
+#. Save your settings.
 
-Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Marking items as electronic products and assigning VAT rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Machen Sie Artikel, die zu den Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen zählen, als solche kenntlich.
+Make items that belong to telecommunication, broadcasting, television and services provided electronically identifiable as such.
 
-Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produkt oder Dienstleistung (siehe :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`).
+Alternatively: Mark all items in a category as electronic products or services (see :ref:`configuration:Marking a category as electronic products and assigning VAT rates`).
 
 .. note::
    **OXID eShop Enterprise Edition**
 
-   Bei einer Enterprise Edition können Sie nur die Artikel des Elternshops anpassen. Die Eigenschaft eines elektronischen Produkts oder Dienstleistung wird an die Subshops vererbt.
+   With an Enterprise Edition you can only customize the items of the parent store. The property of an electronic product or service is inherited to the subshops.
 
-   Artikel oder Kategorien, die Sie in einem Subshop neu anlegen, können Sie gesondert als elektronische Dienstleistungen markieren.
+   Items or categories that you create in a subshop can be marked as electronic services separately.
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Artikel verwalten --> Artikel`.
-#. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
-#. Markieren Sie das Kontrollkästchen :guilabel:`Artikel ist eine Telekommunikations-, Rundfunk-, Fernseh- oder auf elektronischem Weg erbrachte Dienstleistung` (:ref:`oxdakb02`, Pos. 1).
-#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu.
+.. todo: #tbd: oxdakb02.png auf EN ergänzen
+.. todo: #tbd: Verify :guilabel:`eVAT Settings` tab.
+.. todo: #tbd: Verify :guilabel:`Article is a telecommunications, radio, television or electronically delivered service` checkbox
+
+1. Choose :menuselection:`Administer Products --> Products`.
+#. Choose :guilabel:`eVAT Settings` tab.
+#. Choose the :guilabel:`Article is a telecommunications, radio, television or electronically delivered service` checkbox (:ref:`oxdakb02`, item 1).
+#. Assign the applicable VAT rates for each country to the item.
    |br|
-   Ein eBook hat beispielsweise im Vereinigten Königreich den Normalsatz, in Frankreich den ermäßigten Satz 1 (:ref:`oxdakb02`, Pos. 2).
+   For example, an eBook has the standard rate in the UK, and the reduced rate 1 in France (:ref:`oxdakb02`, item 2).
 
    .. attention::
 
-      **Konversion gefährdet**
+      **Conversion at risk**.
 
-      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
+      If the VAT rate assignment for a country is missing, the customer must remove the item in question from the shopping cart.
 
-      In unserem Beispiel (:ref:`intro:What happens in case of error`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
-
+      In our example (:ref:`intro:What happens in case of error`) a customer from Austria cannot buy the eBook and receives a corresponding message.
 
 .. _oxdakb02:
 
 .. figure:: /media/screenshots/oxdakb02.png
    :class: with-shadow
    :width: 650
-   :alt: Mehrwertsteuersätze einem Artikel zuweisen
+   :alt: Assigning VAT rates to an item
 
-   Abb.: Mehrwertsteuersätze einem Artikel zuweisen
+   Fig.: Assigning VAT rates to an item
 
 
-Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Marking a category as electronic products and assigning VAT rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Dienstleistungen.
+Mark all items in a category as electronic products or services.
 
 .. important::
-   **Überschreiben von Artikel-individuellen eVAT-Einstellungen**
+   **Overwriting item-specific eVAT settings**
 
-   Änderungen der eVAT-Einstellungen überschreiben alle individuellen eVAT-Einstellungen bei allen Artikeln dieser Kategorie.
+   Changes to eVAT settings will overwrite all individual eVAT settings on all items in that category.
 
-
+.. todo: #tbd: oxdakb03.png auf EN ergänzen
+.. todo: #tbd: Verify :guilabel:`eVAT Settings` tab.
+.. todo: #tbd: Verify :guilabel:`Articles in this category are electronic services` checkbox
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Artikel verwalten --> Kategorien`.
-#. Wählen Sie die Produktkategorie.
-#. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
-#. Markieren Sie das Kontrollkästchen :guilabel:`Artikel in dieser Kategorie sind elektronische Dienstleistungen` (:ref:`oxdakb03`, Pos. 1).
-#. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu (:ref:`oxdakb03`, Pos. 2).
+1. Choose :menuselection:`Administer Products --> Categories`.
+#. Choose the product category.
+#. Choose the :guilabel:`eVAT Settings` tab.
+#. Choose the :guilabel:`Articles in this category are electronic services` checkbox (:ref:`oxdakb03`, item 1).
+#. Assign the valid VAT rates for each country to the item (:ref:`oxdakb03`, item 2).
 
    .. attention::
 
-      **Konversion gefährdet**
+      **Conversion at risk**.
 
-      Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
+      If the VAT rate assignment for a country is missing, the customer must remove the item in question from the shopping cart.
 
-      In unserem Beispiel (:ref:`intro:What happens in case of error`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+      In our example (:ref:`intro:What happens in case of error`), a customer from Austria cannot buy the eBook and receives a corresponding message.
 
-#. Speichern Sie Ihre Einstellungen.
+#. Save your settings.
 
 .. _oxdakb03:
 
 .. figure:: /media/screenshots/oxdakb03.png
    :class: with-shadow
    :width: 650
-   :alt: Artikel einer Kategorie als elektronische Dienstleistungen definieren
+   :alt: Defining itmes of a category as electronic services
 
-   Abb.: Artikel einer Kategorie als elektronische Dienstleistungen definieren
+   Fig.: Defining itmes of a category as electronic services
 
+Configuring the customer location determination
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-
-Bestimmen des Kundenstandorts konfigurieren
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Aktivieren Sie das Bestimmen des Kundenstandorts.
+Enable determining the customer location.
 
 
 |background|
 
-Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsland des Kunden ermittelt werden muss, der eine Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistung bestellt, um die Mehrwertsteuer korrekt berechnen zu können.
+The Implementing Regulation (EU) No 1042/2013 requires that the country of origin of the customer ordering a telecommunications, broadcasting, television and electronically supplied service must be determined in order to correctly calculate VAT.
 
-Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
+The customer's location must be determined by at least two checks. Simply indicating the customer in the ordering process is not sufficient; you must verify the customer's information.
 
-.. todo: #SB/#Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfüllen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
-    Der Kunde gibt im Bestellprozess seine Rechnungsadresse an. Das Modul prüft die Rechnungsadresse. Wir haben also nur 1 Bestimmungsmethode.
+.. todo: #SB/#Joe check: a) Is the legal requirement valid, b) do we meet it?: "The sole indication of the customer in the ordering process is not sufficient, you must check the customer's indication."
+    The customer specifies his billing address in the ordering process. The module checks the billing address. So we have only 1 determination method.
 
-.. todo: #SB/#Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
+.. todo: #SB/#Joe: Check: Do we need the countryVAT module as a 2nd method, can we use it to meet the legal requirement?
 
-Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
+The :productname:`OXID eShop eVAT` module uses the customer's billing address to determine the customer location.
 
-Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`extension:Bestimmungsmethode für Kundenstandort hinzufügen`).
+You can add custom determination methods if needed (see :ref:`extension:Add determination method for customer location`).
 
+|Procedure|
 
-|procedure|
+.. todo: #tbd: oxdakb04.png auf EN ergänzen
+.. todo: #tbd: verifizieren: :guilabel:`Determination method for customer location`, :guilabel:`Determine customer location using billing address`
 
-1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Modul :guilabel:`OXID eShop eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Stellen Sie unter :guilabel:`Bestimmungsmethode für Kundenstandort` sicher, dass die Bestimmungsmethode :guilabel:`Kundenstandort mittels Rechnungsadresse ermitteln` aktiviert ist.
+1. Choose :menuselection:`Extensions --> Modules`.
+#. Choose the :guilabel:`OXID eShop eVAT` module and choose the :guilabel:`Settings` tab.
+#. Under :guilabel:`Determination method for customer location`, make sure that the :guilabel:`Determine customer location using billing address` determination method is enabled.
    |br|
-   Dazu tun Sie folgendes:
+   To do this, do the following:
 
-   a. Stellen Sie sicher, dass dem Parameter :technicalname:`billing_country` der Wert :technicalname:`1` zugeordnet ist (:ref:`oxdakb04`, Pos. 1).
+   a. Make sure that the :technicalname:`billing_country` parameter is assigned the :technicalname:`1` value (:ref:`oxdakb04`, item 1).
 
    .. code::
 
       billing_country => 1
 
-   b. Stellen Sie sicher, dass :code:`billing_country` als Standard-Bestimmungsmethode gewählt ist (:ref:`oxdakb04`, Pos. 2).
+   b. Make sure :code:`billing_country` is selected as the default determination method (:ref:`oxdakb04`, item 2).
 
    .. _oxdakb04:
 
    .. figure:: /media/screenshots/oxdakb04.png
       :class: with-shadow
       :width: 650
-      :alt: Bestimmungsmethode konfigurieren
+      :alt: Configuring the determination method
 
-      Abb.: Bestimmungsmethode konfigurieren
+      Fig.: Configuring the  determination method
 
    .. note::
 
-      Die Bestimmungsmethode Geolocation ist nicht implementiert.
+      The determination method geolocation is not implemented.
 
-      .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint? -- kommt weg oder --> 0
+      .. todo: #SB/#HR: Can we disable Geolocation so it doesn't appear in the field by default? -- comes away or --> 0
 
-#. Speichern Sie Ihre Einstellungen.
+#. Save your settings.
 
 
 |result|
 
-Das Ergebnis der Prüfung wird in der Bestellung gespeichert.
+The result of the check will be saved in the order.
 
-Im laufenden Betrieb können Sie das Ergebnis der Bestimmung des Kundenstandortes in der Bestellung prüfen (siehe :ref:`operation:Kundenstandort in der Bestellung anzeigen`).
+In the current operation, you can check the result of determining the customer location in the order (see :ref:`operation:Display customer location in order`).
 
 
-Sitz des Shops verifizieren
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Verifying the store location
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
+Make sure that the store location is configured correctly.
 
-.. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?
+.. todo: #HR/#SB: The following is not true: no or wrong country identifier has no effect; what is the expected behavior?
 
 
     |background|
 
-    Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
+    The system checks if a customer is from the same country where the store is located.
 
-    Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
+    If this is the case, the VAT rate defined as default for the store will be used to calculate the value of goods.
 
-    Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
+    If you enter an invalid country code, the store behaves as if no country is entered.
 
-    Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
+    Items representing telecommunication, radio, television and electronically provided services will not be marked as such.
 
-    Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
-
-|procedure|
-
-1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
-#. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (in unserem Beispiel :code:`de` für Deutschland: :ref:`oxdakb04`, Pos. 3).
-
-
-PDF-Rechnung konfigurieren
---------------------------
-
-Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
+    No related messages will be displayed.
 
 |procedure|
 
-1. Wählen Sie im Administrationsbereich :menuselection:`Erweiterungen --> Module`.
+.. todo: Verify :guilabel:`Shop location` field,
+
+1. Choose :menuselection:`Extensions --> Modules`.
+#. Choose the :guilabel:`eVAT` module and choose the :guilabel:`Settings` tab.
+#. In the :guilabel:`Shop location` field, enter the country code for the store location in ISO2 format (in our example :code:`de` for Germany: :ref:`oxdakb04`, item 3).
+
+Configuring PDF Invoice
+-----------------------
+
+If you use :productname:`PDF-Invoice` (see `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) in your OXID eShop, make sure that the order of the overloaded classes is correct.
+
+|procedure|
+
+1. In the administration area, choose :menuselection:`Extensions --> Modules`.
    |br|
-   Auf der Registerkarte :guilabel:`Installierte Shop-Module` werden die überladenen Klassen aufgelistet.
-#. Stellen Sie sicher, dass unter :guilabel:`OxidEsales\Eshop\Application\Model\Order` das Modul :technicalname:`invoicepdfoxorder` vor dem Modul :technicalname:`oevattbeoxorder` platziert ist (:ref:`oxdakb05`, Pos. 1).
+   On the :guilabel:`Installed store modules` tab, the overloaded classes are listed.
+#. Under :guilabel:`OxidEsales\Eshop\Application\Model\Order` make sure that the :technicalname:`invoicepdfoxorder` module is placed before the  :technicalname:`oevattbeoxorder` module (:ref:`oxdakb05`, item 1).
    |br|
-   Ziehen Sie dazu den Eintrag mit gedrückter Maustaste an die richtige Position.
-#. Speichern Sie Ihre Einstellungen.
+   To do so, drag the entry to the correct position with the mouse button held down.
+#. Save your settings.
 
 .. _oxdakb05:
 
 .. figure:: /media/screenshots/oxdakb05.png
    :class: with-shadow
    :width: 650
-   :alt: Korrekte Reihenfolge der Module sicherstellen
+   :alt: Ensuring the correct order of modules
 
-   Abb.: Korrekte Reihenfolge der Module sicherstellen
+   Fig.: Ensuring the correct sequence of modules
 
 |result|
 
-Sie können Rechnungen im PDF-Format ausgeben unter :menuselection:`Bestellungen verwalten --> Bestellungen --> <Bestellung> --> Übersicht`.
+You can output invoices in PDF format under :menuselection:`Administer Orders --> Orders --> <Order> --> Overview`.
 
-Kundeninformationen zu Mehrwertsteuersätzen ergänzen
-----------------------------------------------------
+Adding customer information about VAT rates
+-------------------------------------------
 
-Informieren Sie Ihre Kunden über die verschiedenen Mehrwertsteuersätze.
+Inform your customers about the different VAT rates.
 
-Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`intro:Information on value added tax from the customer's point of view`, Pos. 2).
+Your customers can access this information via a link on the item detail page (see :ref:`intro:Information on value added tax from the customer's point of view`, item 2).
 
 |procedure|
 
-1. Wählen Sie im Administrationsbereich :menuselection:`Kundeninformationen --> CMS-Seiten`.
-#. Rufen Sie die Seite mit der ID :technicalname:`oxdeliveryinfo` auf.
-#. Fügen Sie Informationen bezüglich der speziellen Artikel und der neuen Berechnung der Mehrwertsteuer hinzu (:ref:`oxdakb05a`).
-#. Speichern Sie Ihre Einstellungen.
+1. In the administration area, choose :menuselection:`Customer Info --> CMS pages`.
+#. Call the page with the ID :technicalname:`oxdeliveryinfo`.
+#. Add information related to special items and new VAT calculation (:ref:`oxdakb05a`).
+#. Save your settings.
 
 
 .. _oxdakb05a:
@@ -316,22 +324,22 @@ Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldet
 .. figure:: /media/screenshots/oxdakb05a.png
    :class: with-shadow
    :width: 650
-   :alt: Kundeninformation zur Mehrwertsteuer ergänzen
+   :alt: Adding customer information about value added tax
 
-   Abb.: Kundeninformation zur Mehrwertsteuer ergänzen
+   Fig.: Adding customer information about value added tax
 
 
-Kompatibilität mit Zahlungsmodulen sicherstellen
-------------------------------------------------
+Ensuring compatibility with payment modules
+-------------------------------------------
 
-Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
+If you use additional payment modules, make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
+To do this, check if your payment module has a quick purchase feature (this is the case for :productname:`PayPal`, for example) and turn off the quick purchase feature.
 
-Sie müssen nichts tun, wenn Sie
+You do :emphasis:`not` need to do anything if you have
 
-* ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
-* die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
+* use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
+* use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.
 
 
 |background|
@@ -340,28 +348,28 @@ Sie müssen nichts tun, wenn Sie
 
 |procedure|
 
-In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsmodul :productname:`PayPal` sicher.
+In our following example, you will ensure compatibility for the :productname:`PayPal` payment module.
 
-1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Zahlungsmodul, in unserem Beispiel :productname:`PayPal`.
-#. Stellen Sie sicher, dass die Checkout-Seite angezeigt wird.
+1. Choose :menuselection:`Extensions --> Modules`.
+#. Choose the payment module, in our example :productname:`PayPal`.
+#. Make sure that the checkout page is displayed.
    |br|
-   Dazu deaktivieren Sie in unserem Beispiel (für :productname:`PayPal`) auf der Registerkarte :guilabel:`Einstell.` das Kontrollkästchen :guilabel:`Bestellung nach PayPal Checkout abschließen` (:ref:`oxdakb06`, Pos. 1).
+   To do this, in our example (for :productname:`PayPal`) on the :guilabel:`Settings` tab, uncheck the :guilabel:`Complete order after PayPal checkout` checkbox (:ref:`oxdakb06`, item 1).
    |br|
-   Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
+   Result: The quick purchase feature is disabled, orders are not completed immediately by the payment processor, but the customer lands on the checkout page, and the customer has to confirm the order with the correctly determined VAT.
    |br|
-   Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
-#. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
+   For more information, see your payment module documentation.
+#. If your payment module does not allow you to disable the quick purchase feature, disable the payment module for the electronic items.
 
-.. todo: #SB: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, #SB fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
-.. todo: #tbd: Bild neu machen
+.. todo: #SB: PayPal Plus: a doc: HR ask: who is prod manager -> good question, #SB ask :D. Otherwise interesting, should try if this really still works with the previous PayPal module with store 6.5.x like this. And what about checkout via GraphQL then?
+.. todo: #tbd: redo image DE & EN
 
 .. _oxdakb06:
 
 .. figure:: /media/screenshots/oxdakb06.png
    :width: 650
-   :alt: Schnellkauf-Funktion des Moduls abschalten
+   :alt: Disabling the quick purchase function of the PayPal module
 
-   Abb.: Schnellkauf-Funktion des Moduls :productname:`PayPal` abschalten
+   Fig.: Disabling the quick purchase function of the :productname:`PayPal` module
 
 .. Intern: oxdakb, Status:
