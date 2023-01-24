@@ -55,7 +55,8 @@ Diese Markierung am Artikelpreis erscheint auf der Startseite, in der Kategorie-
 .. _oxdaka01:
 
 .. figure:: /media/screenshots/oxdaka01.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Auszeichnung elektronisch erbrachter Dienstleistungen: Beispiel Artikel-Detailansicht
 
    Abb.: Auszeichnung elektronisch erbrachter Dienstleistungen
@@ -78,7 +79,8 @@ Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehr
 .. _oxdaka02:
 
 .. figure:: /media/screenshots/oxdaka02.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
 
    Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
@@ -94,7 +96,8 @@ Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Mel
 .. _oxdaka03:
 
 .. figure:: /media/screenshots/oxdaka03.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
 
    Abb.: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
@@ -119,7 +122,8 @@ Siehe auch: :ref:`erweiterung:Nicht kaufbare Artikel im Warenkorb hervorheben`.
 .. _oxdaka04:
 
 .. figure:: /media/screenshots/oxdaka04.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Ermittlung der Mehrwertsteuer fehlgeschlagen
 
    Abb.: Ermittlung der Mehrwertsteuer fehlgeschlagen

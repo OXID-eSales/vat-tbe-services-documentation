@@ -112,7 +112,8 @@ In unserem Beispiel ist die Artikelbezeichnung im Warenkorb rot hervorgehoben (:
 .. _oxdake01:
 
 .. figure:: /media/screenshots/oxdake01.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Nicht kaufbare Artikel im Warenkorb farblich hervorheben
 
    Abb.: Nicht kaufbare Artikel im Warenkorb farblich hervorheben

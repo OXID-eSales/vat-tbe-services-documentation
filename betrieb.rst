@@ -28,7 +28,8 @@ Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs
 .. _oxdakd01:
 
 .. figure:: /media/screenshots/oxdakd01.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Kundenstandort in der Bestellung anzeigen
 
    Abb.: Kundenstandort in der Bestellung anzeigen
@@ -41,7 +42,7 @@ Zeigen Sie bei Bedarf die Umsatzsteuer-Identifikationsnummer des Kunden sowie Da
 
 Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
 
-.. todo: #Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Huíntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
+.. todo: #SB/#Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Huíntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
     Warum genau ist das Datum wichtig (ohne eVAT-Modul wird nur die USt-ID angezeigt).
 
 USt-IdNr., Datum und Uhrzeit geben Ihnen einen Hinweis darauf, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
@@ -58,12 +59,13 @@ Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder
 
 Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
 
-.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt) -- Bug, wird gefixt:
+.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt) -- Bug, wird gefixt
+.. todo: Bild neu machen DE/EN
 
 .. _oxdakd02:
 
 .. figure:: /media/screenshots/oxdakd02.png
-   :scale: 100 %
+   :width: 450
    :alt: Umsatzsteuer-ID-Nr. anzeigen
 
    Abb.: Umsatzsteuer-ID-Nr. anzeigen
@@ -81,7 +83,8 @@ Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung
 .. _oxdakd03:
 
 .. figure:: /media/screenshots/oxdakd03.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
 
    Abb.: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung

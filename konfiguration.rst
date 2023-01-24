@@ -68,7 +68,8 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
    .. _oxdakb01a:
 
    .. figure:: /media/screenshots/oxdakb01a.png
-      :scale: 100 %
+      :class: with-shadow
+      :width: 650
       :alt: eVAT-Modul MwSt. anwenden
 
       Abb.: eVAT-Modul MwSt. anwenden
@@ -86,7 +87,8 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
    .. _oxdakb01:
 
    .. figure:: /media/screenshots/oxdakb01.png
-      :scale: 100 %
+      :class: with-shadow
+      :width: 650
       :alt: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
 
       Abb.: Mehrwertsteuersätze anpassen, Beispiel Vereinigtes Königreich
@@ -128,7 +130,8 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 .. _oxdakb02:
 
 .. figure:: /media/screenshots/oxdakb02.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Mehrwertsteuersätze einem Artikel zuweisen
 
    Abb.: Mehrwertsteuersätze einem Artikel zuweisen
@@ -167,7 +170,8 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 .. _oxdakb03:
 
 .. figure:: /media/screenshots/oxdakb03.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Artikel einer Kategorie als elektronische Dienstleistungen definieren
 
    Abb.: Artikel einer Kategorie als elektronische Dienstleistungen definieren
@@ -186,10 +190,10 @@ Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsla
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
-.. todo: #Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfüllen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
+.. todo: #SB/#Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfüllen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
     Der Kunde gibt im Bestellprozess seine Rechnungsadresse an. Das Modul prüft die Rechnungsadresse. Wir haben also nur 1 Bestimmungsmethode.
 
-.. todo: #Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
+.. todo: #SB/#Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
 
 Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
 
@@ -215,10 +219,11 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
    .. _oxdakb04:
 
    .. figure:: /media/screenshots/oxdakb04.png
-         :scale: 100 %
-         :alt: Bestimmungsmethode konfigurieren
+      :class: with-shadow
+      :width: 650
+      :alt: Bestimmungsmethode konfigurieren
 
-         Abb.: Bestimmungsmethode konfigurieren
+      Abb.: Bestimmungsmethode konfigurieren
 
    .. note::
 
@@ -281,7 +286,8 @@ Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXID
 .. _oxdakb05:
 
 .. figure:: /media/screenshots/oxdakb05.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Korrekte Reihenfolge der Module sicherstellen
 
    Abb.: Korrekte Reihenfolge der Module sicherstellen
@@ -308,7 +314,8 @@ Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldet
 .. _oxdakb05a:
 
 .. figure:: /media/screenshots/oxdakb05a.png
-   :scale: 100 %
+   :class: with-shadow
+   :width: 650
    :alt: Kundeninformation zur Mehrwertsteuer ergänzen
 
    Abb.: Kundeninformation zur Mehrwertsteuer ergänzen
@@ -346,12 +353,13 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #VL: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, Vilma fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+.. todo: #SB: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, #SB fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+.. todo: #tbd: Bild neu machen
 
 .. _oxdakb06:
 
 .. figure:: /media/screenshots/oxdakb06.png
-   :scale: 100 %
+   :width: 650
    :alt: Schnellkauf-Funktion des Moduls abschalten
 
    Abb.: Schnellkauf-Funktion des Moduls :productname:`PayPal` abschalten
