@@ -77,7 +77,7 @@ release = '2'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'de'
+language = 'en'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -135,7 +135,7 @@ html_theme = 'sphinx_rtd_theme'
 html_context = {
     'current_version': '2.0',
     'versions':
-        [('1.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
+        [('2.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.0/'),
          ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
@@ -163,7 +163,7 @@ html_theme_path = ['_themes']
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-html_title = 'eVAT | Moduldokumentation'
+html_title = 'eVAT | Module Documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -277,11 +277,11 @@ rst_prolog = """
 
 rst_epilog = """
 .. |link| image:: /media/icons/link.png
-.. |procedure| replace:: **Vorgehen**
-.. |prerequisites| replace:: **Voraussetzungen**
-.. |result| replace:: **Resultat**
-.. |background| replace:: **Hintergrund**
-.. |example| replace:: **Beispiel**
+.. |procedure| replace:: **Procedure**
+.. |prerequisites| replace:: **Prerequisites**
+.. |result| replace:: **Result**
+.. |background| replace:: **Background**
+.. |example| replace:: **Example**
 .. |br| raw:: html
 
    <br />
