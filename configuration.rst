@@ -124,7 +124,7 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 
       Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
-      In unserem Beispiel (:ref:`intro:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+      In unserem Beispiel (:ref:`intro:What happens in case of error`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
 
 .. _oxdakb02:
@@ -163,7 +163,7 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 
       Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
-      In unserem Beispiel (:ref:`intro:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+      In unserem Beispiel (:ref:`intro:What happens in case of error`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
 #. Speichern Sie Ihre Einstellungen.
 
@@ -301,7 +301,7 @@ Kundeninformationen zu Mehrwertsteuersätzen ergänzen
 
 Informieren Sie Ihre Kunden über die verschiedenen Mehrwertsteuersätze.
 
-Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`intro:Informationen zur Mehrwertsteuer aus Kundensicht`, Pos. 2).
+Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`intro:Information on value added tax from the customer's point of view`, Pos. 2).
 
 |procedure|
 

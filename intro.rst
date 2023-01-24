@@ -1,96 +1,92 @@
-﻿Wofür/Wofür nicht?
-==================
+﻿For what / Where not?
+=====================
 
-Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
+With the :productname:`OXID eShop eVAT` module, integrate the taxation of telecommunication, broadcasting, television and electronically provided services into your OXID eShop.
 
-.. todo: #ProdMan:klären: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
-   Große eShops: aus Österreich bestellt, dann 19 -> Modul würde helfen: wenn gezwungen, MWSt korrekt auszuweisen, dann Modul: Steuerberater fragen
+Legal basis
+-----------
 
-Gesetzliche Grundlage
----------------------
+The module :productname:`OXID eShop eVAT` helps you to comply with the EU implementing regulation no. 1042/2013 regarding the country of supply of services.
 
-Das Modul :productname:`OXID eShop eVAT` hilft Ihnen, die EU-Durchführungsverordnung Nr. 1042/2013 bezüglich des Orts der Dienstleistung einzuhalten.
+This EU implementing regulation states that from January 1, 2015, merchants and service providers, when selling their electronically provided services, must pay the VAT of the EU country where the private customer ("consumer (non-taxable person)") belongs. Previously, it was the VAT of the country where the business is located.
 
-Diese EU-Durchführungsverordnung besagt, dass Händler und Dienstleister ab dem 1. Januar 2015 beim Verkauf ihrer elektronisch erbrachten Dienstleistungen die Mehrwertsteuer des EU-Landes abführen müssen, aus dem der Privatkunde ("Verbraucher (Nichtsteuerpflichtiger)") kommt. Vorher war es die Mehrwertsteuer des Landes, in dem das eigene Unternehmen ansässig ist.
+For more information, see the European Commission's website under: `ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_en <https://ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_en>`_.
 
-Weitere Informationen finden Sie auf den Seiten der Europäischen Kommission unter: `ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de <https://ec.europa.eu/taxation_customs/news/vat-updated-version-moss-report-has-just-been-published-2016-05-12_de>`_.
+Technical implementation
+------------------------
 
-Technische Umsetzung
---------------------
+Items that you define as electronically delivered services in your OXID eShop are marked as such at the time of purchase.
 
-Artikel, die Sie in Ihrem OXID eShop als elektronisch erbrachte Dienstleistungen definieren, sind beim Kauf als solche gekennzeichnet.
+:productname:`OXID eShop eVAT` determines the country of origin of the private customer (B2C) according to the billing address and calculates the respective VAT accordingly.
 
-:productname:`OXID eShop eVAT` ermittelt das Herkunftsland des Privatkunden (B2C) nach der Rechnungsadresse und berechnet entsprechend die jeweilige Mehrwertsteuer.
-
-* Ein OXID eShop :emphasis:`ohne` das Modul :productname:`OXID eShop eVAT` verwendet auch bei Privatkunden aus EU-Ländern immer den Mehrwertsteuersatz, den Sie im Administrationsbereich unter :menuselection:`Stammdaten --> Grundeinstellungen --> Einstell. --> Mehrwertsteuer` als Standard festgelegt haben.
-* Ein OXID eShop :emphasis:`mit` dem Modul :productname:`OXID eShop eVAT` berechnet die Mehrwertsteuer für Artikel, die Sie in Ihrem OXID eShop als elektronische Produkte oder Dienstleistungen definiert haben, mit dem Mehrwertsteuersatz, der dem ermittelten Standort des Privatkunden entspricht.
+* An OXID eShop :emphasis:`without` the module :productname:`OXID eShop eVAT` always uses the VAT rate you set as default in the administration area under :menuselection:`Master Settings --> Core Settings --> Settings. --> VAT` as default.
+* An OXID eShop :emphasis:`with` the module :productname:`OXID eShop eVAT` calculates the VAT for items that you have defined as electronic products or services in your OXID eShop with the VAT rate that corresponds to the determined location of the private customer.
   |br|
-  Für alle übrigen Artikel wird der Mehrwertsteuersatz herangezogen, der als Standard im Shop gilt.
+  For all other items, the VAT rate that is the default in the store is used.
 
-Alle der Berechnung zugrunde liegenden Daten werden bei der Bestellung gespeichert.
+All data on which the calculation is based is saved when the order is placed.
 
-Ihre Vorteile
+Your benefits
 -------------
 
-* Definieren Sie Artikel einzeln oder kategorieweise als elektronische Produkte oder Dienstleistungen und ordnen Sie die Mehrwertsteuersätze für die gewünschten Länder zu.
-* Nutzen Sie dabei
+* Define items individually or by category as electronic products or services and assign VAT rates for the desired countries.
+* Take advantage of
 
-  * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
-  * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)").
+  * the logging of the customer's location when ordering electronic products or services
+  * the logging of the VAT ID number including date and time as proof for taxable customers ("business (taxable person)").
     |br|
-    Bei steuerpflichtigen Kunden wird in der Rechnung der Nettopreis ohne Mehrwertsteuer ausgewiesen.
-* Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
+    For taxable customers, the invoice will show the net price without VAT.
+* Extend :productname:`OXID eShop eVAT` with custom determination methods if required.
 
-Funktionsweise
+How it works
 --------------
 
+Information on value added tax from the customer's point of view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Informationen zur Mehrwertsteuer aus Kundensicht
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the frontend, all items with which you offer electronically provided services are marked with two asterisks ** (:ref:`oxdaka01`, item 1).
 
-Im Frontend werden alle Artikel, mit denen Sie elektronisch erbrachte Dienstleistungen anbieten, mit zwei Sternchen ** markiert (:ref:`oxdaka01`, Pos. 1).
-
-Diese Markierung am Artikelpreis erscheint auf der Startseite, in der Kategorie-Ansicht, der Detailseite des Artikels und an verschiedenen anderen Stellen.
+This mark on the item price appears on the front end, in the category view, the item detail page, and in various other places.
 
 .. _oxdaka01:
 
 .. figure:: /media/screenshots/oxdaka01.png
    :class: with-shadow
    :width: 650
-   :alt: Auszeichnung elektronisch erbrachter Dienstleistungen: Beispiel Artikel-Detailansicht
+   :alt: Marking of electronically provided services: Example of an article detail view
 
-   Abb.: Auszeichnung elektronisch erbrachter Dienstleistungen
+   Fig.: Marking of electronically provided services
 
 
-Am unteren rechten Ende einer jeden Seite des Frontends weisen die zwei Sternchen :guilabel:`**` auf eine elektronisch erbrachte Dienstleistung hin (:ref:`oxdaka01`, Pos. 2).
+At the bottom right of each page of the frontend, the two asterisks :guilabel:`**` indicate a service provided electronically (:ref:`oxdaka01`, item 2).
 
-Ein Link (:ref:`oxdaka01`, Pos. 2) ruft die Seite auf, auf der Sie als Shopbetreiber Ihre Kunden detailliert über Zahlung und Lieferung Ihrer Ware informieren.
+A link (:ref:`oxdaka01`, item 2) calls up the page on which you, as the store operator, inform your customers in detail about payment and delivery of your goods.
 |br|
-Den Inhalt dieser Seite bearbeiten Sie im Administrationsbereich unter :menuselection:`Kundeninformationen --> CMS-Seiten` (siehe :ref:`configuration:Kundeninformationen zu Mehrwertsteuersätzen ergänzen`).
+You edit the content of this page in the administration area under :menuselection:`Customer Info --> CMS ages` (see :ref:`configuration:add customer information to VAT rates`).
 
 
-Der Bestellprozess aus Kundensicht
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The ordering process from the customer's point of view
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Legt Ihr Kunde einen Artikel, mit Sie elektronisch erbrachte Dienstleistungen anbieten, in den Warenkorb, dann werden die zwei Sternchen :guilabel:`**` bei der Mehrwertsteuer angezeigt (:ref:`oxdaka02`, Pos. 1).
+When your customer adds an item with which you offer electronically provided services to the shopping cart, then the two asterisks :guilabel:`**` are displayed with the VAT (:ref:`oxdaka02`, item 1).
 
-Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehrwertsteuer basiert und dass sich die Mehrwertsteuer ändern kann, sobald der Kunde im Shop angemeldet ist (:ref:`oxdaka02`, Pos. 2).
+A message tells your customer which country the displayed VAT is based on and that the VAT may change once the customer is logged into the store (:ref:`oxdaka02`, item 2).
 
 .. _oxdaka02:
 
 .. figure:: /media/screenshots/oxdaka02.png
    :class: with-shadow
    :width: 650
-   :alt: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
+   :alt: Order step 1 with reference to VAT calculation
 
-   Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
+   Fig.: Order step 1 with reference to VAT calculation
 
 
-Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat (siehe :ref:`configuration:Bestimmen des Kundenstandorts konfigurieren`).
+The VAT is calculated after registration or after specifying the billing address, after :productname:`OXID eShop eVAT` has determined the customer location (see :ref:`configuration:Configure customer location`).
 
-Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka03`, Pos. 1, 2).
+A message tells the customer again which country is the basis for the VAT calculation (:ref:`oxdaka03`, items 1, 2).
 
-Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Meldung aktualisiert.
+Each time the country is changed, the VAT is recalculated and the message is updated.
 
 
 .. _oxdaka03:
@@ -98,45 +94,48 @@ Bei jeder Änderung des Landes wird die Mehrwertsteuer neu berechnet und die Mel
 .. figure:: /media/screenshots/oxdaka03.png
    :class: with-shadow
    :width: 650
-   :alt: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+   :alt: Order step 1 with reference to customer location and VAT calculation
 
-   Abb.: Bestellschritt 1 mit Hinweis auf Kundenstandort und MwSt.-Berechnung
+   Fig.: Order step 1 with reference to customer location and VAT calculation
 
-Was im Fehlerfall passiert
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+What happens in case of error
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommt ein Benutzer aus einem EU-Land, das Sie nicht für die Berechnung der Mehrwertsteuer für elektronische Dienstleistungen konfiguriert haben, erscheint eine Fehlermeldung.
+If a user comes from an EU country that you have not configured to calculate the VAT for electronic services, an error message appears.
 
-Der Kunde wird aufgefordert den Artikel aus dem Warenkorb entfernen (:ref:`oxdaka04`, Pos. 1).
+The customer is asked to remove the item from the shopping cart (:ref:`oxdaka04`, item 1).
 
-Grund: Die Mehrwertsteuer lässt sich nicht bestimmen  (:ref:`oxdaka04`, Pos. 2).
+Reason: The VAT cannot be determined (:ref:`oxdaka04`, pos. 2).
 
-Um den Fehlerfall zu vermeiden, folgen Sie den Anweisungen unter
+To avoid the error case, follow the instructions under
 
-* :ref:`configuration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
-* :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Mark item as electronic product and assign VAT rate`
+* :ref:`configuration:Mark category as electronic product and assign VAT rate`
 
 
-Siehe auch: :ref:`extension:Nicht kaufbare Artikel im Warenkorb hervorheben`.
+See also :ref:`extension:Highlight non-purchasable items in shopping cart`.
 
 .. _oxdaka04:
 
 .. figure:: /media/screenshots/oxdaka04.png
    :class: with-shadow
    :width: 650
-   :alt: Ermittlung der Mehrwertsteuer fehlgeschlagen
+   :alt: Determination of value added tax failed
 
-   Abb.: Ermittlung der Mehrwertsteuer fehlgeschlagen
+   Fig.: Determination of value added tax failed
 
 
-Kompatibilität mit Zahlungsmodulen
+Compatibility with payment modules
 ----------------------------------
 
 .. include:: /_static/reuse/payment-modules.rst
 
-Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
+You need to make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-Weitere Informationen finden Sie unter :ref:`configuration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
+For more information, see :ref:`configuration:Ensure compatibility with payment modules`.
+
+
+
 
 
 

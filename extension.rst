@@ -77,7 +77,7 @@ In einigen Fällen kann es sein, dass ein Artikel nicht gekauft werden kann, wei
 
 Ein Beispiel ist der Kauf eines Artikels, welcher als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gilt.
 
-Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, wird eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt (siehe :ref:`intro:Was im Fehlerfall passiert`).
+Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, wird eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt (siehe :ref:`intro:What happens in case of error`).
 
 Der Kunde muss den Artikel aus dem Warenkorb entfernen.
 
