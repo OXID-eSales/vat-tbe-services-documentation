@@ -51,7 +51,7 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
 
    Ist das Modul aktiviert, dann müssen Sie als Shop-Betreiber die Mehrwertsteuersätze pflegen.
 
-   Weitere Informationen finden Sie unter :ref:`betrieb:Mehrwertsteuersätze pflegen`.
+   Weitere Informationen finden Sie unter :ref:`operation:Mehrwertsteuersätze pflegen`.
 
 
 .. note::
@@ -100,7 +100,7 @@ Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen
 
 Machen Sie Artikel, die zu den Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen zählen, als solche kenntlich.
 
-Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produkt oder Dienstleistung (siehe :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`).
+Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produkt oder Dienstleistung (siehe :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`).
 
 .. note::
    **OXID eShop Enterprise Edition**
@@ -124,7 +124,7 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 
       Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
-      In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+      In unserem Beispiel (:ref:`intro:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
 
 .. _oxdakb02:
@@ -163,7 +163,7 @@ Markieren Sie alle Artikel einer Kategorie als elektronische Produkte oder Diens
 
       Fehlt die Zuordnung des Mehrwertsteuersatzes für ein Land, muss der Kunde den betreffenden Artikel aus dem Warenkorb entfernen.
 
-      In unserem Beispiel (:ref:`einfuehrung:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
+      In unserem Beispiel (:ref:`intro:Was im Fehlerfall passiert`) kann ein Kunde aus Österreich das eBook nicht kaufen und erhält eine entsprechende Meldung.
 
 #. Speichern Sie Ihre Einstellungen.
 
@@ -197,7 +197,7 @@ Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Di
 
 Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
 
-Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erweiterung:Bestimmungsmethode für Kundenstandort hinzufügen`).
+Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`extension:Bestimmungsmethode für Kundenstandort hinzufügen`).
 
 
 |procedure|
@@ -238,7 +238,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
 Das Ergebnis der Prüfung wird in der Bestellung gespeichert.
 
-Im laufenden Betrieb können Sie das Ergebnis der Bestimmung des Kundenstandortes in der Bestellung prüfen (siehe :ref:`betrieb:Kundenstandort in der Bestellung anzeigen`).
+Im laufenden Betrieb können Sie das Ergebnis der Bestimmung des Kundenstandortes in der Bestellung prüfen (siehe :ref:`operation:Kundenstandort in der Bestellung anzeigen`).
 
 
 Sitz des Shops verifizieren
@@ -301,7 +301,7 @@ Kundeninformationen zu Mehrwertsteuersätzen ergänzen
 
 Informieren Sie Ihre Kunden über die verschiedenen Mehrwertsteuersätze.
 
-Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`einfuehrung:Informationen zur Mehrwertsteuer aus Kundensicht`, Pos. 2).
+Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldetailseite (siehe :ref:`intro:Informationen zur Mehrwertsteuer aus Kundensicht`, Pos. 2).
 
 |procedure|
 

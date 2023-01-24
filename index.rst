@@ -1,16 +1,16 @@
-Moduldokumentation
-==================
+Module Dokumentation
+====================
 
 
 .. toctree::
    :maxdepth: 1
    :caption: eVAT
 
-   Wofür/Wofür nicht? <einfuehrung>
+   For what?/Where not? <intro>
    Installation <installation>
-   Konfiguration <konfiguration>
-   Betrieb <betrieb>
-   Erweiterung <erweiterung>
+   Configuration <configuration>
+   Operation <operation>
+   Extension <extension>
    Changelog (GitHub) ➜ <https://github.com/OXID-eSales/vat_tbe_services/blob/master/CHANGELOG.md>
 
 

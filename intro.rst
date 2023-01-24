@@ -66,7 +66,7 @@ Am unteren rechten Ende einer jeden Seite des Frontends weisen die zwei Sternche
 
 Ein Link (:ref:`oxdaka01`, Pos. 2) ruft die Seite auf, auf der Sie als Shopbetreiber Ihre Kunden detailliert über Zahlung und Lieferung Ihrer Ware informieren.
 |br|
-Den Inhalt dieser Seite bearbeiten Sie im Administrationsbereich unter :menuselection:`Kundeninformationen --> CMS-Seiten` (siehe :ref:`konfiguration:Kundeninformationen zu Mehrwertsteuersätzen ergänzen`).
+Den Inhalt dieser Seite bearbeiten Sie im Administrationsbereich unter :menuselection:`Kundeninformationen --> CMS-Seiten` (siehe :ref:`configuration:Kundeninformationen zu Mehrwertsteuersätzen ergänzen`).
 
 
 Der Bestellprozess aus Kundensicht
@@ -86,7 +86,7 @@ Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehr
    Abb.: Bestellschritt 1 mit Hinweis auf MwSt.-Berechnung
 
 
-Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat (siehe :ref:`konfiguration:Bestimmen des Kundenstandorts konfigurieren`).
+Die Mehrwertsteuer wird nach Anmeldung oder nach Angeben der Rechnungsadresse berechnet, nachdem :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat (siehe :ref:`configuration:Bestimmen des Kundenstandorts konfigurieren`).
 
 Eine Meldung weist den Kunden erneut darauf hin, welches Land Grundlage für die Berechnung der Mehrwertsteuer ist (:ref:`oxdaka03`, Pos. 1, 2).
 
@@ -113,11 +113,11 @@ Grund: Die Mehrwertsteuer lässt sich nicht bestimmen  (:ref:`oxdaka04`, Pos. 2)
 
 Um den Fehlerfall zu vermeiden, folgen Sie den Anweisungen unter
 
-* :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
-* :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
 
 
-Siehe auch: :ref:`erweiterung:Nicht kaufbare Artikel im Warenkorb hervorheben`.
+Siehe auch: :ref:`extension:Nicht kaufbare Artikel im Warenkorb hervorheben`.
 
 .. _oxdaka04:
 
@@ -136,7 +136,7 @@ Kompatibilität mit Zahlungsmodulen
 
 Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
-Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
+Weitere Informationen finden Sie unter :ref:`configuration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 
 
 

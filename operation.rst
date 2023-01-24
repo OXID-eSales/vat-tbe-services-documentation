@@ -108,8 +108,8 @@ Sie haben beim Konfigurieren sichergestellt, dass unter :menuselection:`Artikel 
 
 Weitere Informationen finden Sie unter
 
-* :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
-* :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
 
 |procedure|
 
