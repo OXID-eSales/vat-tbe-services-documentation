@@ -1,56 +1,62 @@
 Installation
 ============
 
-Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop ab Version 6.0.
+Install the module :productname:`OXID eShop eVAT` for OXID eShop version 6.0 and higher.
 
 
 |prerequisites|
 
-* Sie haben den OXID eShop 6.0 oder höher installiert.
-* Sie haben PHP 5.6 oder höher.
+* You have installed OXID eShop 6.0 or higher.
+* You have PHP 5.6 or higher.
 
 
 |procedure|
 
 
-1. Öffnen Sie eine Shell und wechseln Sie ins Root-Verzeichnis des eShops (in dem die Datei :file:`composer.json` liegt).
+1. Open a shell and change to the root directory of the eShop (where the :file:`composer.json` file is located).
    |br|
-   Beispiel:
+   Example:
 
    .. code:: bash
 
       cd /var/www/oxideshop
 
-#. Um die letzte veröffentlichte Version zu installieren, führen Sie folgenden Befehl aus:
+#. To install the latest released version, run the following command:
 
    .. code:: bash
 
       composer require oxid-esales/evat-module:^2.0
 
-   Alternativ: Um die letzte unveröffentlichte Version von Github zu installieren, führen Sie folgenden Befehl aus:
+   Alternatively, to install the latest unreleased version from Github, run the following command:
 
    .. code:: bash
 
       composer require oxid-esales/evat-module:dev-master
 
-#. Bestätigen Sie die Abfragen.
-#. Optional Löschen Sie alle Dateien und Ordner außer der Datei :file:`.htaccess` aus dem Verzeichnis :file:`/tmp` des Shops.
+#. Confirm the queries.
+#. Optional: Delete all files and folders except :file:`.htaccess` from the :file:`/tmp` directory of the store.
+
+.. todo: #HR:  composer require oxid-esales/evat-module:^2.0 führt zu  "Metadata version 1.2 is not supported"
 
 |result|
 
 
-Sobald der Installationsprozess abgeschlossen ist, erscheint das Modul :productname:`OXID eShop eVAT` im Administrationsbereich unter :menuselection:`Erweiterungen --> Module` (:ref:`oxdakc01`).
+Once the installation process is complete, the :productname:`OXID eShop eVAT` module will appear in the administration area under :menuselection:`Extensions --> Modules` (:ref:`oxdakc01`).
+
+.. todo: #tbd:  oxdakc01 EN einfügen
 
 .. _oxdakc01:
 
 .. figure:: /media/screenshots/oxdakc01.png
    :scale: 100 %
-   :alt: Modul eVAT installiert
+   :alt: Module eVAT installed
 
-   Abb.: Modul eVAT installiert
+   Fig.: Module eVAT installed
 
 
-Nächster Schritt: Um :productname:`OXID eShop eVAT` zu konfigurieren, wählen Sie :guilabel:`Weiter`.
+Next step: To configure :productname:`OXID eShop eVAT`, choose :guilabel:`Next`.
+
+
 
 
 
