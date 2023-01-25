@@ -43,12 +43,10 @@ Install the module :productname:`OXID eShop eVAT` for OXID eShop version 6.0 and
 
 Once the installation process is complete, the :productname:`OXID eShop eVAT` module will appear in the administration area under :menuselection:`Extensions --> Modules` (:ref:`oxdakc01`).
 
-.. todo: #tbd:  oxdakc01 EN einfügen
-
 .. _oxdakc01:
 
 .. figure:: /media/screenshots/oxdakc01.png
-   :scale: 100 %
+   :width: 450
    :alt: Module eVAT installed
 
    Fig.: Module eVAT installed
