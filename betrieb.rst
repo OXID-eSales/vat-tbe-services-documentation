@@ -42,7 +42,7 @@ Zeigen Sie bei Bedarf die Umsatzsteuer-Identifikationsnummer des Kunden sowie Da
 
 Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
 
-.. todo: #SB/#Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Huíntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
+.. todo: #SB: Joe: /#Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Híntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
     Warum genau ist das Datum wichtig (ohne eVAT-Modul wird nur die USt-ID angezeigt).
 
 USt-IdNr., Datum und Uhrzeit geben Ihnen einen Hinweis darauf, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
@@ -115,7 +115,7 @@ Weitere Informationen finden Sie unter
 
 Pflegen Sie die Mehrwertsteuersätze unter :menuselection:`Stammdaten --> Länder --> <Land> --> MwSt.-Sätze`.
 
-
+Weitere Informationen finden Sie unter :ref:`konfiguration:Länderspezifische Mehrwertsteuersätze aktivieren`
 
 .. Intern: oxdakd, Status:
 

@@ -29,6 +29,8 @@ Artikel, die Sie in Ihrem OXID eShop als elektronisch erbrachte Dienstleistungen
 
 Alle der Berechnung zugrunde liegenden Daten werden bei der Bestellung gespeichert.
 
+Auf Anfrage können Sie damit den Standort eines Kunden nachweisen (siehe :ref:`betrieb:Kundenstandort in der Bestellung anzeigen`).
+
 Ihre Vorteile
 -------------
 

@@ -190,10 +190,16 @@ Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsla
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
+.. todo: #SB prüft: "Sie müssen die Angabe des Kunden prüfen.": Worin kann/muss die Prüfung bestehen?
+    "Beweismittel": Angaben auf Rechnung gelten als Beweismittel: SB lässt Joe prüfen
+    Bankdaten? Nur bei SEPA-Zahlung möglich?;
+    IP-Adresse: Geolocation
+
 .. todo: #SB/#Joe prüfen: a) Ist die rechtliche Anforderung valide, b) erfüllen wir sie?: "Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen."
     Der Kunde gibt im Bestellprozess seine Rechnungsadresse an. Das Modul prüft die Rechnungsadresse. Wir haben also nur 1 Bestimmungsmethode.
 
-.. todo: #SB/#Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?
+.. todo: #SB: wahrscheinlich Nein: eVAT setzt country VAT voraus: SB prüft; /#Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?:
+    SB prüft: was machen die beiden Module? Gibt es Abhängigkeiten?
 
 Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
 
@@ -354,6 +360,7 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
 .. todo: #SB: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, #SB fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+
 .. todo: #tbd: Bild neu machen
 
 .. _oxdakb06:
