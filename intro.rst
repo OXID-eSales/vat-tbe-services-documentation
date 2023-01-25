@@ -26,6 +26,8 @@ Items that you define as electronically delivered services in your OXID eShop ar
 
 All data on which the calculation is based is saved when the order is placed.
 
+On request, you can use it to prove the location of a customer (see :ref:`operation:Displaying the customer location in an order`).
+
 Your benefits
 -------------
 
@@ -39,7 +41,7 @@ Your benefits
 * Extend :productname:`OXID eShop eVAT` with custom determination methods if required.
 
 How it works
---------------
+------------
 
 Information on value added tax from the customer's point of view
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -113,7 +115,7 @@ To avoid the error case, follow the instructions under
 * :ref:`configuration:Marking a category as electronic products and assigning VAT rates`
 
 
-See also :ref:`extension:Highlight non-purchasable items in shopping cart`.
+See also :ref:`extension:Highlighting non-purchasable items in a shopping cart`.
 
 .. _oxdaka04:
 

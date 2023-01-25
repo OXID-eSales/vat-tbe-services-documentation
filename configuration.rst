@@ -20,10 +20,8 @@ Enable :productname:`OXID eShop eVAT` in each subshop where you want to use the 
 
 |procedure|
 
-.. todo: #tbd: Verify :menuselection:`Main --> Activate`.:
-
 1. Choose :menuselection:`Extensions --> Modules`.
-2. Choose the module :guilabel:`eVAT` and choose :menuselection:`Main --> Activate`.
+2. Choose the module :guilabel:`eVAT` and choose :menuselection:`Overview --> Activate`.
 
 Configuring eVAT
 ----------------
@@ -59,11 +57,9 @@ Check the statically stored VAT rates and adjust them if necessary.
 
 |procedure|
 
-.. todo: #tbd: oxdakb01a.png EN einfügen
-
 1. Choose :menuselection:`Master Settings --> Countries`.
 #. Choose the country to which you want to apply the EU directive and choose the :guilabel:`Main` tab.
-#. Activate the :guilabel:`apply VAT module` option (:ref:`oxdakb01a`).
+#. Activate the :guilabel:`Apply VAT module` checkbox (:ref:`oxdakb01a`).
 
    .. _oxdakb01a:
 
@@ -74,7 +70,7 @@ Check the statically stored VAT rates and adjust them if necessary.
 
       Fig.: Applying the eVAT module VAT
 
-#. To adjust the stored VAT rates, if necessary, or to create new VAT rates, choose the :guilabel:`VAT rates` (:ref:`oxdakb01`, pos. 1) tab.
+#. To adjust the stored VAT rates, if necessary, or to create new VAT rates, choose the :guilabel:`Country VAT rates` (:ref:`oxdakb01`, pos. 1) tab.
    |br|
    The VAT rates for the European Union countries are already prepared.
    |br|
@@ -83,8 +79,6 @@ Check the statically stored VAT rates and adjust them if necessary.
    If needed: Create new VAT rates under :guilabel:`Create new VAT rate`, each with a name, a percentage and an optional description.
    |br|
    Example: For the United Kingdom, add the zero rate applicable in 2022 for, among other things, printed books and newspapers and audio books for the blind (:ref:`oxdakb01`, item 2).
-
-   .. todo: #tbd: oxdakb01.png auf EN ergänzen
 
    .. _oxdakb01:
 
@@ -114,12 +108,10 @@ Alternatively: Mark all items in a category as electronic products or services (
 |procedure|
 
 .. todo: #tbd: oxdakb02.png auf EN ergänzen
-.. todo: #tbd: Verify :guilabel:`eVAT Settings` tab.
-.. todo: #tbd: Verify :guilabel:`Article is a telecommunications, radio, television or electronically delivered service` checkbox
 
 1. Choose :menuselection:`Administer Products --> Products`.
 #. Choose :guilabel:`eVAT Settings` tab.
-#. Choose the :guilabel:`Article is a telecommunications, radio, television or electronically delivered service` checkbox (:ref:`oxdakb02`, item 1).
+#. Choose the :guilabel:`Product is a telecommunication, broadcasting or electronic service` checkbox (:ref:`oxdakb02`, item 1).
 #. Assign the applicable VAT rates for each country to the item.
    |br|
    For example, an eBook has the standard rate in the UK, and the reduced rate 1 in France (:ref:`oxdakb02`, item 2).
@@ -152,16 +144,13 @@ Mark all items in a category as electronic products or services.
 
    Changes to eVAT settings will overwrite all individual eVAT settings on all items in that category.
 
-.. todo: #tbd: oxdakb03.png auf EN ergänzen
-.. todo: #tbd: Verify :guilabel:`eVAT Settings` tab.
-.. todo: #tbd: Verify :guilabel:`Articles in this category are electronic services` checkbox
 
 |procedure|
 
 1. Choose :menuselection:`Administer Products --> Categories`.
 #. Choose the product category.
 #. Choose the :guilabel:`eVAT Settings` tab.
-#. Choose the :guilabel:`Articles in this category are electronic services` checkbox (:ref:`oxdakb03`, item 1).
+#. Choose the :guilabel:`Products in this category are electronic services` checkbox (:ref:`oxdakb03`, item 1).
 #. Assign the valid VAT rates for each country to the item (:ref:`oxdakb03`, item 2).
 
    .. attention::
@@ -202,7 +191,7 @@ The customer's location must be determined by at least two checks. Simply indica
 
 The :productname:`OXID eShop eVAT` module uses the customer's billing address to determine the customer location.
 
-You can add custom determination methods if needed (see :ref:`extension:Add determination method for customer location`).
+You can add custom determination methods if needed (see :ref:`extension:Adding a method to determine the customer location`).
 
 |Procedure|
 
@@ -245,7 +234,7 @@ You can add custom determination methods if needed (see :ref:`extension:Add dete
 
 The result of the check will be saved in the order.
 
-In the current operation, you can check the result of determining the customer location in the order (see :ref:`operation:Display customer location in order`).
+In the current operation, you can check the result of determining the customer location in the order (see :ref:`operation:Displaying the customer location in an order`).
 
 
 Verifying the store location

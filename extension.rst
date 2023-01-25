@@ -1,35 +1,35 @@
-Modul-Erweiterung
-=================
+Module extension
+================
 
-Erweitern Sie das Modul :productname:`OXID eShop eVAT` bei Bedarf.
+Extend the :productname:`OXID eShop eVAT` module as needed.
 
-Wir beschreiben beispielhaft,
+We describe as an example,
 
-* wie Sie eine eigene Bestimmungsmethode für den Kundenstandort hinzufügen
-* wie Sie einen Artikel im Warenkorb farblich hervorheben können, dessen Mehrwertsteuersatz nicht ermittelt werden konnte.
+* how to add a custom determination method for customer location
+* how to highlight an item in the shopping cart whose VAT rate could not be determined.
 
-Bestimmungsmethode für Kundenstandort hinzufügen
-------------------------------------------------
+Adding a method to determine the customer location
+--------------------------------------------------
 
-Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstellen Sie eine Klasse und registrieren sie. Sie erweitern :productname:`OXID eShop eVAT` also mit einem eigenen Modul.
+To add a custom method to determine the customer location, create a class and register it. In this way, you extend :productname:`OXID eShop eVAT` with your custom module.
 
 .. note::
 
-   Die Klasse :technicalname:`oeVATTBEGeoLocationEvidence` ist derzeit nur vorbereitet und muss implementiert werden.
+   The :technicalname:`oeVATTBEGeoLocationEvidence` class is currently only prepared and needs to be implemented.
 
-   Das kann durch Erweitern dieser Klasse mit einem Modul und Implementierung der Methode :technicalname:`oeVATTBEGeoLocationEvidence::getCountryId()` umgesetzt werden.
+   This can be done by extending this class with a module and implementing the :technicalname:`oeVATTBEGeoLocationEvidence::getCountryId()` method.
 
 
 |procedure|
 
-Tun Sie Folgendes:
+Do the following:
 
-* Damit die neue Klasse eine Schnittstelle hat, stellen Sie sicher, dass sie die Klasse :technicalname:`oeVATTBEEvidence` erweitert.
-* Registrieren Sie die Klasse mit :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
-* Wenn die Klasse nicht mehr benötigt wird, beenden Sie die Registrierung der Klasse mit :technicalname:`oeVATTBEEvidenceRegister::unregisterEvidence()`.
-* Erstellen Sie ein Modul, das die neue Klasse enthält.
-* Tragen Sie die Klasse in der Datei :technicalname:`metadata.php` des Moduls ein.
-* Verwenden Sie für das Registrieren und Abmelden der Klasse die Ereignisse :technicalname:`onActivate()` und :technicalname:`onDeactivate()` des Moduls.
+* For the new class to have an interface, make sure it extends the :technicalname:`oeVATTBEEvidence` class.
+* Register the class with :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
+* When the class is no longer needed, unregister the class with :technicalname:`oeVATTBEEvidenceRegister::unregisterEvidence()`.
+* Create a module that contains the new class.
+* Enter the class in the :technicalname:`metadata.php` file of the module.
+* For registering and unregistering the class, use the :technicalname:`onActivate()` and :technicalname:`onDeactivate()` events of the module.
 
   .. code::
 
@@ -55,37 +55,37 @@ Tun Sie Folgendes:
             }
         }
 
-  Falls das Modul die neue Klasse bei einer Deaktivierung nicht abgemeldet hat, werden die hinzugefügten Bestimmungsmethoden bei der nächsten Bestimmung des Kundenstandortes entfernt.
+  If the module did not unregister the new class when it was deactivated, the added determination methods will be removed the next time the customer location is determined.
 
-* Aktivieren Sie Ihr Modul mit den zusätzlichen Bestimmungsmethoden nur dann, wenn das Modul :productname:`OXID eShop eVAT` aktiv ist.
+* Activate your module with the additional determination methods only if the :productname:`OXID eShop eVAT` module is active.
 
-  Andernfalls wird :technicalname:`oeVATTBEEvidenceRegister` nicht gefunden.
+  Otherwise :technicalname:`oeVATTBEEvidenceRegister` will not be found.
 
 
-Nicht kaufbare Artikel im Warenkorb hervorheben
------------------------------------------------
+Highlighting non-purchasable items in a shopping cart
+-----------------------------------------------------
 
-Sie wollen nicht kaufbare Artikel im Warenkorb farblich hervorheben.
+You want to highlight non-purchasable items in the shopping cart.
 
-Das setzen Sie mit Hilfe einer CSS-Klasse um, die Sie in das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` integrieren.
+You can do this using a CSS class that you integrate into the :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` template.
 
-Die Information, ob ein Artikel im Warenkorb kaufbar ist, liefert Ihnen die Controller-Methode :technicalname:`isOeVATTBETBEArticleValid`.
+The information whether an item in the shopping cart is purchasable is provided by the controller method :technicalname:`isOeVATTBETBEArticleValid`.
 
 |background|
 
-In einigen Fällen kann es sein, dass ein Artikel nicht gekauft werden kann, weil sich seine Mehrwertsteuer nicht berechnen lässt.
+In some cases, an item may not be purchasable because its VAT cannot be calculated.
 
-Ein Beispiel ist der Kauf eines Artikels, welcher als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gilt.
+An example is the purchase of an item which is considered to be telecommunications, radio, television and services provided by electronic means.
 
-Fehlen die Mehrwertsteuersätze bei dem Land, aus dem der Kunde bestellen möchte, wird eine Fehlermeldung mit Hinweis auf den betreffenden Artikel angezeigt (siehe :ref:`intro:What happens in case of error`).
+If the VAT rates are missing for the country from which the customer wants to order, an error message is displayed with a reference to the item in question (see :ref:`intro:What happens in case of error`).
 
-Der Kunde muss den Artikel aus dem Warenkorb entfernen.
+The customer has to remove the item from the shopping cart.
 
-Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leichter identifizieren.
+Color highlighting makes it easier for your customer to identify the item in question.
 
 |procedure|
 
-1. Erstellen Sie ein Erweiterungsmodul mit einer CCS-Klasse (in unserem Beispiel :code:`oeVATTBEBasketItemInvalid`) und erweitern Sie das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
+1. Create an extension module with a CCS class (in our example :code:`oeVATTBEBasketItemInvalid`) and extend the template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
 
    .. code::
 
@@ -96,7 +96,7 @@ Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leicht
              [{if !$oView->isOeVATTBETBEArticleValid()}] oeVATTBEBasketItemInvalid[{/if}]"
              id="cartItem_[{$smarty.foreach.basketContents.iteration}]">
 
-2. Fügen Sie die CSS-Klasse der CSS-Datei :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` oder der CSS-Datei des verwendeten Themes hinzu.
+2. Add the CSS class to the CSS file :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` or to the CSS file of the theme you use.
 
    .. code::
 
@@ -107,16 +107,18 @@ Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leicht
 
 |result|
 
-In unserem Beispiel ist die Artikelbezeichnung im Warenkorb rot hervorgehoben (:ref:`oxdake01`, Pos. 1).
+In our example, the item name in the shopping cart is highlighted in red (:ref:`oxdake01`, item 1).
+
+.. todo: tbd: Bild EN erg.
 
 .. _oxdake01:
 
 .. figure:: /media/screenshots/oxdake01.png
    :class: with-shadow
    :width: 650
-   :alt: Nicht kaufbare Artikel im Warenkorb farblich hervorheben
+   :alt: Highlighting non-purchasable items in the shopping cart by color
 
-   Abb.: Nicht kaufbare Artikel im Warenkorb farblich hervorheben
+   Figure: Highlighting non-purchasable items in the shopping cart in color
 
 
 .. Intern: oxdake, Status:

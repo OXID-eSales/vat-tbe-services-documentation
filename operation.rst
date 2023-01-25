@@ -104,14 +104,12 @@ When configuring :productname:`OXID eShop eVAT`, under :menuselection:`Administe
 
 For more information, see
 
-* :ref:`configuration:Mark item as electronic product and assign VAT rate`
-* :ref:`configuration:Mark category as electronic product and assign VAT rate`
+* :ref:`configuration:Marking items as electronic products and assigning VAT rates`
+* :ref:`configuration:Marking a category as electronic products and assigning VAT rates`
 
 |procedure|
 
 Maintain the VAT rates under :menuselection:`Master Settings --> Countries --> <country> --> VAT rates`.
-
-.. todo: #tbd: add xref in DE:
 
 For more information, see :ref:`configuration:Activating and maintaining country-specific VAT rates`
 
