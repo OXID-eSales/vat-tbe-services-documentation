@@ -1,119 +1,119 @@
-Betrieb
-=======
+Operation
+=========
 
-Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`OXID eShop eVAT`:
+Use the following functions of the :productname:`OXID eShop eVAT` module during operation:
 
-* Kundenstandort in der Bestellung anzeigen
-* Umsatzsteuer-Identifikationsnummer anzeigen
-* Erweiterung der PDF-Rechnung nutzen
+* Display customer location in the order
+* Display sales tax identification number
+* Use PDF invoice extension
 
-Kundenstandort in der Bestellung anzeigen
------------------------------------------
+Displaying the customer location in an order
+--------------------------------------------
 
-Verifizieren Sie bei Bedarf, dass :productname:`OXID eShop eVAT` den Kundenstandort ermittelt hat.
+If required, verify that :productname:`OXID eShop eVAT` has determined the customer location.
 
 |prerequisites|
 
-Ihr Kunde hat mindestens einen Artikel gekauft, der als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gilt.
+Your customer has purchased at least one item that qualifies as telecommunications, broadcasting, television, and electronically delivered service.
 
 |procedure|
 
-1. Wählen Sie :guilabel:`Bestellungen verwalten --> Bestellungen`.
-2. Wählen Sie eine Bestellung, die einen elektronischen Artikel enthält.
+1. Choose :guilabel:`Administer Orders --> Orders`.
+2. Choose an order that contains an electronic item.
 
 |result|
 
-Auf der Registerkarte :guilabel:`Stamm` wird am unteren Ende des Eingabebereichs das Ergebnis der Bestimmung des Kundenstandortes angezeigt (:ref:`oxdakd01`, Pos. 1).
+On the :guilabel:`Main` tab, below the input area, the result of determining the customer location is displayed (:ref:`oxdakd01`, item 1).
 
 .. _oxdakd01:
 
 .. figure:: /media/screenshots/oxdakd01.png
    :class: with-shadow
    :width: 650
-   :alt: Kundenstandort in der Bestellung anzeigen
+   :alt: Displaying the customer location in an order
 
-   Abb.: Kundenstandort in der Bestellung anzeigen
+   Figure: Displaying the customer location in an order
 
 
-Umsatzsteuer-Identifikationsnummer anzeigen
--------------------------------------------
+Displaying the VAT ID
+---------------------
 
-Zeigen Sie bei Bedarf die Umsatzsteuer-Identifikationsnummer des Kunden sowie Datum und Zeit der Speicherung an.
+If required, display the customer's VAT ID and the date and time it was saved.
 
-Das Modul :productname:`OXID eShop eVAT` stellt sicher, dass die von einem Kunden eingegebene Umsatzsteuer-Identifikationsnummer (USt-IdNr.) zusammen mit Datum und Zeit gespeichert wird, wenn sie gültig ist.
+The :productname:`OXID eShop eVAT` module ensures that the VAT number (VAT ID) entered by a customer is saved along with the date and time when it is valid.
 
-.. todo: #SB/#Joe: was bedeutet " ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist"? -- Was könnte der rechtliche Anwendungsfall der Info sein? -- Huíntergrund ist ja: Auslandskunden mit USt-ID zahlen dem Shopbetreiber keine MWSt., sondern  den Nettopreis.
-    Warum genau ist das Datum wichtig (ohne eVAT-Modul wird nur die USt-ID angezeigt).
+VAT ID, date and time give you an indication that and from when the customer is considered to be liable to pay VAT to the store.
 
-USt-IdNr., Datum und Uhrzeit geben Ihnen einen Hinweis darauf, dass und ab wann der Kunde dem Shop gegenüber als steuerpflichtig anzusehen ist.
-
-Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder im Bestellprozess angeben. Er kann sie auch zu einem späteren Zeitpunkt in seinem Kundenkonto nachtragen.
+Customers can provide the VAT ID when registering or during the ordering process. They can also enter it later in their customer accounts.
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Benutzer verwalten --> Benutzer`.
-#. Wählen Sie den Benutzer.
-#. Wählen Sie die Registerkarte :guilabel:`Stamm`.
+1. Choose :menuselection:`Administer Users --> Users`.
+#. Choose the user.
+#. Choose the :guilabel:`Main` tab.
 
 |result|
 
-Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
+The VAT ID is displayed with the date and time it was entered (:ref:`oxdakd02`, item 1).
 
-.. todo: #HR: der Zeitstempel wird nicht (mehr) angezeigt) -- Bug, wird gefixt
-.. todo: Bild neu machen DE/EN
+.. todo: #HR: the timestamp is not displayed (anymore)) -- bug, will be fixed
+.. todo: tbd: Redo image DE/EN
 
 .. _oxdakd02:
 
 .. figure:: /media/screenshots/oxdakd02.png
    :width: 450
-   :alt: Umsatzsteuer-ID-Nr. anzeigen
+   :alt: Displaying VAT ID
 
-   Abb.: Umsatzsteuer-ID-Nr. anzeigen
+   Fig.: Displaying VAT ID
 
 
-Erweiterung der PDF-Rechnung nutzen
------------------------------------
+Using the PDF invoice extension
+-------------------------------
 
-Enthält eine Bestellung Artikel, welche als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gelten, fügt :productname:`OXID eShop eVAT` zusätzliche Informationen zur PDF-Rechnung hinzu.
+If an order contains items that are considered telecommunications, broadcasting, television and electronically provided services, :productname:`OXID eShop eVAT` adds additional information to the PDF invoice.
 
-Mit einem Sternchen :guilabel:`*` wird auf den verwendeten Mehrwertsteuersatz hingewiesen (:ref:`oxdakd03`, Pos. 1).
+An asterisk :guilabel:`*` indicates the VAT rate used (:ref:`oxdakd03`, item 1).
 
-Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung des Artikelpreises herangezogen wurde (:ref:`oxdakd03`, Pos. 2).
+A message informs about the country whose VAT rate was used to calculate the item price (:ref:`oxdakd03`, item 2).
 
 .. _oxdakd03:
 
 .. figure:: /media/screenshots/oxdakd03.png
    :class: with-shadow
    :width: 650
-   :alt: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
+   :alt: Note on VAT rate in PDF invoice
 
-   Abb.: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
-
-
-Mehrwertsteuersätze pflegen
----------------------------
+   Fig.: Note on VAT rate in PDF invoice
 
 
-Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul statisch hinterlegt. Sie werden nicht automatisch aktualisiert.
+Maintaining VAT rates
+---------------------
 
-Sobald Sie :productname:`OXID eShop eVAT` aktiviert haben, müssen Sie als Shopbetreiber die Mehrwertsteuersätze pflegen.
+The current VAT rates of the different countries are statically stored in the module. They are not updated automatically.
+
+Once you have enabled :productname:`OXID eShop eVAT`, as a store owner you need to maintain the VAT rates.
 
 .. tip::
 
-   Um sich über mögliche Änderungen der Mehrwertsteuersätze auf dem Laufenden zu halten, abonnieren Sie einen Informationsservice.
+   To keep up to date with possible changes in VAT rates, subscribe to an information service.
 
 |prerequisites|
 
-Sie haben beim Konfigurieren sichergestellt, dass unter :menuselection:`Artikel verwalten --> Artikel --> <elektronisch erbrachte Dienstleistung> --> eVAT-Einstellungen` jedem betreffenden Artikel der für das jeweilige Land gültige Mehrwertsteuersatz zugeordnet ist.
+When configuring :productname:`OXID eShop eVAT`, under :menuselection:`Administer Products --> Products --> <electronically supplied service> --> eVAT Settings` you have ensured that each item in question is assigned the VAT rate valid for that country.
 
-Weitere Informationen finden Sie unter
+For more information, see
 
-* :ref:`configuration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
-* :ref:`configuration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`configuration:Mark item as electronic product and assign VAT rate`
+* :ref:`configuration:Mark category as electronic product and assign VAT rate`
 
 |procedure|
 
-Pflegen Sie die Mehrwertsteuersätze unter :menuselection:`Stammdaten --> Länder --> <Land> --> MwSt.-Sätze`.
+Maintain the VAT rates under :menuselection:`Master Settings --> Countries --> <country> --> VAT rates`.
+
+.. todo: #tbd: add xref in DE:
+
+For more information, see :ref:`configuration:Activating and maintaining country-specific VAT rates`
 
 
 

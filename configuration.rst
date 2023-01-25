@@ -28,8 +28,8 @@ Enable :productname:`OXID eShop eVAT` in each subshop where you want to use the 
 Configuring eVAT
 ----------------
 
-Activating country specific VAT rates
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Activating and maintaining country-specific VAT rates
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Activate the calculation of the VAT for the relevant countries.
 
