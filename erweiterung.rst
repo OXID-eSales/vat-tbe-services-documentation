@@ -109,6 +109,8 @@ Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leicht
 
 In unserem Beispiel ist die Artikelbezeichnung im Warenkorb rot hervorgehoben (:ref:`oxdake01`, Pos. 1).
 
+.. todo: #tbd: Bild EN erstellen
+
 .. _oxdake01:
 
 .. figure:: /media/screenshots/oxdake01.png

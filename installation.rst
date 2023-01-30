@@ -36,6 +36,8 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop ab
 #. Bestätigen Sie die Abfragen.
 #. Optional Löschen Sie alle Dateien und Ordner außer der Datei :file:`.htaccess` aus dem Verzeichnis :file:`/tmp` des Shops.
 
+.. todo: #HR:  composer require oxid-esales/evat-module:^2.0 führt zu  "Metadata version 1.2 is not supported"
+
 |result|
 
 

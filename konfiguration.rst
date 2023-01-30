@@ -111,7 +111,7 @@ Alternativ: Markieren Sie alle Artikel einer Kategorie als elektronisches Produk
 
 |procedure|
 
-1. Wählen Sie :menuselection:`Artikel verwalten --> Artikel`.
+1. Wählen Sie unter :menuselection:`Artikel verwalten --> Artikel` das Produkt.
 #. Wählen Sie die Registerkarte :guilabel:`eVAT-Einstellungen`.
 #. Markieren Sie das Kontrollkästchen :guilabel:`Artikel ist eine Telekommunikations-, Rundfunk-, Fernseh- oder auf elektronischem Weg erbrachte Dienstleistung` (:ref:`oxdakb02`, Pos. 1).
 #. Weisen Sie dem Artikel die gültigen Mehrwertsteuersätze für die einzelnen Länder zu.
@@ -233,7 +233,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
    .. note::
 
-      Die Bestimmungsmethode Geolocation ist nicht implementiert.
+      Die Bestimmungsmethode :code:`geo_location` ist nicht implementiert.
 
       .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint? -- kommt weg oder --> 0
 
@@ -254,23 +254,22 @@ Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
 .. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?
 
+|background|
 
-    |background|
+Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
 
-    Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
+Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
 
-    Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
+Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
 
-    Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
+Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
 
-    Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
-
-    Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
+Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
 |procedure|
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Modul :guilabel:`eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
+#. Wählen Sie das Modul :guilabel:`OXID eShop eVAT` und wählen Sie die Registerkarte :guilabel:`Einstell.`.
 #. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (in unserem Beispiel :code:`de` für Deutschland: :ref:`oxdakb04`, Pos. 3).
 
 
@@ -359,9 +358,9 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #SB: PayPal Plus: eine Doku: Heike fragen: wer ist Prod-Manager -> gute Frage, #SB fragen :D. Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+.. todo: #HR: Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
 
-.. todo: #tbd: Bild neu machen
+.. todo: #tbd: Bild neu machen DE/EN
 
 .. _oxdakb06:
 
