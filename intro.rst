@@ -3,6 +3,8 @@
 
 With the :productname:`OXID eShop eVAT` module, integrate the taxation of telecommunication, broadcasting, television and electronically provided services into your OXID eShop.
 
+For this purpose :productname:`OXID eShop eVAT` determines the customer location using the :emphasis:`billing address` of the customer and calculates the respective VAT accordingly.
+
 Legal basis
 -----------
 
@@ -35,10 +37,12 @@ Your benefits
 * Take advantage of
 
   * the logging of the customer's location when ordering electronic products or services
-  * the logging of the VAT ID number including date and time as proof for taxable customers ("business (taxable person)").
+  * the logging of the VAT ID number as proof for taxable customers ("business (taxable person)").
     |br|
     For taxable customers, the invoice will show the net price without VAT.
 * Extend :productname:`OXID eShop eVAT` with custom determination methods if required.
+
+.. todo: #tbd V.3: "the logging of the VAT ID number including date and time as proof for taxable customers ("business (taxable person)").
 
 How it works
 ------------

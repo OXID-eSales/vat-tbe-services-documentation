@@ -109,8 +109,6 @@ Color highlighting makes it easier for your customer to identify the item in que
 
 In our example, the item name in the shopping cart is highlighted in red (:ref:`oxdake01`, item 1).
 
-.. todo: tbd: Bild EN erg.
-
 .. _oxdake01:
 
 .. figure:: /media/screenshots/oxdake01.png

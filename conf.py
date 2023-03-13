@@ -68,7 +68,7 @@ author = 'OXID eSales AG'
 # built documents.
 #
 # The short X.Y version.
-version = '2.0'
+version = '2.1'
 # The full version, including alpha/beta/rc tags.
 release = '2'
 
@@ -133,13 +133,13 @@ todo_include_todos = True
 html_theme = 'sphinx_rtd_theme'
 
 html_context = {
-    'current_version': '2.0',
+    'current_version': '2.1',
     'versions':
-        [('2.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.0/'),
+        [('2.0', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.1/'),
          ],
     'languages':
-       [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.0/'),
-        ('EN', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.0/')],
+       [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.1/'),
+        ('EN', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.1/')],
     'css_files': [('_static/oxid.css')],
     'theme_logo_only': True,
     'show_sphinx': False,

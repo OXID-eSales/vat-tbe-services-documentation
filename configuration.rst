@@ -107,9 +107,7 @@ Alternatively: Mark all items in a category as electronic products or services (
 
 |procedure|
 
-.. todo: #tbd: oxdakb02.png auf EN ergänzen
-
-1. Choose :menuselection:`Administer Products --> Products`.
+1. Under :menuselection:`Administer Products --> Products`, choose the product.
 #. Choose :guilabel:`eVAT Settings` tab.
 #. Choose the :guilabel:`Product is a telecommunication, broadcasting or electronic service` checkbox (:ref:`oxdakb02`, item 1).
 #. Assign the applicable VAT rates for each country to the item.
@@ -168,9 +166,9 @@ Mark all items in a category as electronic products or services.
 .. figure:: /media/screenshots/oxdakb03.png
    :class: with-shadow
    :width: 650
-   :alt: Defining itmes of a category as electronic services
+   :alt: Defining items of a category as electronic services
 
-   Fig.: Defining itmes of a category as electronic services
+   Fig.: Defining items of a category as electronic services
 
 Configuring the customer location determination
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -184,23 +182,15 @@ The Implementing Regulation (EU) No 1042/2013 requires that the country of origi
 
 The customer's location must be determined by at least two checks. Simply indicating the customer in the ordering process is not sufficient; you must verify the customer's information.
 
-.. todo: #SB/#Joe check: a) Is the legal requirement valid, b) do we meet it?: "The sole indication of the customer in the ordering process is not sufficient, you must check the customer's indication."
-    The customer specifies his billing address in the ordering process. The module checks the billing address. So we have only 1 determination method.
-
-.. todo: #SB/#Joe: Check: Do we need the countryVAT module as a 2nd method, can we use it to meet the legal requirement?
-
 The :productname:`OXID eShop eVAT` module uses the customer's billing address to determine the customer location.
 
 You can add custom determination methods if needed (see :ref:`extension:Adding a method to determine the customer location`).
 
 |Procedure|
 
-.. todo: #tbd: oxdakb04.png auf EN ergänzen
-.. todo: #tbd: verifizieren: :guilabel:`Determination method for customer location`, :guilabel:`Determine customer location using billing address`
-
 1. Choose :menuselection:`Extensions --> Modules`.
 #. Choose the :guilabel:`OXID eShop eVAT` module and choose the :guilabel:`Settings` tab.
-#. Under :guilabel:`Determination method for customer location`, make sure that the :guilabel:`Determine customer location using billing address` determination method is enabled.
+#. Under :guilabel:`eVAT customer location method`, make sure that the :guilabel:`Determine customer location using billing address` determination method is enabled.
    |br|
    To do this, do the following:
 
@@ -223,9 +213,7 @@ You can add custom determination methods if needed (see :ref:`extension:Adding a
 
    .. note::
 
-      The determination method geolocation is not implemented.
-
-      .. todo: #SB/#HR: Can we disable Geolocation so it doesn't appear in the field by default? -- comes away or --> 0
+      The :code:`geo_location` determination method is not implemented.
 
 #. Save your settings.
 
@@ -242,28 +230,19 @@ Verifying the store location
 
 Make sure that the store location is configured correctly.
 
-.. todo: #HR/#SB: The following is not true: no or wrong country identifier has no effect; what is the expected behavior?
-
-
+.. todo: #tb:: add as of V.3
     |background|
-
     The system checks if a customer is from the same country where the store is located.
-
     If this is the case, the VAT rate defined as default for the store will be used to calculate the value of goods.
-
     If you enter an invalid country code, the store behaves as if no country is entered.
-
     Items representing telecommunication, radio, television and electronically provided services will not be marked as such.
-
     No related messages will be displayed.
 
 |procedure|
 
-.. todo: Verify :guilabel:`Shop location` field,
-
 1. Choose :menuselection:`Extensions --> Modules`.
-#. Choose the :guilabel:`eVAT` module and choose the :guilabel:`Settings` tab.
-#. In the :guilabel:`Shop location` field, enter the country code for the store location in ISO2 format (in our example :code:`de` for Germany: :ref:`oxdakb04`, item 3).
+#. Choose the :guilabel:`OXID eShop eVAT` module and choose the :guilabel:`Settings` tab.
+#. In the :guilabel:`Place of Business` field, enter the country code for the store location in ISO2 format (in our example :code:`de` for Germany: :ref:`oxdakb04`, item 3).
 
 Configuring PDF Invoice
 -----------------------
@@ -349,9 +328,6 @@ In our following example, you will ensure compatibility for the :productname:`Pa
    |br|
    For more information, see your payment module documentation.
 #. If your payment module does not allow you to disable the quick purchase feature, disable the payment module for the electronic items.
-
-.. todo: #SB: PayPal Plus: a doc: HR ask: who is prod manager -> good question, #SB ask :D. Otherwise interesting, should try if this really still works with the previous PayPal module with store 6.5.x like this. And what about checkout via GraphQL then?
-.. todo: #tbd: redo image DE & EN
 
 .. _oxdakb06:
 

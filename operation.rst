@@ -3,9 +3,9 @@ Operation
 
 Use the following functions of the :productname:`OXID eShop eVAT` module during operation:
 
-* Display customer location in the order
-* Display sales tax identification number
-* Use PDF invoice extension
+* Displaying the customer location in the order
+* Displaying the sales tax identification number
+* Using the PDF invoice extension
 
 Displaying the customer location in an order
 --------------------------------------------
@@ -54,10 +54,9 @@ Customers can provide the VAT ID when registering or during the ordering process
 
 |result|
 
-The VAT ID is displayed with the date and time it was entered (:ref:`oxdakd02`, item 1).
+The VAT ID is displayed (:ref:`oxdakd02`, item 1).
 
-.. todo: #HR: the timestamp is not displayed (anymore)) -- bug, will be fixed
-.. todo: tbd: Redo image DE/EN
+.. todo: #tbd 3.0: "with the date and time it was entered"
 
 .. _oxdakd02:
 
