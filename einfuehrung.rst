@@ -3,7 +3,9 @@
 
 Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
 
-.. todo: #ProdMan:klären: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
+Dazu bestimmt :productname:`OXID eShop eVAT` den Kundenstandort mithilfe der :emphasis:`Rechnungsadresse` des Kunden und berechnet entsprechend die jeweilige Mehrwertsteuer.
+
+.. todo: #SB: ProdMan:klären: Wenn el. Artikel, dann Modul nötig; hilft auch bei anderen Produkten, aber da nicht nötig; wenn business > 100000 Euro auch mit 19% nach Österreich; Jahresumsatz
    Große eShops: aus Österreich bestellt, dann 19 -> Modul würde helfen: wenn gezwungen, MWSt korrekt auszuweisen, dann Modul: Steuerberater fragen
 
 Gesetzliche Grundlage
@@ -38,10 +40,13 @@ Ihre Vorteile
 * Nutzen Sie dabei
 
   * die Protokollierung des Kundenstandortes bei Bestellungen von elektronischen Produkten oder Dienstleistungen
-  * die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)").
+  * die Speicherung der USt-ID-Nummer als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)").
     |br|
     Bei steuerpflichtigen Kunden wird in der Rechnung der Nettopreis ohne Mehrwertsteuer ausgewiesen.
 * Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
+
+.. todo: #tbd: V.3.0: Satz oben wie folgt ersetzen: "die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)")." -- "mit Datum und Uhrzeit" ist ein Bug in V.3, wird in V. 4 für eShop behoben
+
 
 Funktionsweise
 --------------

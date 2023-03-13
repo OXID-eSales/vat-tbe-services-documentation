@@ -201,7 +201,7 @@ Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Di
 .. todo: #SB: wahrscheinlich Nein: eVAT setzt country VAT voraus: SB prüft; /#Joe: Prüfen: Brauchen wir das countryVAT-Modul als 2. Methode, können wir es nutzen, um die rechtliche Anforderung zu erfüllen?:
     SB prüft: was machen die beiden Module? Gibt es Abhängigkeiten?
 
-Das Modul :productname:`OXID eShop eVAT` verwendet die Rechnungsadresse des Kunden, um den Kundenstandort zu bestimmen.
+Das Modul :productname:`OXID eShop eVAT` verwendet die :emphasis:`Rechnungsadresse` des Kunden, um den Kundenstandort zu bestimmen.
 
 Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erweiterung:Bestimmungsmethode für Kundenstandort hinzufügen`).
 
@@ -235,7 +235,7 @@ Sie können bei Bedarf eigene Bestimmungsmethoden hinzuzufügen (siehe :ref:`erw
 
       Die Bestimmungsmethode :code:`geo_location` ist nicht implementiert.
 
-      .. todo: #HR: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint? -- kommt weg oder --> 0
+      .. todo: #SB: Können wir Geolocation deaktivieren, so dass es nicht standardmäßig in dem Feld erscheint? -- kommt weg oder --> 0 --> SB/VL fragen: wird geolocation implementiert, wie vorgehen mit geolocation?
 
 #. Speichern Sie Ihre Einstellungen.
 
@@ -252,19 +252,13 @@ Sitz des Shops verifizieren
 
 Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
-.. todo: #HR: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?
-
-|background|
-
-Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
-
-Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
-
-Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
-
-Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
-
-Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
+.. todo: #SB: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?; HR: Nachrichten über MWSt-Satz werden nicht angezeigt -- mit 7.0 prüfen OXDEV-6375: VL/SB fragen: wie soll Verhalten sein? für 7.0 klären
+        |background|
+        Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
+        Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
+        Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
+        Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
+        Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
 
 |procedure|
 
@@ -358,7 +352,7 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #HR: Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL?
+.. todo: #HR: Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL? -- HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
 
 .. todo: #tbd: Bild neu machen DE/EN
 
