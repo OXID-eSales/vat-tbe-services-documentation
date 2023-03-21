@@ -326,6 +326,8 @@ Kompatibilität mit Zahlungsmodulen sicherstellen
 Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
+.. todo: 'Schnellkauf ist der Express checkout.
+.. todo: Unzer fügt nur 'normaler Zahlarten hinzu', das sollte kein Problem sein, d.h. Beschreibung passt.
 
 Sie müssen nichts tun, wenn Sie
 
@@ -345,6 +347,11 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
 #. Wählen Sie das Zahlungsmodul, in unserem Beispiel :productname:`PayPal`.
 #. Stellen Sie sicher, dass die Checkout-Seite angezeigt wird.
    |br|
+   .. todo: Originaldoku spricht vom Express-Checkout. oxdakb06.png zeigt nur das feature für 'nach Epxress Checkout direkt auf thank you page oder noch mal explizit Bestellung abschliessen'.
+            Das Problem ist aber der Expresscheckout an sich. Screenshot bitte ändern auf 'keinen Express checkout zulassen', so dass PayPal nur als Standard-Bezahlmethode funktioniert.
+            INterne info: PP Express mit evat kann den shop in Maintenance Mode bringen.
+
+
    Dazu deaktivieren Sie in unserem Beispiel (für :productname:`PayPal`) auf der Registerkarte :guilabel:`Einstell.` das Kontrollkästchen :guilabel:`Bestellung nach PayPal Checkout abschließen` (:ref:`oxdakb06`, Pos. 1).
    |br|
    Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
@@ -353,8 +360,9 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
 .. todo: #HR: Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL? -- HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
+   2023-03-21 HR: PPC scheint zu funktionieren, auch express checkout. GraphQL habe ich nicht probiert.
 
-.. todo: #tbd: Bild neu machen DE/EN
+.. todo: #tbd: Bild neu machen DE/EN (die anderen checkboxen)
 
 .. _oxdakb06:
 
