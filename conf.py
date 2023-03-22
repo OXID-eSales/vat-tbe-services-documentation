@@ -136,7 +136,7 @@ html_context = {
     'current_version': '2.1',
     'versions':
         [('2.1', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.1/'),
-         ],
+         ],e
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat_tbe_services/de/2.1/'),
         ('EN', 'https://docs.oxid-esales.com/modules/vat_tbe_services/en/2.1/')],
@@ -148,7 +148,7 @@ html_context = {
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'OXID-eSales',
     'github_repo': 'vat-tbe-services-documentation',
-    'github_version': '2.1-de/'
+    'github_version': '2.1-en/'
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
