@@ -325,9 +325,7 @@ Kompatibilität mit Zahlungsmodulen sicherstellen
 
 Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
-Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
-.. todo: 'Schnellkauf ist der Express checkout.
-.. todo: Unzer fügt nur 'normaler Zahlarten hinzu', das sollte kein Problem sein, d.h. Beschreibung passt.
+Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion (Express-Ccheckout) hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
 
 Sie müssen nichts tun, wenn Sie
 
@@ -345,31 +343,33 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Zahlungsmodul, in unserem Beispiel :productname:`PayPal`.
-#. Stellen Sie sicher, dass die Checkout-Seite angezeigt wird.
-   |br|
-   .. todo: Originaldoku spricht vom Express-Checkout. oxdakb06.png zeigt nur das feature für 'nach Epxress Checkout direkt auf thank you page oder noch mal explizit Bestellung abschliessen'.
-            Das Problem ist aber der Expresscheckout an sich. Screenshot bitte ändern auf 'keinen Express checkout zulassen', so dass PayPal nur als Standard-Bezahlmethode funktioniert.
-            INterne info: PP Express mit evat kann den shop in Maintenance Mode bringen.
+#. Wählen Sie in unserem Beispiel :menuselection:`Einstell. --> Integration von PayPal`.
+#. Stellen Sie sicher, dass (in unserem Beispiel für :productname:`PayPal`) nur die Standard-Bezahlmethode aktiviert ist:
 
+   * Stellen Sie sicher, das das Kontrollkästchen :guilabel:`PayPal Basis` :emphasis:`aktiviert` ist (:ref:`oxdakb06`, Pos. 1).
+   * Stellen Sie sicher, das folgende Kontrollkästchen :emphasis:`deaktiviert` sind (:ref:`oxdakb06`, Pos. 2):
+     * :guilabel:`PayPal Express`
+     * :guilabel:`Express Checkout im Mini-Warenkorb anzeigen`
+     * :guilabel:`Express Checkout auf der Artikel-Detailseite anzeigen`
 
-   Dazu deaktivieren Sie in unserem Beispiel (für :productname:`PayPal`) auf der Registerkarte :guilabel:`Einstell.` das Kontrollkästchen :guilabel:`Bestellung nach PayPal Checkout abschließen` (:ref:`oxdakb06`, Pos. 1).
-   |br|
+#. Speichern Sie Ihre Einstellungen.
+
    Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
    |br|
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. todo: #HR: Ansonsten interessant, sollte man mal ausprobieren, ob das wirklich mit dem bisherigen PayPal-Modul mit shop 6.5.x noch so funktioniert. Und was ist dann mit checkout über GraphQL? -- HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
-   2023-03-21 HR: PPC scheint zu funktionieren, auch express checkout. GraphQL habe ich nicht probiert.
-
-.. todo: #tbd: Bild neu machen DE/EN (die anderen checkboxen)
+.. todo: #HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
+   2023-03-21 HR: PPC funktionier, auch express checkout. GraphQL habe ich nicht probiert.
 
 .. _oxdakb06:
 
 .. figure:: /media/screenshots/oxdakb06.png
-   :width: 650
    :alt: Schnellkauf-Funktion des Moduls abschalten
+   :class: with-shadow
+   :width: 650
 
-   Abb.: Schnellkauf-Funktion des Moduls :productname:`PayPal` abschalten
+   Abb.: Schnellkauf-Funktion des Moduls abschalten
+
 
 .. Intern: oxdakb, Status:
