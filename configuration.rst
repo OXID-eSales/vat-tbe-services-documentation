@@ -302,7 +302,7 @@ Ensuring compatibility with payment modules
 
 If you use additional payment modules, make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-To do this, check if your payment module has a quick purchase feature (this is the case for :productname:`PayPal`, for example) and turn off the quick purchase feature.
+To do this, check if your payment module has a quick purchase feature (Express Ccheckout) (this is the case for :productname:`PayPal`, for example) and turn off the quick purchase feature.
 
 You do :emphasis:`not` need to do anything if you have
 
@@ -320,10 +320,17 @@ In our following example, you will ensure compatibility for the :productname:`Pa
 
 1. Choose :menuselection:`Extensions --> Modules`.
 #. Choose the payment module, in our example :productname:`PayPal`.
-#. Make sure that the checkout page is displayed.
-   |br|
-   To do this, in our example (for :productname:`PayPal`) on the :guilabel:`Settings` tab, uncheck the :guilabel:`Complete order after PayPal checkout` checkbox (:ref:`oxdakb06`, item 1).
-   |br|
+#. In our example, choose :menuselection:`Settings --> PayPal Integration`.
+#. To make sure that (in our example for :productname:`PayPal`) only the default payment method is enabled, do the following:
+
+   * Make sure that the :guilabel:`PayPal Basis` checkbox is :emphasis:`enabled` (:ref:`oxdakb06`, item 1).
+   * Make sure that the following checkboxes are :emphasis:`disabled` (:ref:`oxdakb06`, item 2):
+     * :guilabel:`PayPal Express`
+     * :guilabel:`Show Express Checkout in the mini cart`.
+     * :guilabel:`Show Express Checkout in the products detail page`.
+
+#. Save your settings.
+
    Result: The quick purchase feature is disabled, orders are not completed immediately by the payment processor, but the customer lands on the checkout page, and the customer has to confirm the order with the correctly determined VAT.
    |br|
    For more information, see your payment module documentation.
@@ -332,8 +339,9 @@ In our following example, you will ensure compatibility for the :productname:`Pa
 .. _oxdakb06:
 
 .. figure:: /media/screenshots/oxdakb06.png
-   :width: 650
    :alt: Disabling the quick purchase function of the PayPal module
+   :class: with-shadow
+   :width: 650
 
    Fig.: Disabling the quick purchase function of the :productname:`PayPal` module
 
