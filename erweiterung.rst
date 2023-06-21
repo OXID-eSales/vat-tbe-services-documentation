@@ -15,18 +15,18 @@ Um eine eigene Bestimmungsmethode für den Kundenstandort hinzuzufügen, erstell
 
 .. note::
 
-   Die Klasse :technicalname:`oeVATTBEGeoLocationEvidence` ist derzeit nur vorbereitet und muss implementiert werden.
+   Die Klasse :technicalname:`GeoLocationEvidence` ist derzeit nur vorbereitet und muss implementiert werden.
 
-   Das kann durch Erweitern dieser Klasse mit einem Modul und Implementierung der Methode :technicalname:`oeVATTBEGeoLocationEvidence::getCountryId()` umgesetzt werden.
+   Das kann durch Erweitern dieser Klasse mit einem Modul und Implementierung der Methode :technicalname:`GeoLocationEvidence::getCountryId()` umgesetzt werden.
 
 
 |procedure|
 
 Tun Sie Folgendes:
 
-* Damit die neue Klasse eine Schnittstelle hat, stellen Sie sicher, dass sie die Klasse :technicalname:`oeVATTBEEvidence` erweitert.
-* Registrieren Sie die Klasse mit :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
-* Wenn die Klasse nicht mehr benötigt wird, beenden Sie die Registrierung der Klasse mit :technicalname:`oeVATTBEEvidenceRegister::unregisterEvidence()`.
+* Damit die neue Klasse eine Schnittstelle hat, stellen Sie sicher, dass sie die Klasse :technicalname:`Evidence` erweitert.
+* Registrieren Sie die Klasse mit :technicalname:`EvidenceRegister::registerEvidence()`.
+* Wenn die Klasse nicht mehr benötigt wird, beenden Sie die Registrierung der Klasse mit :technicalname:`EvidenceRegister::unregisterEvidence()`.
 * Erstellen Sie ein Modul, das die neue Klasse enthält.
 * Tragen Sie die Klasse in der Datei :technicalname:`metadata.php` des Moduls ein.
 * Verwenden Sie für das Registrieren und Abmelden der Klasse die Ereignisse :technicalname:`onActivate()` und :technicalname:`onDeactivate()` des Moduls.
@@ -35,23 +35,23 @@ Tun Sie Folgendes:
 
      public static function onActivate()
         {
-            if (class_exists('oeVATTBEEvidenceRegister')) {
-                $oConfig = oxRegistry::getConfig();
-                /** @var oeVATTBEEvidenceRegister $oEvidenceRegister */
-                $oEvidenceRegister = oxNew('oeVATTBEEvidenceRegister', $oConfig);
-                $oEvidenceRegister->registerEvidence('oeVATTBEExtendedEvidence1');
-                $oEvidenceRegister->registerEvidence('oeVATTBEExtendedEvidence2');
+            if (class_exists('EvidenceRegister')) {
+                $oConfig = Registry::getConfig();
+                /** @var EvidenceRegister $oEvidenceRegister */
+                $oEvidenceRegister = oxNew('EvidenceRegister', $oConfig);
+                $oEvidenceRegister->registerEvidence('ExtendedEvidence1');
+                $oEvidenceRegister->registerEvidence('ExtendedEvidence2');
             }
         }
 
         public static function onDeactivate()
         {
-            if (class_exists('oeVATTBEEvidenceRegister')) {
-                $oConfig = oxRegistry::getConfig();
-                /** @var oeVATTBEEvidenceRegister $oEvidenceRegister */
-                $oEvidenceRegister = oxNew('oeVATTBEEvidenceRegister', $oConfig);
-                $oEvidenceRegister->unregisterEvidence('oeVATTBEExtendedEvidence1');
-                $oEvidenceRegister->unregisterEvidence('oeVATTBEExtendedEvidence2');
+            if (class_exists('EvidenceRegister')) {
+                $oConfig = Registry::getConfig();
+                /** @var EvidenceRegister $oEvidenceRegister */
+                $oEvidenceRegister = oxNew('EvidenceRegister', $oConfig);
+                $oEvidenceRegister->unregisterEvidence('ExtendedEvidence1');
+                $oEvidenceRegister->unregisterEvidence('ExtendedEvidence2');
             }
         }
 
@@ -59,7 +59,7 @@ Tun Sie Folgendes:
 
 * Aktivieren Sie Ihr Modul mit den zusätzlichen Bestimmungsmethoden nur dann, wenn das Modul :productname:`OXID eShop eVAT` aktiv ist.
 
-  Andernfalls wird :technicalname:`oeVATTBEEvidenceRegister` nicht gefunden.
+  Andernfalls wird :technicalname:`EvidenceRegister` nicht gefunden.
 
 
 Nicht kaufbare Artikel im Warenkorb hervorheben
@@ -69,7 +69,7 @@ Sie wollen nicht kaufbare Artikel im Warenkorb farblich hervorheben.
 
 Das setzen Sie mit Hilfe einer CSS-Klasse um, die Sie in das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` integrieren.
 
-Die Information, ob ein Artikel im Warenkorb kaufbar ist, liefert Ihnen die Controller-Methode :technicalname:`isOeVATTBETBEArticleValid`.
+Die Information, ob ein Artikel im Warenkorb kaufbar ist, liefert Ihnen die Controller-Methode :technicalname:`isArticleValid`.
 
 |background|
 
@@ -85,7 +85,7 @@ Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leicht
 
 |procedure|
 
-1. Erstellen Sie ein Erweiterungsmodul mit einer CCS-Klasse (in unserem Beispiel :code:`oeVATTBEBasketItemInvalid`) und erweitern Sie das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
+1. Erstellen Sie ein Erweiterungsmodul mit einer CCS-Klasse (in unserem Beispiel :code:`BasketItemInvalid`) und erweitern Sie das Template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
 
    .. code::
 
@@ -93,7 +93,7 @@ Durch eine farbliche Hervorhebung kann Ihr Kunde den betreffenden Artikel leicht
             [{block name="checkout_basketcontents_basketitem"}]
              ....
             <tr class="basketItem
-             [{if !$oView->isOeVATTBETBEArticleValid()}] oeVATTBEBasketItemInvalid[{/if}]"
+             [{if !$oView->isArticleValid()}] BasketItemInvalid[{/if}]"
              id="cartItem_[{$smarty.foreach.basketContents.iteration}]">
 
 2. Fügen Sie die CSS-Klasse der CSS-Datei :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` oder der CSS-Datei des verwendeten Themes hinzu.
