@@ -15,18 +15,18 @@ To add a custom method to determine the customer location, create a class and re
 
 .. note::
 
-   The :technicalname:`oeVATTBEGeoLocationEvidence` class is currently only prepared and needs to be implemented.
+   The :technicalname:`GeoLocationEvidence` class is currently only prepared and needs to be implemented.
 
-   This can be done by extending this class with a module and implementing the :technicalname:`oeVATTBEGeoLocationEvidence::getCountryId()` method.
+   This can be done by extending this class with a module and implementing the :technicalname:`GeoLocationEvidence::getCountryId()` method.
 
 
 |procedure|
 
 Do the following:
 
-* For the new class to have an interface, make sure it extends the :technicalname:`oeVATTBEEvidence` class.
-* Register the class with :technicalname:`oeVATTBEEvidenceRegister::registerEvidence()`.
-* When the class is no longer needed, unregister the class with :technicalname:`oeVATTBEEvidenceRegister::unregisterEvidence()`.
+* For the new class to have an interface, make sure it extends the :technicalname:`Evidence` class.
+* Register the class with :technicalname:`EvidenceRegister::registerEvidence()`.
+* When the class is no longer needed, unregister the class with :technicalname:`EvidenceRegister::unregisterEvidence()`.
 * Create a module that contains the new class.
 * Enter the class in the :technicalname:`metadata.php` file of the module.
 * For registering and unregistering the class, use the :technicalname:`onActivate()` and :technicalname:`onDeactivate()` events of the module.
@@ -35,23 +35,23 @@ Do the following:
 
      public static function onActivate()
         {
-            if (class_exists('oeVATTBEEvidenceRegister')) {
-                $oConfig = oxRegistry::getConfig();
-                /** @var oeVATTBEEvidenceRegister $oEvidenceRegister */
-                $oEvidenceRegister = oxNew('oeVATTBEEvidenceRegister', $oConfig);
-                $oEvidenceRegister->registerEvidence('oeVATTBEExtendedEvidence1');
-                $oEvidenceRegister->registerEvidence('oeVATTBEExtendedEvidence2');
+            if (class_exists('EvidenceRegister')) {
+                $oConfig = Registry::getConfig();
+                /** @var EvidenceRegister $oEvidenceRegister */
+                $oEvidenceRegister = oxNew('EvidenceRegister', $oConfig);
+                $oEvidenceRegister->registerEvidence('ExtendedEvidence1');
+                $oEvidenceRegister->registerEvidence('ExtendedEvidence2');
             }
         }
 
         public static function onDeactivate()
         {
-            if (class_exists('oeVATTBEEvidenceRegister')) {
-                $oConfig = oxRegistry::getConfig();
-                /** @var oeVATTBEEvidenceRegister $oEvidenceRegister */
-                $oEvidenceRegister = oxNew('oeVATTBEEvidenceRegister', $oConfig);
-                $oEvidenceRegister->unregisterEvidence('oeVATTBEExtendedEvidence1');
-                $oEvidenceRegister->unregisterEvidence('oeVATTBEExtendedEvidence2');
+            if (class_exists('EvidenceRegister')) {
+                $oConfig = Registry::getConfig();
+                /** @var EvidenceRegister $oEvidenceRegister */
+                $oEvidenceRegister = oxNew('EvidenceRegister', $oConfig);
+                $oEvidenceRegister->unregisterEvidence('ExtendedEvidence1');
+                $oEvidenceRegister->unregisterEvidence('ExtendedEvidence2');
             }
         }
 
@@ -59,7 +59,7 @@ Do the following:
 
 * Activate your module with the additional determination methods only if the :productname:`OXID eShop eVAT` module is active.
 
-  Otherwise :technicalname:`oeVATTBEEvidenceRegister` will not be found.
+  Otherwise :technicalname:`EvidenceRegister` will not be found.
 
 
 Highlighting non-purchasable items in a shopping cart
@@ -69,7 +69,7 @@ You want to highlight non-purchasable items in the shopping cart.
 
 You can do this using a CSS class that you integrate into the :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl` template.
 
-The information whether an item in the shopping cart is purchasable is provided by the controller method :technicalname:`isOeVATTBETBEArticleValid`.
+The information whether an item in the shopping cart is purchasable is provided by the controller method :technicalname:`isArticleValid`.
 
 |background|
 
@@ -85,7 +85,7 @@ Color highlighting makes it easier for your customer to identify the item in que
 
 |procedure|
 
-1. Create an extension module with a CCS class (in our example :code:`oeVATTBEBasketItemInvalid`) and extend the template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
+1. Create an extension module with a CCS class (in our example :code:`BasketItemInvalid`) and extend the template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
 
    .. code::
 
@@ -93,7 +93,7 @@ Color highlighting makes it easier for your customer to identify the item in que
             [{block name="checkout_basketcontents_basketitem"}]
              ....
             <tr class="basketItem
-             [{if !$oView->isOeVATTBETBEArticleValid()}] oeVATTBEBasketItemInvalid[{/if}]"
+             [{if !$oView->isArticleValid()}] BasketItemInvalid[{/if}]"
              id="cartItem_[{$smarty.foreach.basketContents.iteration}]">
 
 2. Add the CSS class to the CSS file :technicalname:`/oe/oevattbe/out/src/css/vattbe.css` or to the CSS file of the theme you use.
