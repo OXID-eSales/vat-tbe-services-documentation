@@ -133,13 +133,14 @@ todo_include_todos = True
 html_theme = 'sphinx_rtd_theme'
 
 html_context = {
-    'current_version': '2.1',
+    'current_version': '3.0',
     'versions':
         [('2.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/2.1/'),
+        ('3.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/3.0/'),
          ],
     'languages':
-       [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/2.1/'),
-        ('EN', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/2.1/')],
+       [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/3.0/'),
+        ('EN', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/3.0/')],
     'css_files': [('_static/oxid.css')],
     'theme_logo_only': True,
     'show_sphinx': False,
@@ -148,7 +149,7 @@ html_context = {
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     'github_user': 'OXID-eSales',
     'github_repo': 'vat-tbe-services-documentation',
-    'github_version': '2.1-de/'
+    'github_version': '3.0-de/'
 }
 
 # Theme options are theme-specific and customize the look and feel of a theme
