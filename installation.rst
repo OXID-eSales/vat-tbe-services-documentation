@@ -6,8 +6,8 @@ Install the module :productname:`OXID eShop eVAT` for OXID eShop version 6.0 and
 
 |prerequisites|
 
-* You have installed OXID eShop 6.0 or higher.
-* You have PHP 5.6 or higher.
+* You have installed OXID eShop 7.0 or higher.
+* You have PHP 8.0 or higher.
 
 
 |procedure|
@@ -25,13 +25,13 @@ Install the module :productname:`OXID eShop eVAT` for OXID eShop version 6.0 and
 
    .. code:: bash
 
-      composer require oxid-esales/evat-module:^2.0
+      composer require oxid-esales/evat-module:^3.0
 
    Alternatively, to install the latest unreleased version from Github, run the following command:
 
    .. code:: bash
 
-      composer require oxid-esales/evat-module:dev-master
+      composer require oxid-esales/evat-module:dev-b-7.0.x
 
 #. Confirm the queries.
 #. Optional: Delete all files and folders except :file:`.htaccess` from the :file:`/tmp` directory of the store.
