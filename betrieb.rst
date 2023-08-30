@@ -59,7 +59,7 @@ Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder
 
 Die Umsatzsteuer-Identifikationsnummer wird angezeigt (:ref:`oxdakd02`, Pos. 1).
 
-.. todo: #tbd eVAT V.3=eShop7: Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
+.. todo: #HR; #tbd eVAT V.3=eShop7: Die Umsatzsteuer-Identifikationsnummer wird mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
 .. todo: Hintergrund: Fehlender Zeitstempel ist Bug in 2.0 -- wird gefixt für 7.0: OXDEV-6375 für shop 7/eVAT 3.0
 
 

@@ -360,7 +360,9 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
 .. todo: #HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
-   2023-03-21 HR: PPC funktionier, auch express checkout. GraphQL habe ich nicht probiert.
+   2023-03-21 HR: PPC funktioniert für 6.5, auch express checkout. GraphQL habe ich nicht probiert --
+    20230830 lässt sich auch nicht testen: HR fragt SB, ob wir GraphQL für eVAT nachziehen.; PPC für 3.0 noch nicht getestet; aber Module noch nicht da; Absatz
+    Kapitel nur: Kompatibilität mit Zahlungsmodlen sicherstellen, potentiele Problemquelle ist Express Checkout; Einzelheiten weg.
 
 .. _oxdakb06:
 

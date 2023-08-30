@@ -45,7 +45,7 @@ Ihre Vorteile
     Bei steuerpflichtigen Kunden wird in der Rechnung der Nettopreis ohne Mehrwertsteuer ausgewiesen.
 * Erweitern Sie :productname:`OXID eShop eVAT` bei Bedarf um eigene Bestimmungsmethoden.
 
-.. todo: #tbd: V.3.0: Satz oben wie folgt ersetzen: "die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)")." -- "mit Datum und Uhrzeit" ist ein Bug in V.3, wird in V. 4 für eShop behoben
+.. todo: #HR: #tbd: V.3.0: Satz oben wie folgt ersetzen: "die Speicherung der USt-ID-Nummer mit Datum und Uhrzeit als Nachweis für steuerpflichtige Kunden ("Unternehmen (Steuerpflichtige)")." -- "mit Datum und Uhrzeit" ist ein Bug in V.3, wird in V. 4 für eShop behoben
 
 
 Funktionsweise
