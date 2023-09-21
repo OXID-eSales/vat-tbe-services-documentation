@@ -299,52 +299,37 @@ Wenn Sie Zahlungsmodule von Drittanbietern verwenden, stellen Sie sicher, dass I
 
 Dazu kann es reichen, dass Sie die Schnellkauf-Funktion (Express-Checkout) abschalten.
 
+Hintergrund: Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
+|br|
+Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, dann nutzt Ihr OXID eShop nur die Standard-Funktionalität zur Bestimmung der Mehrwertsteuer, und die ermittelte Mehrwertsteuer ist möglicherweise falsch.
+
 .. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
     Sie müssen nichts tun, wenn Sie
     * ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
     * die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
 
-
-|background|
-
-.. include:: /_static/reuse/payment-modules.rst
-
 |procedure|
 
-In unserem folgenden Beispiel deaktivieren Sie die Schnellkauf-Funktion beim Zahlungsmodul :productname:`PayPal`.
+1. Navigieren Sie zu den Einstellungen des Drittanbieter-Zahlungsmoduls.
+#. Stellen Sie sicher, dass nur die Standard-Bezahlmethode aktiviert ist.
 
-1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
-#. Wählen Sie das Zahlungsmodul, in unserem Beispiel :productname:`PayPal`.
-#. Wählen Sie in unserem Beispiel :menuselection:`Einstell. --> Integration von PayPal`.
-#. Stellen Sie sicher, dass (in unserem Beispiel für :productname:`PayPal`) nur die Standard-Bezahlmethode aktiviert ist:
+   Deaktivieren Sie Funktionen, die mit "Schnelkauf-" oder "Express Checkout" oder ähnlichem zu tun haben.
 
-   * Stellen Sie sicher, das das Kontrollkästchen :guilabel:`PayPal Basis` :emphasis:`aktiviert` ist (:ref:`oxdakb06`, Pos. 1).
-   * Stellen Sie sicher, das folgende Kontrollkästchen :emphasis:`deaktiviert` sind (:ref:`oxdakb06`, Pos. 2):
-     * :guilabel:`PayPal Express`
-     * :guilabel:`Express Checkout im Mini-Warenkorb anzeigen`
-     * :guilabel:`Express Checkout auf der Artikel-Detailseite anzeigen`
+   Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 
 #. Speichern Sie Ihre Einstellungen.
 
-   Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
-   |br|
-   Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
-#. Wenn Ihr Drittanbieter-Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 #. Testen Sie, ob das Zahlungsmodul bei deaktivierter Schnellkauf-Funktion funktioniert.
 
-.. todo: #HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
-   2023-03-21 HR: PPC funktioniert für 6.5, auch express checkout. GraphQL habe ich nicht probiert --
-    20230830 lässt sich auch nicht testen: HR fragt SB, ob wir GraphQL für eVAT nachziehen.; PPC für 3.0 noch nicht getestet; aber Module noch nicht da; Absatz
-    Kapitel nur: Kompatibilität mit Zahlungsmodlen sicherstellen, potentiele Problemquelle ist Express Checkout; Einzelheiten weg.
+   Erwartetes Egebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
 
-.. _oxdakb06:
+#. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
-.. figure:: /media/screenshots/oxdakb06.png
-   :alt: Schnellkauf-Funktion des Moduls abschalten
-   :class: with-shadow
-   :width: 650
 
-   Abb.: Schnellkauf-Funktion des Moduls abschalten
+.. todo: HR: PPC funktioniert für 6.5, auch express checkout. GraphQL habe ich nicht probiert --
+    20230830 lässt sich auch nicht testen: HR fragt SB, ob wir GraphQL für eVAT nachziehen.; PPC für 3.0 noch nicht getestet; aber Module noch nicht da;
+
+
 
 
 .. Intern: oxdakb, Status:

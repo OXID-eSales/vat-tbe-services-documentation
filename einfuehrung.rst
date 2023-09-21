@@ -142,9 +142,16 @@ Kompatibilität
 Zahlungsmodule
 ^^^^^^^^^^^^^^
 
-.. include:: /_static/reuse/payment-modules.rst
+Beachten Sie folgende Einschränkungen:
 
-Sie müssen sicherstellen, dass Ihre Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` kompatibel sind.
+* Die neuen Zahlungsmodule :productname:`PayPal Checkout`, :productname:`Amazon Pay` und :productname:`Unzer Payment für OXID` sind noch nicht für Version 7 des OXID eShop verfügbar.
+
+  .. todo: Zahlungsmodule ergänzen, soabald verfügbarbar für eShop 7: vorerst ausblenden
+   Die Zahlungsmodule :productname:`PayPal Checkout`, :productname:`Amazon Pay` und :productname:`Unzer Payment für OXID` sind mit :productname:`OXID eShop eVAT` kompatibel: Auch bei der Schnellkauf-Funktion gelangt Ihr Kunde auf eine Checkout-Seite, auf der er die Daten zur Bestellung einschließlich des Mehrwertsteuersatzes bestätigt.
+
+* Die Zahlungsmodule :productname:`PayPal` und :productname:`PayPal Plus` sind nicht mit :productname:`OXID eShop` Version 7 kompatibel und stehen deshalb nicht für :productname:`OXID eShop eVAT` zur Verfügung.
+
+Sie müssen sicherstellen, dass Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 
