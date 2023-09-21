@@ -5,7 +5,7 @@ Use the following functions of the :productname:`OXID eShop eVAT` module during 
 
 * Displaying the customer location in the order
 * Displaying the sales tax identification number
-* Using the PDF invoice extension
+
 
 Displaying the customer location in an order
 --------------------------------------------
@@ -65,25 +65,6 @@ The VAT ID is displayed (:ref:`oxdakd02`, item 1).
    :alt: Displaying VAT ID
 
    Fig.: Displaying VAT ID
-
-
-Using the PDF invoice extension
--------------------------------
-
-If an order contains items that are considered telecommunications, broadcasting, television and electronically provided services, :productname:`OXID eShop eVAT` adds additional information to the PDF invoice.
-
-An asterisk :guilabel:`*` indicates the VAT rate used (:ref:`oxdakd03`, item 1).
-
-A message informs about the country whose VAT rate was used to calculate the item price (:ref:`oxdakd03`, item 2).
-
-.. _oxdakd03:
-
-.. figure:: /media/screenshots/oxdakd03.png
-   :class: with-shadow
-   :width: 650
-   :alt: Note on VAT rate in PDF invoice
-
-   Fig.: Note on VAT rate in PDF invoice
 
 
 Maintaining VAT rates

@@ -244,34 +244,6 @@ Make sure that the store location is configured correctly.
 #. Choose the :guilabel:`OXID eShop eVAT` module and choose the :guilabel:`Settings` tab.
 #. In the :guilabel:`Place of Business` field, enter the country code for the store location in ISO2 format (in our example :code:`de` for Germany: :ref:`oxdakb04`, item 3).
 
-Configuring PDF Invoice
------------------------
-
-If you use :productname:`PDF-Invoice` (see `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) in your OXID eShop, make sure that the order of the overloaded classes is correct.
-
-|procedure|
-
-1. In the administration area, choose :menuselection:`Extensions --> Modules`.
-   |br|
-   On the :guilabel:`Installed store modules` tab, the overloaded classes are listed.
-#. Under :guilabel:`OxidEsales\Eshop\Application\Model\Order` make sure that the :technicalname:`invoicepdfoxorder` module is placed before the  :technicalname:`oevattbeoxorder` module (:ref:`oxdakb05`, item 1).
-   |br|
-   To do so, drag the entry to the correct position with the mouse button held down.
-#. Save your settings.
-
-.. _oxdakb05:
-
-.. figure:: /media/screenshots/oxdakb05.png
-   :class: with-shadow
-   :width: 650
-   :alt: Ensuring the correct order of modules
-
-   Fig.: Ensuring the correct sequence of modules
-
-|result|
-
-You can output invoices in PDF format under :menuselection:`Administer Orders --> Orders --> <Order> --> Overview`.
-
 Adding customer information about VAT rates
 -------------------------------------------
 
@@ -304,7 +276,7 @@ If you use additional payment modules, make sure that your payment modules are c
 
 To do this, check if your payment module has a quick purchase feature (Express Ccheckout) (this is the case for :productname:`PayPal`, for example) and turn off the quick purchase feature.
 
-You do :emphasis:`not` need to do anything if you have
+You do :emphasis:`not` need to do anything if you
 
 * use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
 * use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.

@@ -131,15 +131,22 @@ See also :ref:`extension:Highlighting non-purchasable items in a shopping cart`.
    Fig.: Determination of value added tax failed
 
 
-Compatibility with payment modules
-----------------------------------
+Compatibility
+-------------
+
+Payment modules
+^^^^^^^^^^^^^^^
 
 .. include:: /_static/reuse/payment-modules.rst
 
-You need to make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
+Make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
 For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
 
+PDF Invoice
+^^^^^^^^^^^
+
+:productname:`PDFInvoice` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) is not compatible with :productname:`OXID eShop eVAT` V. 3.0 for OXID eShop version 7 and above.
 
 
 
