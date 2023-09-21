@@ -136,8 +136,11 @@ Siehe auch: :ref:`erweiterung:Nicht kaufbare Artikel im Warenkorb hervorheben`.
    Abb.: Ermittlung der Mehrwertsteuer fehlgeschlagen
 
 
-Kompatibilität mit Zahlungsmodulen
-----------------------------------
+Kompatibilität
+--------------
+
+Zahlungsmodule
+^^^^^^^^^^^^^^
 
 .. include:: /_static/reuse/payment-modules.rst
 
@@ -145,6 +148,10 @@ Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop
 
 Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 
+PDF-Rechnung
+^^^^^^^^^^^^
+
+:productname:`PDF-Rechnung` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) ist mit :productname:`OXID eShop eVAT` V. 3.0 für OXID eShop ab Version 7 nicht kompatibel.
 
 
 .. Intern: oxdaka, Status:

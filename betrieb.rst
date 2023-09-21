@@ -5,7 +5,6 @@ Nutzen Sie im laufenden Betrieb folgende Funktionen des Moduls :productname:`OXI
 
 * Kundenstandort in der Bestellung anzeigen
 * Umsatzsteuer-Identifikationsnummer anzeigen
-* Erweiterung der PDF-Rechnung nutzen
 
 Kundenstandort in der Bestellung anzeigen
 -----------------------------------------
@@ -72,28 +71,8 @@ Die Umsatzsteuer-Identifikationsnummer wird angezeigt (:ref:`oxdakd02`, Pos. 1).
    Abb.: Umsatzsteuer-ID-Nr. anzeigen
 
 
-Erweiterung der PDF-Rechnung nutzen
------------------------------------
-
-Enthält eine Bestellung Artikel, welche als Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen gelten, fügt :productname:`OXID eShop eVAT` zusätzliche Informationen zur PDF-Rechnung hinzu.
-
-Mit einem Sternchen :guilabel:`*` wird auf den verwendeten Mehrwertsteuersatz hingewiesen (:ref:`oxdakd03`, Pos. 1).
-
-Eine Meldung informiert über das Land, dessen Mehrwertsteuersatz zur Berechnung des Artikelpreises herangezogen wurde (:ref:`oxdakd03`, Pos. 2).
-
-.. _oxdakd03:
-
-.. figure:: /media/screenshots/oxdakd03.png
-   :class: with-shadow
-   :width: 650
-   :alt: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
-
-   Abb.: Hinweis auf Mehrwertsteuersatz in PDF-Rechnung
-
-
 Mehrwertsteuersätze pflegen
 ---------------------------
-
 
 Die aktuellen Mehrwertsteuersätze der verschiedenen Länder sind im Modul statisch hinterlegt. Sie werden nicht automatisch aktualisiert.
 

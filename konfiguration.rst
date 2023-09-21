@@ -267,34 +267,6 @@ Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 #. Tragen Sie im Feld :guilabel:`Sitz des Shops` den Ländercode für den Shop-Standort im ISO2-Format ein (in unserem Beispiel :code:`de` für Deutschland: :ref:`oxdakb04`, Pos. 3).
 
 
-PDF-Rechnung konfigurieren
---------------------------
-
-Wenn Sie in Ihrem OXID eShop :productname:`PDF-Rechnung` (siehe `github.com/OXIDprojects/pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) verwenden, dann stellen Sie sicher, dass die Reihenfolge der überladenen Klassen stimmt.
-
-|procedure|
-
-1. Wählen Sie im Administrationsbereich :menuselection:`Erweiterungen --> Module`.
-   |br|
-   Auf der Registerkarte :guilabel:`Installierte Shop-Module` werden die überladenen Klassen aufgelistet.
-#. Stellen Sie sicher, dass unter :guilabel:`OxidEsales\Eshop\Application\Model\Order` das Modul :technicalname:`invoicepdfoxorder` vor dem Modul :technicalname:`oevattbeoxorder` platziert ist (:ref:`oxdakb05`, Pos. 1).
-   |br|
-   Ziehen Sie dazu den Eintrag mit gedrückter Maustaste an die richtige Position.
-#. Speichern Sie Ihre Einstellungen.
-
-.. _oxdakb05:
-
-.. figure:: /media/screenshots/oxdakb05.png
-   :class: with-shadow
-   :width: 650
-   :alt: Korrekte Reihenfolge der Module sicherstellen
-
-   Abb.: Korrekte Reihenfolge der Module sicherstellen
-
-|result|
-
-Sie können Rechnungen im PDF-Format ausgeben unter :menuselection:`Bestellungen verwalten --> Bestellungen --> <Bestellung> --> Übersicht`.
-
 Kundeninformationen zu Mehrwertsteuersätzen ergänzen
 ----------------------------------------------------
 
