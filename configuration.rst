@@ -276,46 +276,31 @@ If you use third-party payment modules, make sure that your payment modules are 
 
 To do so, it may be enough for you to turn off the quick purchase (express checkout) feature.
 
+Reason: For customers who are not registered, the final price for telecommunication, broadcasting, television and services provided electronically cannot be calculated and passed on to PayPal.
+|br|
+If a payment module is not compatible with :productname:`OXID eShop eVAT`, your OXID eShop uses only the standard VAT determination functionality, and the VAT determined may be incorrect.
+
 .. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
     You do :emphasis:`not` need to do anything if you
     * use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
     * use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.
 
 
-|background|
-
-.. include:: /_static/reuse/payment-modules.rst
-
 |procedure|
 
-In our following example, you will to turn off the quick purchase for the :productname:`PayPal` payment module.
+1. Navigate to the settings of the third-party payment module.
+#. Make sure that only the default payment method is enabled.
 
-1. Choose :menuselection:`Extensions --> Modules`.
-#. Choose the payment module, in our example :productname:`PayPal`.
-#. In our example, choose :menuselection:`Settings --> PayPal Integration`.
-#. To make sure that (in our example for :productname:`PayPal`) only the default payment method is enabled, do the following:
+   Disable features related to "Quick Checkout" or "Express Checkout" or similar.
 
-   * Make sure that the :guilabel:`PayPal Basis` checkbox is :emphasis:`enabled` (:ref:`oxdakb06`, item 1).
-   * Make sure that the following checkboxes are :emphasis:`disabled` (:ref:`oxdakb06`, item 2):
-     * :guilabel:`PayPal Express`
-     * :guilabel:`Show Express Checkout in the mini cart`.
-     * :guilabel:`Show Express Checkout in the products detail page`.
+   For more information, see your payment module documentation.
 
 #. Save your settings.
 
-   Result: The quick purchase feature is disabled, orders are not completed immediately by the payment processor, but the customer lands on the checkout page, and the customer has to confirm the order with the correctly determined VAT.
-   |br|
-   For more information, see your payment module documentation.
-#. If your payment module does not allow you to disable the quick purchase feature, disable the payment module for the electronic items.
-#. Test whether the payment module works with the quick purchase function disabled.
+#. Test whether the payment module works with the Quick Purchase function disabled.
 
-.. _oxdakb06:
+   Expected result: The quick purchase function is disabled, orders are not completed immediately by the payment provider, but the customer lands on the checkout page and the customer has to confirm the order with the correctly determined VAT.
 
-.. figure:: /media/screenshots/oxdakb06.png
-   :alt: Disabling the quick purchase function of the PayPal module
-   :class: with-shadow
-   :width: 650
-
-   Fig.: Disabling the quick purchase function of the :productname:`PayPal` module
+#. If your payment module does not allow to disable the quick purchase function, disable the payment module for the electronic items.
 
 .. Intern: oxdakb, Status:
