@@ -272,14 +272,14 @@ Your customers can access this information via a link on the item detail page (s
 Ensuring compatibility with payment modules
 -------------------------------------------
 
-If you use additional payment modules, make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
+If you use third-party payment modules, make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-To do this, check if your payment module has a quick purchase feature (Express Ccheckout) (this is the case for :productname:`PayPal`, for example) and turn off the quick purchase feature.
+To do so, it may be enough for you to turn off the quick purchase (express checkout) feature.
 
-You do :emphasis:`not` need to do anything if you
-
-* use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
-* use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.
+.. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
+    You do :emphasis:`not` need to do anything if you
+    * use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
+    * use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.
 
 
 |background|
@@ -288,7 +288,7 @@ You do :emphasis:`not` need to do anything if you
 
 |procedure|
 
-In our following example, you will ensure compatibility for the :productname:`PayPal` payment module.
+In our following example, you will to turn off the quick purchase for the :productname:`PayPal` payment module.
 
 1. Choose :menuselection:`Extensions --> Modules`.
 #. Choose the payment module, in our example :productname:`PayPal`.
@@ -307,6 +307,7 @@ In our following example, you will ensure compatibility for the :productname:`Pa
    |br|
    For more information, see your payment module documentation.
 #. If your payment module does not allow you to disable the quick purchase feature, disable the payment module for the electronic items.
+#. Test whether the payment module works with the quick purchase function disabled.
 
 .. _oxdakb06:
 
