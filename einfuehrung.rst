@@ -144,7 +144,7 @@ Zahlungsmodule
 
 .. include:: /_static/reuse/payment-modules.rst
 
-Sie müssen sicherstellen, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
+Sie müssen sicherstellen, dass Ihre Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` kompatibel sind.
 
 Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 

@@ -295,14 +295,14 @@ Ihre Kunden gelangen zu diesen Informationen über einen Link auf der Artikeldet
 Kompatibilität mit Zahlungsmodulen sicherstellen
 ------------------------------------------------
 
-Wenn Sie zusätzliche Zahlungsmodule nutzen, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
+Wenn Sie Zahlungsmodule von Drittanbietern verwenden, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
-Dazu prüfen Sie, ob Ihr Zahlungsmodul eine Schnellkauf-Funktion (Express-Ccheckout) hat (das ist beispielsweise bei :productname:`PayPal` der Fall), und schalten die Schnellkauf-Funktion ab.
+Dazu kann es reichen, dass Sie die Schnellkauf-Funktion (Express-Checkout) abschalten.
 
-Sie müssen nichts tun, wenn Sie
-
-* ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
-* die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
+.. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
+    Sie müssen nichts tun, wenn Sie
+    * ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
+    * die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
 
 
 |background|
@@ -311,7 +311,7 @@ Sie müssen nichts tun, wenn Sie
 
 |procedure|
 
-In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsmodul :productname:`PayPal` sicher.
+In unserem folgenden Beispiel deaktivieren Sie die Schnellkauf-Funktion beim Zahlungsmodul :productname:`PayPal`.
 
 1. Wählen Sie :menuselection:`Erweiterungen --> Module`.
 #. Wählen Sie das Zahlungsmodul, in unserem Beispiel :productname:`PayPal`.
@@ -329,7 +329,8 @@ In unserem folgenden Beispiel stellen Sie die Kompatibilität für das Zahlungsm
    Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
    |br|
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
-#. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
+#. Wenn Ihr Drittanbieter-Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
+#. Testen Sie, ob das Zahlungsmodul bei deaktivierter Schnellkauf-Funktion funktioniert.
 
 .. todo: #HR: in 7.0 kein altes PayPal, aber zu prüfen für PP Checkout: HR vermerkt Aufgabe in OXDEV-6375
    2023-03-21 HR: PPC funktioniert für 6.5, auch express checkout. GraphQL habe ich nicht probiert --
