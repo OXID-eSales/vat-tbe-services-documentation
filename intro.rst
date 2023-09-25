@@ -137,18 +137,12 @@ Compatibility
 Payment modules
 ^^^^^^^^^^^^^^^
 
-Note the following restrictions:
+Do the following:
 
-* The payment modules :productname:`PayPal Checkout`, :productname:`Amazon Pay`, and :productname:`Unzer Payment for OXID` are not yet available for version 7 of OXID eShop.
+* Check if your payment modules are available for OXID eShop version 7.
+* Ensure that your third-party payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-  .. todo: Zahlungsmodule ergänzen, soabald verfügbarbar für eShop 7: vorerst ausblenden
-    The :productname:`PayPal Checkout`, :productname:`Amazon Pay`, and :productname:`Unzer Payment for OXID` payment modules are compatible with :productname:`OXID eShop eVAT`: Even with the quick purchase feature, your customer is taken to a checkout page where the customer confirms the order data including the VAT rate.
-
-* The :productname:`PayPal` and :productname:`PayPal Plus` payment modules are not compatible with :productname:`OXID eShop` version 7 and are therefore not available for :productname:`OXID eShop eVAT`.
-
-You have to ensure that your third-party payment modules are compatible with :productname:`OXID eShop eVAT`.
-
-For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
+  For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
 
 PDF Invoice
 ^^^^^^^^^^^
