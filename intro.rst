@@ -139,8 +139,8 @@ Payment modules
 
 Do the following:
 
-* Check if your payment modules are available for OXID eShop version 7.
-* Ensure that your third-party payment modules are compatible with :productname:`OXID eShop eVAT`.
+* In the OXID Solution Hub under `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, check if your payment modules are already available in a version compatible with OXID eShop version 7.
+* Ensure that your third-party payment modules are compatible with :productname:`OXID eShop eVAT` version 3.
 
   For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
 
