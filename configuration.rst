@@ -274,9 +274,13 @@ Ensuring compatibility with payment modules
 
 If you use third-party payment modules, make sure that your payment modules are compatible with :productname:`OXID eShop eVAT`.
 
-To do so, it may be enough for you to turn off the quick purchase (express checkout) feature.
+Experience has shown that there may be problems with the Quick Purchase function (express checkout).
 
-Reason: For customers who are not registered, the final price for telecommunication, broadcasting, television and services provided electronically cannot be calculated and passed on to PayPal.
+Therefore, check if the Quick Purchase function of your payment module works with :productname:`OXID eShop eVAT`. If it does not work, turn it off and check again.
+
+|background|
+
+For customers who are not registered, the final price for telecommunication, broadcasting, television and services provided electronically cannot be calculated and passed on to PayPal.
 |br|
 If a payment module is not compatible with :productname:`OXID eShop eVAT`, your OXID eShop uses only the standard VAT determination functionality, and the VAT determined may be incorrect.
 
@@ -288,19 +292,23 @@ If a payment module is not compatible with :productname:`OXID eShop eVAT`, your 
 
 |procedure|
 
-1. Navigate to the settings of the third-party payment module.
-#. Make sure that only the default payment method is enabled.
+1. Check if your payment module works correctly.
+   |br|
+   In particular, check whether the Quick Purchase function works.
+#. If it does not work, disable the Quick Purchase function of your payment module:
 
-   Disable features related to "Quick Checkout" or "Express Checkout" or similar.
+   a. Navigate to the third-party payment module settings.
+   #. Make sure only the default payment method is enabled.
+   #. Disable functions related to "quick purchase" or "express checkout" or similar.
 
-   For more information, see your payment module documentation.
+      For more information, see your payment module documentation.
 
-#. Save your settings.
+   #. Save your settings.
 
 #. Test whether the payment module works with the Quick Purchase function disabled.
 
-   Expected result: The quick purchase function is disabled, orders are not completed immediately by the payment provider, but the customer lands on the checkout page and the customer has to confirm the order with the correctly determined VAT.
+   Expected result: the Quick Purchase function is disabled, orders are not completed immediately by the payment provider, but the customer lands on the checkout page and the customer has to confirm the order with the correctly determined VAT.
 
-#. If your payment module does not allow to disable the quick purchase function, disable the payment module for the electronic items.
+#. If your payment module does not work even with the Quick Purchase function disabled or if it does not allow to disable the Quick Purchase function, disable the payment module for the electronic items.
 
 .. Intern: oxdakb, Status:
