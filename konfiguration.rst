@@ -297,12 +297,13 @@ Kompatibilität mit Zahlungsmodulen sicherstellen
 
 Wenn Sie Zahlungsmodule von Drittanbietern verwenden, stellen Sie sicher, dass Ihre Zahlungsmodule mit :productname:`OXID eShop eVAT` kompatibel sind.
 
-Dazu kann es reichen, dass Sie die Schnellkauf-Funktion (Express-Checkout) abschalten.
+Erfahrungsgemäß kann es zu Problemen mit der Schnellkauf-Funktion (Express-Checkout) kommen.
 
-.. todo: Eher: Wahrscheinlich Probleme mit Schnellkauf, evtl. abschalten oder prüfen ob es geht, dann abschalten
+Prüfen Sie deshalb, ob die Schnellkauf-Funktion Ihres Zahlungsmoduls mit :productname:`OXID eShop eVAT` funktioniert. Wenn Sie nicht funktioniert, schalten Sie sie ab und prüfen erneut.
 
+|background|
 
-Hintergrund: Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
+Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
 |br|
 Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, dann nutzt Ihr OXID eShop nur die Standard-Funktionalität zur Bestimmung der Mehrwertsteuer, und die ermittelte Mehrwertsteuer ist möglicherweise falsch.
 
@@ -313,22 +314,24 @@ Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, 
 
 |procedure|
 
-1. Navigieren Sie zu den Einstellungen des Drittanbieter-Zahlungsmoduls.
-#. Stellen Sie sicher, dass nur die Standard-Bezahlmethode aktiviert ist.
+1. Prüfen Sie, ob Ihr Zahlungsmodul funktioniert.
+   |br|
+   Prüfen Sie insbesondere, ob die Schnellkauffunktion funktioniert.
+#. Wenn es nicht funktioniert, deaktivieren Sie die Schnellkauf-Funktion Ihres Zahlungsmoduls:
 
-   Deaktivieren Sie Funktionen, die mit "Schnellkauf-" oder "Express Checkout" oder ähnlichem zu tun haben.
+   a. Navigieren Sie zu den Einstellungen des Drittanbieter-Zahlungsmoduls.
+   #. Stellen Sie sicher, dass nur die Standard-Bezahlmethode aktiviert ist.
+   #. Deaktivieren Sie Funktionen, die mit "Schnellkauf-" oder "Express Checkout" oder ähnlichem zu tun haben.
 
-   Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
+      Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 
-#. Speichern Sie Ihre Einstellungen.
+   #. Speichern Sie Ihre Einstellungen.
 
 #. Testen Sie, ob das Zahlungsmodul bei deaktivierter Schnellkauf-Funktion funktioniert.
 
-    .. todo: #tbd Noch mal testen mit Schnellkauf
-
    Erwartetes Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
 
-#. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
+#. Wenn Ihr Zahlungsmodul auch mit deaktivierter Schnellkauf-Funktion nicht funktioniert oder es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
 
 .. todo: HR: PPC funktioniert für 6.5, auch express checkout. GraphQL habe ich nicht probiert --
