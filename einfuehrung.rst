@@ -142,12 +142,10 @@ Kompatibilität
 Zahlungsmodule
 ^^^^^^^^^^^^^^
 
-.. todo: Zahlungsmodule ergänzen, soabald verfügbarbar für eShop 7
-
 Tun Sie Folgendes:
 
-* Prüfen Sie, ob Ihre Zahlungsmodule für OXID eShop Version 7 verfügbar sind.
-* Stellen Sie sicher, dass Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` kompatibel sind.
+* Prüfen Sie im OXID Solution Hub unter `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, ob Ihre Zahlungsmodule bereits in einer Version verfügbar sind, die mit OXID eShop Version 7 kompatibel ist.
+* Stellen Sie sicher, dass Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` Version 3 kompatibel sind.
 
   Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
 

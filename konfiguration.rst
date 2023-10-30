@@ -299,6 +299,9 @@ Wenn Sie Zahlungsmodule von Drittanbietern verwenden, stellen Sie sicher, dass I
 
 Dazu kann es reichen, dass Sie die Schnellkauf-Funktion (Express-Checkout) abschalten.
 
+.. todo: Eher: Wahrscheinlich Probleme mit Schnellkauf, evtl. abschalten oder prüfen ob es geht, dann abschalten
+
+
 Hintergrund: Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
 |br|
 Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, dann nutzt Ihr OXID eShop nur die Standard-Funktionalität zur Bestimmung der Mehrwertsteuer, und die ermittelte Mehrwertsteuer ist möglicherweise falsch.
@@ -313,7 +316,7 @@ Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, 
 1. Navigieren Sie zu den Einstellungen des Drittanbieter-Zahlungsmoduls.
 #. Stellen Sie sicher, dass nur die Standard-Bezahlmethode aktiviert ist.
 
-   Deaktivieren Sie Funktionen, die mit "Schnelkauf-" oder "Express Checkout" oder ähnlichem zu tun haben.
+   Deaktivieren Sie Funktionen, die mit "Schnellkauf-" oder "Express Checkout" oder ähnlichem zu tun haben.
 
    Weitere Informationen finden Sie in der Dokumentation Ihres Zahlungsmoduls.
 
@@ -321,7 +324,9 @@ Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, 
 
 #. Testen Sie, ob das Zahlungsmodul bei deaktivierter Schnellkauf-Funktion funktioniert.
 
-   Erwartetes Egebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
+    .. todo: #tbd Noch mal testen mit Schnellkauf
+
+   Erwartetes Ergebnis: Die Schnellkauf-Funktion ist abgeschaltet, Bestellungen werden nicht durch den Zahlungsdienstleister sofort abgeschlossen, sondern der Kunde landet auf der Checkout-Seite, und der Kunde muss die Bestellung mit der korrekt bestimmten Mehrwertsteuer bestätigen.
 
 #. Wenn Ihr Zahlungsmodul es nicht zulässt, die Schnellkauf-Funktion abzuschalten, dann deaktivieren Sie das Zahlungsmodul für die elektronischen Artikel.
 
