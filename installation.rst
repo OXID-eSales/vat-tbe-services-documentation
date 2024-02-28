@@ -1,12 +1,14 @@
 Installation
 ============
 
-Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop ab Version 6.0.
+Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Version 7.
 
 
 |prerequisites|
 
-* Sie haben den OXID eShop 7.0 oder höher installiert.
+.. todo: #HR: 7.x, 7.0.x?
+
+* Sie haben den OXID eShop 7 installiert.
 * Sie haben PHP 8.0 oder höher.
 
 
