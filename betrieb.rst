@@ -62,6 +62,7 @@ Die Umsatzsteuer-Identifikationsnummer wird angezeigt (:ref:`oxdakd02`, Pos. 1).
 .. todo: Hintergrund: Fehlender Zeitstempel ist Bug in 2.0 -- wird gefixt für 7.0: OXDEV-6375 für shop 7/eVAT 3.0
 
 
+
 .. _oxdakd02:
 
 .. figure:: /media/screenshots/oxdakd02.png

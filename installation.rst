@@ -6,11 +6,10 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
 |prerequisites|
 
-.. todo: #HR: 7.x, 7.0.x?
-
-* Sie haben den OXID eShop 7 installiert.
+* Sie haben OXID eShop 7.0.x.
 * Sie haben PHP 8.0 oder höher.
 
+.. todo: #HR: "PHP 8.0 oder höher."? -- ist  das relevant, wenn ich den shop habe, wenn 7.1 8.1/8.2 hat?
 
 |procedure|
 
@@ -27,13 +26,7 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
    .. code:: bash
 
-      composer require oxid-esales/evat-module:^3.0
-
-   Alternativ: Um die letzte unveröffentlichte Version von Github zu installieren, führen Sie folgenden Befehl aus:
-
-   .. code:: bash
-
-      composer require oxid-esales/evat-module:dev-b-7.0.x
+      composer require oxid-esales/evat-module:^3.0.0
 
 #. Bestätigen Sie die Abfragen.
 #. Optional Löschen Sie alle Dateien und Ordner außer der Datei :file:`.htaccess` aus dem Verzeichnis :file:`/tmp` des Shops.
