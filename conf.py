@@ -136,6 +136,7 @@ html_context = {
     'current_version': '2.1',
     'versions':
         [('2.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/2.1/'),
+        ('3.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/3.0/'),
          ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/2.1/'),
