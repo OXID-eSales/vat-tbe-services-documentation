@@ -8,8 +8,6 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
 * Sie haben OXID eShop 7.0.x.
 
-.. todo: #HR: "PHP 8.0 oder höher."? -- ist  das relevant, wenn ich den shop habe, wenn 7.1 8.1/8.2 hat?
-
 |procedure|
 
 
