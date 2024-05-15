@@ -11,7 +11,7 @@ Moduldokumentation
    Konfiguration <konfiguration>
    Betrieb <betrieb>
    Erweiterung <erweiterung>
-   Changelog (GitHub) ➜ <https://github.com/OXID-eSales/vat_tbe_services/blob/v3.0.0/CHANGELOG.md>
+   Changelog (GitHub) ➜ <https://github.com/OXID-eSales/vat_tbe_services/blob/v4.0.0/CHANGELOG.md>
 
 
 .. image:: media/icons/home.png
