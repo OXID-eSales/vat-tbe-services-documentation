@@ -250,9 +250,19 @@ Sitz des Shops verifizieren
 
 Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
-.. todo: #HR: Nach OXDEV-8299 so?: Wenn Sie den Sitz des Shops nicht oder nicht richtig konfiguieren, werden alle Benutzer werden so behandelt, als kämen sie aus dem Ausland, und während des Bezahlvorgangs wird eine Nachricht angezeigt: "Diese Mehrwertsteuer wurde für Ihren Standort berechnet."
+.. todo: #HR: Nach OXDEV-8299 so?:
 
-.. todo: #HR: Was heißt in OXDEV-8299: "in this case vat rates should be explicitly added in the product eVAT settings tab (if the product is marked as electronic) for all the countries which are available to order - this is already mentioned in the documentation."
+|background|
+
+Wenn Sie den Sitz des Shops nicht oder nicht richtig konfiguieren, werden alle Benutzer werden so behandelt, als kämen sie aus dem Ausland.
+
+Einem Kunden beispielsweise aus Deutschland würde in Ihrem deutschen OXID eShop während des Bezahlvorgangs die Nachricht angezeigt werden: "Diese Mehrwertsteuer wurde für Ihren Standort berechnet."
+
+.. todo: #HR: Stimmt die Aussage: "Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet."  -- oder gilt das nur, wenn ich auch keine MWSt.-Sätze definiert habe?
+
+.. todo: #HR: OXDEV-8299: Was heißt in OXDEV-8299: "in this case vat rates should be explicitly added in the product eVAT settings tab (if the product is marked as electronic) for all the countries which are available to order - this is already mentioned in the documentation."
+
+.. todo: Meinen wir: :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen` und :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen` ?
 
 .. todo: #SB: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?; HR: Nachrichten über MWSt-Satz werden nicht angezeigt -- mit 7.0 prüfen OXDEV-6375: VL/SB fragen: wie soll Verhalten sein? für 7.0 klären
         |background|
@@ -310,7 +320,7 @@ Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekomm
 |br|
 Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, dann nutzt Ihr OXID eShop nur die Standard-Funktionalität zur Bestimmung der Mehrwertsteuer, und die ermittelte Mehrwertsteuer ist möglicherweise falsch.
 
-.. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
+.. todo: #tbd: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
     Sie müssen nichts tun, wenn Sie
     * ein Zahlungsmodul ohne Schnellkauf-Funktion nutzen, beispielsweise :productname:`Unzer Payment für OXID`
     * die mit :productname:`OXID eShop eVAT` kompatiblen Zahlungsmodule :productname:`PayPal Checkout` oder :productname:`Amazon Pay`, nutzen
