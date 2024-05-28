@@ -54,9 +54,7 @@ Customers can provide the VAT ID when registering or during the ordering process
 
 |result|
 
-The VAT ID is displayed (:ref:`oxdakd02`, item 1).
-
-.. todo: #tbd 3.0: "with the date and time it was entered"
+If a sales VAT ID exists, it is displayed with the date and time of entry (:ref:`oxdakd02`, item 1).
 
 .. _oxdakd02:
 

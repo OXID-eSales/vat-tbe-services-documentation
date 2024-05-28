@@ -37,7 +37,7 @@ Your benefits
 * Take advantage of
 
   * the logging of the customer's location when ordering electronic products or services
-  * the logging of the VAT ID number as proof for taxable customers ("business (taxable person)").
+  * the logging of the VAT ID with date and time of entry as proof for taxable customers ("business (taxable person)").
     |br|
     For taxable customers, the invoice will show the net price without VAT.
 * Extend :productname:`OXID eShop eVAT` with custom determination methods if required.
@@ -87,13 +87,11 @@ A message tells your customer which country the displayed VAT is based on and th
 
    Fig.: Order step 1 with reference to VAT calculation
 
-
 The VAT is calculated after registration or after specifying the billing address, after :productname:`OXID eShop eVAT` has determined the customer location (see :ref:`configuration:Configuring the customer location determination`).
 
 A message tells the customer again which country is the basis for the VAT calculation (:ref:`oxdaka03`, items 1, 2).
 
 Each time the country is changed, the VAT is recalculated and the message is updated.
-
 
 .. _oxdaka03:
 

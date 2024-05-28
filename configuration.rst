@@ -175,7 +175,6 @@ Configuring the customer location determination
 
 Enable determining the customer location.
 
-
 |background|
 
 The Implementing Regulation (EU) No 1042/2013 requires that the country of origin of the customer ordering a telecommunications, broadcasting, television and electronically supplied service must be determined in order to correctly calculate VAT.
@@ -230,13 +229,16 @@ Verifying the store location
 
 Make sure that the store location is configured correctly.
 
-.. todo: #tb:: add as of V.3
-    |background|
-    The system checks if a customer is from the same country where the store is located.
-    If this is the case, the VAT rate defined as default for the store will be used to calculate the value of goods.
-    If you enter an invalid country code, the store behaves as if no country is entered.
-    Items representing telecommunication, radio, television and electronically provided services will not be marked as such.
-    No related messages will be displayed.
+|background|
+
+If you do not configure the store location or do not configure it correctly, all users will be treated as if they are from abroad.
+
+For example, a customer from Germany would be shown the following message in your German OXID eShop during the checkout process: “This VAT has been calculated for your location.”
+
+The VAT is calculated as you have configured it under
+
+* :ref:`configuration:Marking a category as electronic products and assigning VAT rates`
+* :ref:`configuration:Marking items as electronic products and assigning VAT rates`
 
 |procedure|
 
@@ -284,7 +286,7 @@ For customers who are not registered, the final price for telecommunication, bro
 |br|
 If a payment module is not compatible with :productname:`OXID eShop eVAT`, your OXID eShop uses only the standard VAT determination functionality, and the VAT determined may be incorrect.
 
-.. todo: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
+.. todo: #tbd: Folgendes ergänzen, sobald Zahlungsmodule für eShop 7 verfügbar
     You do :emphasis:`not` need to do anything if you
     * use a payment module without a quick purchase feature, for example :productname:`Unzer Payment for OXID`
     * use the :productname:`OXID eShop eVAT`-compatible payment modules :productname:`PayPal Checkout` or :productname:`Amazon Pay`.
