@@ -250,28 +250,18 @@ Sitz des Shops verifizieren
 
 Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
-.. todo: #HR: Nach OXDEV-8299 so?:
-
 |background|
 
-Wenn Sie den Sitz des Shops nicht oder nicht richtig konfiguieren, werden alle Benutzer werden so behandelt, als kämen sie aus dem Ausland.
+.. todo: #HR: Folgendes verifizieren entsprechend OXDEV-8299/5817
+
+Wenn Sie den Sitz des Shops nicht oder nicht richtig konfigurieren, werden alle Benutzer so behandelt, als kämen sie aus dem Ausland.
 
 Einem Kunden beispielsweise aus Deutschland würde in Ihrem deutschen OXID eShop während des Bezahlvorgangs die Nachricht angezeigt werden: "Diese Mehrwertsteuer wurde für Ihren Standort berechnet."
 
-.. todo: #HR: Stimmt die Aussage: "Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet."  -- oder gilt das nur, wenn ich auch keine MWSt.-Sätze definiert habe?
+Die Mehrwertsteuer wird berechnet, wie Sie sie konfiguriert haben unter
 
-.. todo: #HR: OXDEV-8299: Was heißt in OXDEV-8299: "in this case vat rates should be explicitly added in the product eVAT settings tab (if the product is marked as electronic) for all the countries which are available to order - this is already mentioned in the documentation."
-
-.. todo: Meinen wir: :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen` und :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen` ?
-
-.. todo: #SB: Das folgende stimmt nicht: keine oder falsche Landeskennung hat keine Auswirkung; was ist das erwartete Verhalten?; HR: Nachrichten über MWSt-Satz werden nicht angezeigt -- mit 7.0 prüfen OXDEV-6375: VL/SB fragen: wie soll Verhalten sein? für 7.0 klären
-        |background|
-        Das System prüft, ob ein Kunde aus demselben Land kommt, in dem der Shop ansässig ist.
-        Ist das der Fall, wird der für den Shop als Standard definierte Mehrwertsteuersatz zur Berechnung des Warenwerts verwendet.
-        Wenn Sie einen ungültigen Ländercode eintragen, verhält sich der Shop so, als wäre kein Land eingetragen.
-        Artikel, welche Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen darstellen, werden dann nicht als solche gekennzeichnet.
-        Es werden auch keine damit in Zusammenhang stehenden Meldungen ausgegeben.
-
+* :ref:`konfiguration:Kategorie als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
+* :ref:`konfiguration:Artikel als elektronisches Produkt markieren und Mehrwertsteuersatz zuordnen`
 
 |procedure|
 
