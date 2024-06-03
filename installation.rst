@@ -23,7 +23,7 @@ Install the module :productname:`OXID eShop eVAT` for OXID eShop version 7.1.
 
    .. code:: bash
 
-      composer require oxid-esales/evat-module:^4.0.0
+      composer require oxid-esales/evat-module:^4.0.0 --with-all-dependencies
 
 #. Confirm the queries.
 #. Optional: Delete all files and folders except :file:`.htaccess` from the :file:`/tmp` directory of the store.
