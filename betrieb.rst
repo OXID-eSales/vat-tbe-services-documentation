@@ -56,10 +56,6 @@ Der Kunde kann die Umsatzsteuer-Identifikationsnummer bei der Registrierung oder
 
 |result|
 
-.. todo: #HR: Verifizieren: Resultat neu formuliert, um folgende Fälle abzudecken: "Wenn eine Umsatzsteuer-Identifikationsnummer existiert, wird  ..."
-.. todo: A: OXDEV-5817: remove date in case no vat id is set/was removed -- HR: Datum wird nicht mehr angezeigt, fehlt noch im Changelog
-.. todo: B: OXDEV-5817: "date and time of last change to a customer’s USt-IdNr. in now working as described in the documentation - showing the date of the last change"
-
 Wenn eine Umsatzsteuer-Identifikationsnummer existiert, wird sie mit Datum und Zeit der Eingabe angezeigt (:ref:`oxdakd02`, Pos. 1).
 
 .. _oxdakd02:

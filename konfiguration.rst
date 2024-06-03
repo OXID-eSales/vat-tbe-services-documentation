@@ -252,8 +252,6 @@ Stellen Sie sicher, dass der Sitz des Shops richtig konfiguriert ist.
 
 |background|
 
-.. todo: #HR: Folgendes verifizieren entsprechend OXDEV-8299/5817
-
 Wenn Sie den Sitz des Shops nicht oder nicht richtig konfigurieren, werden alle Benutzer so behandelt, als kämen sie aus dem Ausland.
 
 Einem Kunden beispielsweise aus Deutschland würde in Ihrem deutschen OXID eShop während des Bezahlvorgangs die Nachricht angezeigt werden: "Diese Mehrwertsteuer wurde für Ihren Standort berechnet."
