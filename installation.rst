@@ -3,7 +3,6 @@ Installation
 
 Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Version 7.1.
 
-
 |prerequisites|
 
 * Sie haben OXID eShop 7.1.x.
@@ -23,13 +22,12 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
    .. code:: bash
 
-      composer require oxid-esales/evat-module:^4.0.0
+      composer require oxid-esales/evat-module:^4.0.0 --with-all-dependencies
 
 #. Bestätigen Sie die Abfragen.
 #. Optional Löschen Sie alle Dateien und Ordner außer der Datei :file:`.htaccess` aus dem Verzeichnis :file:`/tmp` des Shops.
 
 |result|
-
 
 Sobald der Installationsprozess abgeschlossen ist, erscheint das Modul :productname:`OXID eShop eVAT` im Administrationsbereich unter :menuselection:`Erweiterungen --> Module` (:ref:`oxdakc01`).
 
