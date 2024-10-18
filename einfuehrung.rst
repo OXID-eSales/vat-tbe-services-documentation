@@ -140,7 +140,7 @@ Zahlungsmodule
 
 Tun Sie Folgendes:
 
-* Prüfen Sie im OXID Solution Hub unter `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, ob Ihre Zahlungsmodule bereits in einer Version verfügbar sind, die mit OXID eShop Version 7.1 kompatibel ist.
+* Prüfen Sie im OXID Solution Hub unter `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, ob Ihre Zahlungsmodule bereits in einer Version verfügbar sind, die mit OXID eShop Version 7.2 kompatibel ist.
 * Stellen Sie sicher, dass Zahlungsmodule von Drittanbietern mit :productname:`OXID eShop eVAT` Version 4 kompatibel sind.
 
   Weitere Informationen finden Sie unter :ref:`konfiguration:Kompatibilität mit Zahlungsmodulen sicherstellen`.
@@ -148,7 +148,7 @@ Tun Sie Folgendes:
 PDF-Rechnung
 ^^^^^^^^^^^^
 
-:productname:`PDF-Rechnung` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) ist mit :productname:`OXID eShop eVAT` V. 4.0 für OXID eShop ab Version 7 nicht kompatibel.
+:productname:`PDF-Rechnung` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) ist mit :productname:`OXID eShop eVAT` V. 4.1 für OXID eShop ab Version 7 nicht kompatibel.
 
 
 .. Intern: oxdaka, Status:
