@@ -138,7 +138,8 @@ html_context = {
         ('2.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/2.1/'),
         ('3.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/3.0/'),
         ('4.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.0/'),
-    ],
+        ('4.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.1/'),
+         ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/4.0/'),
         ('EN', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.0/')],
