@@ -145,7 +145,7 @@ Do the following:
 PDF Invoice
 ^^^^^^^^^^^
 
-:productname:`PDFInvoice` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) is not compatible with :productname:`OXID eShop eVAT` V. 4.0 for OXID eShop version 7 and above.
+:productname:`PDFInvoice` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) is not compatible with :productname:`OXID eShop eVAT` V. 4.1 for OXID eShop version 7 and above.
 
 
 
