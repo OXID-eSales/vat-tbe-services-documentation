@@ -1,11 +1,13 @@
 Installation
 ============
 
-Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Version 7.1.
+Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Version 7.2.
 
 |prerequisites|
 
 * Sie haben OXID eShop 7.2.x.
+
+.. todo: #HR: 7.1 auch kompatibel?
 
 |procedure|
 
