@@ -7,8 +7,6 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
 * Sie haben OXID eShop 7.2.x.
 
-.. todo: #HR: 7.1 auch kompatibel?
-
 |procedure|
 
 
