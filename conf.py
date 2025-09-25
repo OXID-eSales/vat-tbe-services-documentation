@@ -60,7 +60,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'eVAT'
-copyright = '{}, OXID eSales AG'.format(dt.date.today().year)
+copyright = '2003 \u2013 {}, OXID eSales AG'.format(dt.date.today().year)
 author = 'OXID eSales AG'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -139,7 +139,8 @@ html_context = {
         ('3.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/3.0/'),
         ('4.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.0/'),
         ('4.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.1/'),
-         ],
+        ('4.2', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.2/'),
+        ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/4.0/'),
         ('EN', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.0/')],
