@@ -134,13 +134,13 @@ html_theme = 'sphinx_rtd_theme'
 
 html_context = {
     'current_version': '3.0',
-    'versions':
-        [('2.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/2.1/'),
+    'versions': [
+        ('2.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/2.1/'),
         ('3.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/3.0/'),
         ('4.0', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.0/'),
         ('4.1', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.1/'),
         ('4.2', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/4.2/'),
-         ],
+        ],
     'languages':
        [('DE', 'https://docs.oxid-esales.com/modules/vat-tbe-services/de/3.0/'),
         ('EN', 'https://docs.oxid-esales.com/modules/vat-tbe-services/en/3.0/')],
