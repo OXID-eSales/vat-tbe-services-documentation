@@ -5,13 +5,9 @@ Installieren Sie das Modul :productname:`OXID eShop eVAT` für den OXID eShop Ve
 
 |prerequisites|
 
-.. todo: #HR: Wie formulieren wir die PHP 8.4 kompatibilität? Als Voraussetzung wie folgt?
-
 * Sie haben OXID eShop 7.4.x.
-* Sie haben PHP 8.2, 8.3 oder 8.4.
 
 |procedure|
-
 
 1. Öffnen Sie eine Shell und wechseln Sie ins Root-Verzeichnis des eShops (in dem die Datei :file:`composer.json` liegt).
    |br|
