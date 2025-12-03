@@ -1,4 +1,4 @@
-Module Dokumentation
+Module Documentation
 ====================
 
 
