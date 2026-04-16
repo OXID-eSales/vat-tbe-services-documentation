@@ -85,7 +85,7 @@ Color highlighting makes it easier for your customer to identify the item in que
 
 |procedure|
 
-1. Create an extension module with a CCS class (in our example :code:`BasketItemInvalid`) and extend the template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
+1. Create an extension module with a CSS class (in our example :code:`BasketItemInvalid`) and extend the template :technicalname:`/tpl/page/checkout/inc/basketcontents.tpl`:
 
    .. code::
 
