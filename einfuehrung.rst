@@ -75,7 +75,7 @@ Den Inhalt dieser Seite bearbeiten Sie im Administrationsbereich unter :menusele
 Der Bestellprozess aus Kundensicht
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Legt Ihr Kunde einen Artikel, mit Sie elektronisch erbrachte Dienstleistungen anbieten, in den Warenkorb, dann werden die zwei Sternchen :guilabel:`**` bei der Mehrwertsteuer angezeigt (:ref:`oxdaka02`, Pos. 1).
+Legt Ihr Kunde einen Artikel, mit dem Sie elektronisch erbrachte Dienstleistungen anbieten, in den Warenkorb, dann werden die zwei Sternchen :guilabel:`**` bei der Mehrwertsteuer angezeigt (:ref:`oxdaka02`, Pos. 1).
 
 Eine Meldung weist Ihren Kunden darauf hin, auf welchem Land die angezeigte Mehrwertsteuer basiert und dass sich die Mehrwertsteuer ändern kann, sobald der Kunde im Shop angemeldet ist (:ref:`oxdaka02`, Pos. 2).
 
@@ -110,7 +110,7 @@ Was im Fehlerfall passiert
 
 Kommt ein Benutzer aus einem EU-Land, das Sie nicht für die Berechnung der Mehrwertsteuer für elektronische Dienstleistungen konfiguriert haben, erscheint eine Fehlermeldung.
 
-Der Kunde wird aufgefordert den Artikel aus dem Warenkorb entfernen (:ref:`oxdaka04`, Pos. 1).
+Der Kunde wird aufgefordert, den Artikel aus dem Warenkorb zu entfernen (:ref:`oxdaka04`, Pos. 1).
 
 Grund: Die Mehrwertsteuer lässt sich nicht bestimmen  (:ref:`oxdaka04`, Pos. 2).
 

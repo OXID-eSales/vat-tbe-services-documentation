@@ -57,7 +57,7 @@ Prüfen Sie die hinterlegten Mehrwertsteuersätze und passen Sie sie bei Bedarf 
 .. note::
    **OXID eShop Enterprise Edition**
 
-   Bei einer Enterprise Edition wirken sich Anpassungen der Mehrwertsteuersätze auf alle Subhops/Mandanten aus.
+   Bei einer Enterprise Edition wirken sich Anpassungen der Mehrwertsteuersätze auf alle Subshops/Mandanten aus.
 
 |procedure|
 
