@@ -184,7 +184,7 @@ Aktivieren Sie das Bestimmen des Kundenstandorts.
 
 |background|
 
-Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsland des Kunden ermittelt werden muss, der eine Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistung bestellt, um die Mehrwertsteuer korrekt berechnen zu können.
+Die EU-Durchführungsverordnung Nr. 1042/2013 schreibt vor, dass das Herkunftsland des Kunden ermittelt werden muss, der eine Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistung bestellt, um die Mehrwertsteuer korrekt berechnen zu können.
 
 Der Kundenstandort muss durch mindestens zwei Prüfungen festgestellt werden. Die alleinige Angabe des Kunden im Bestellprozess reicht nicht aus, Sie müssen die Angabe des Kunden prüfen.
 
@@ -304,7 +304,7 @@ Prüfen Sie deshalb, ob die Schnellkauf-Funktion Ihres Zahlungsmoduls mit :produ
 
 |background|
 
-Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
+Für Kunden, die nicht angemeldet sind, kann der endgültige Preis für Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen nicht berechnet und an das Zahlungsmodul weitergegeben werden.
 |br|
 Wenn ein Zahlungsmodul nicht mit :productname:`OXID eShop eVAT` kompatibel ist, dann nutzt Ihr OXID eShop nur die Standard-Funktionalität zur Bestimmung der Mehrwertsteuer, und die ermittelte Mehrwertsteuer ist möglicherweise falsch.
 

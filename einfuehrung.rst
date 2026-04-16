@@ -1,7 +1,7 @@
 ﻿Wofür/Wofür nicht?
 ==================
 
-Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachte Dienstleistungen in Ihren OXID eShop.
+Integrieren Sie mit dem Modul :productname:`OXID eShop eVAT` die Besteuerung von Telekommunikations-, Rundfunk-, Fernseh- und auf elektronischem Weg erbrachten Dienstleistungen in Ihren OXID eShop.
 
 Dazu bestimmt :productname:`OXID eShop eVAT` den Kundenstandort mithilfe der :emphasis:`Rechnungsadresse` des Kunden und berechnet entsprechend die jeweilige Mehrwertsteuer.
 
