@@ -137,7 +137,7 @@ Payment modules
 
 Do the following:
 
-* In the OXID Solution Hub under `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, check if your payment modules are already available in a version compatible with OXID eShop version 7.5.
+* In the OXID Solution Hub under `solutionhub.oxid-esales.com <https://solutionhub.oxid-esales.com/>`_, check if your payment modules are already available in a version compatible with OXID eShop version 7.6.
 * Ensure that your third-party payment modules are compatible with :productname:`OXID eShop eVAT` version 4.
 
   For more information, see :ref:`configuration:Ensuring compatibility with payment modules`.
@@ -145,7 +145,7 @@ Do the following:
 PDF Invoice
 ^^^^^^^^^^^
 
-:productname:`PDFInvoice` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) is not compatible with :productname:`OXID eShop eVAT` V. 4.4 for OXID eShop version 7 and above.
+:productname:`PDFInvoice` (`pdf-invoice-module <https://github.com/OXIDprojects/pdf-invoice-module>`_) is not compatible with :productname:`OXID eShop eVAT` V. 4.5 for OXID eShop version 7 and above.
 
 
 
